@@ -1,0 +1,390 @@
+nohup: ignoring input
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+Cora: 1
+Dataset: CoraGraphDataset
+ Original:num_edges:10556
+ Synthetic: num_nodes:tensor([351, 217, 418, 818, 426, 298, 180]), num_edges:10401
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 1/200 [00:00<01:49,  1.82it/s] 11%|█         | 22/200 [00:00<00:04, 44.42it/s] 22%|██▎       | 45/200 [00:00<00:01, 85.89it/s] 34%|███▍      | 68/200 [00:00<00:01, 119.71it/s] 45%|████▌     | 90/200 [00:00<00:00, 144.44it/s] 56%|█████▌    | 112/200 [00:01<00:00, 163.42it/s] 67%|██████▋   | 134/200 [00:01<00:00, 178.30it/s] 78%|███████▊  | 156/200 [00:01<00:00, 189.95it/s] 89%|████████▉ | 178/200 [00:01<00:00, 198.14it/s]100%|██████████| 200/200 [00:01<00:00, 203.51it/s]100%|██████████| 200/200 [00:01<00:00, 136.13it/s]
+epoch 0, loss 1.6031098365783691
+evaluating on sampled validation set
+Sampled Accuracy: 0.4220
+evaluating on full size validation set
+Full size Accuracy: 0.4220
+epoch 10, loss 0.0
+epoch 20, loss 0.0
+epoch 30, loss 0.0
+epoch 40, loss 0.0
+epoch 50, loss 0.0
+evaluating on sampled validation set
+Sampled Accuracy: 0.4220
+evaluating on full size validation set
+Full size Accuracy: 0.4220
+epoch 60, loss 0.0
+epoch 70, loss 0.0
+epoch 80, loss 0.0
+epoch 90, loss 0.0
+epoch 100, loss 0.0
+evaluating on sampled validation set
+Sampled Accuracy: 0.4220
+evaluating on full size validation set
+Full size Accuracy: 0.4220
+epoch 110, loss 0.0
+epoch 120, loss 0.0
+epoch 130, loss 0.0
+epoch 140, loss 0.0
+epoch 150, loss 0.0
+evaluating on sampled validation set
+Sampled Accuracy: 0.4220
+evaluating on full size validation set
+Full size Accuracy: 0.4220
+epoch 160, loss 0.0
+epoch 170, loss 0.0
+epoch 180, loss 0.0
+epoch 190, loss 0.0
+evaluating on sampled test set
+Sampled Accuracy: 0.0000
+evaluating on full size test set
+Full size Accuracy: 0.0000
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+Citeseer: 1
+Dataset: CiteseerGraphDataset
+ Original:num_edges:9228
+ Synthetic: num_nodes:tensor([264, 590, 668, 701, 596, 508]), num_edges:9041
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 214.63it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.72it/s] 33%|███▎      | 66/200 [00:00<00:00, 215.18it/s] 44%|████▍     | 89/200 [00:00<00:00, 218.70it/s] 56%|█████▌    | 111/200 [00:00<00:00, 217.27it/s] 66%|██████▋   | 133/200 [00:00<00:00, 217.41it/s] 78%|███████▊  | 155/200 [00:00<00:00, 216.55it/s] 88%|████████▊ | 177/200 [00:00<00:00, 216.84it/s]100%|█████████▉| 199/200 [00:00<00:00, 216.18it/s]100%|██████████| 200/200 [00:00<00:00, 216.49it/s]
+epoch 0, loss 2.092252016067505
+evaluating on sampled validation set
+Sampled Accuracy: 0.1020
+evaluating on full size validation set
+Full size Accuracy: 0.1020
+epoch 10, loss 2.0066873673840746e-07
+epoch 20, loss 0.0
+epoch 30, loss 0.0
+epoch 40, loss 0.0
+epoch 50, loss 0.0
+evaluating on sampled validation set
+Sampled Accuracy: 0.2880
+evaluating on full size validation set
+Full size Accuracy: 0.2880
+epoch 60, loss 0.0
+epoch 70, loss 0.0
+epoch 80, loss 0.0
+epoch 90, loss 0.0
+epoch 100, loss 0.0
+evaluating on sampled validation set
+Sampled Accuracy: 0.2880
+evaluating on full size validation set
+Full size Accuracy: 0.2880
+epoch 110, loss 0.0
+epoch 120, loss 0.0
+epoch 130, loss 0.0
+epoch 140, loss 0.0
+epoch 150, loss 0.0
+evaluating on sampled validation set
+Sampled Accuracy: 0.2880
+evaluating on full size validation set
+Full size Accuracy: 0.2880
+epoch 160, loss 0.0
+epoch 170, loss 0.0
+epoch 180, loss 0.0
+epoch 190, loss 0.0
+evaluating on sampled test set
+Sampled Accuracy: 0.0000
+evaluating on full size test set
+Full size Accuracy: 0.0000
+  NumNodes: 19717
+  NumEdges: 88651
+  NumFeats: 500
+  NumClasses: 3
+  NumTrainingSamples: 60
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+Pubmed: 1
+Dataset: PubmedGraphDataset
+ Original:num_edges:88651
+ Synthetic: num_nodes:tensor([4103, 7739, 7875]), num_edges:88730
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 211.94it/s] 22%|██▏       | 44/200 [00:00<00:00, 214.26it/s] 33%|███▎      | 66/200 [00:00<00:00, 214.65it/s] 44%|████▍     | 88/200 [00:00<00:00, 215.08it/s] 56%|█████▌    | 111/200 [00:00<00:00, 217.31it/s] 66%|██████▋   | 133/200 [00:00<00:00, 217.83it/s] 78%|███████▊  | 155/200 [00:00<00:00, 218.05it/s] 88%|████████▊ | 177/200 [00:00<00:00, 217.71it/s]100%|█████████▉| 199/200 [00:00<00:00, 218.12it/s]100%|██████████| 200/200 [00:00<00:00, 216.98it/s]
+epoch 0, loss 1.6290233135223389
+evaluating on sampled validation set
+Sampled Accuracy: 1.0000
+evaluating on full size validation set
+Full size Accuracy: 1.0000
+epoch 10, loss 0.0
+epoch 20, loss 0.0
+epoch 30, loss 0.0
+epoch 40, loss 0.0
+epoch 50, loss 0.0
+evaluating on sampled validation set
+Sampled Accuracy: 1.0000
+evaluating on full size validation set
+Full size Accuracy: 1.0000
+epoch 60, loss 0.0
+epoch 70, loss 0.0
+epoch 80, loss 0.0
+epoch 90, loss 0.0
+epoch 100, loss 0.0
+evaluating on sampled validation set
+Sampled Accuracy: 1.0000
+evaluating on full size validation set
+Full size Accuracy: 1.0000
+epoch 110, loss 0.0
+epoch 120, loss 0.0
+epoch 130, loss 0.0
+epoch 140, loss 0.0
+epoch 150, loss 0.0
+evaluating on sampled validation set
+Sampled Accuracy: 1.0000
+evaluating on full size validation set
+Full size Accuracy: 1.0000
+epoch 160, loss 0.0
+epoch 170, loss 0.0
+epoch 180, loss 0.0
+epoch 190, loss 0.0
+evaluating on sampled test set
+Sampled Accuracy: 0.0000
+evaluating on full size test set
+Full size Accuracy: 0.0000
+Done loading data from cached files.
+Texas: 1
+Dataset: TexasDataset
+ Original:num_edges:325
+ Synthetic: num_nodes:tensor([ 33,   1,  18, 101,  30]), num_edges:330
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 211.92it/s] 22%|██▏       | 44/200 [00:00<00:00, 211.62it/s] 33%|███▎      | 66/200 [00:00<00:00, 212.14it/s] 44%|████▍     | 88/200 [00:00<00:00, 213.75it/s] 55%|█████▌    | 110/200 [00:00<00:00, 213.77it/s] 66%|██████▌   | 132/200 [00:00<00:00, 214.61it/s] 77%|███████▋  | 154/200 [00:00<00:00, 215.42it/s] 88%|████████▊ | 177/200 [00:00<00:00, 217.39it/s]100%|█████████▉| 199/200 [00:00<00:00, 217.93it/s]100%|██████████| 200/200 [00:00<00:00, 215.57it/s]
+epoch 0, loss 1.3227967023849487
+evaluating on sampled validation set
+Sampled Accuracy: 0.2203
+evaluating on full size validation set
+Full size Accuracy: 0.2203
+epoch 10, loss 2.972041368484497
+epoch 20, loss 1.4365508556365967
+epoch 30, loss 1.0889664888381958
+epoch 40, loss 0.7176612019538879
+epoch 50, loss 0.6559661030769348
+evaluating on sampled validation set
+Sampled Accuracy: 0.4576
+evaluating on full size validation set
+Full size Accuracy: 0.4576
+epoch 60, loss 0.6197693943977356
+epoch 70, loss 0.5861319899559021
+epoch 80, loss 0.5461454391479492
+epoch 90, loss 0.5126098394393921
+epoch 100, loss 0.4782237708568573
+evaluating on sampled validation set
+Sampled Accuracy: 0.4746
+evaluating on full size validation set
+Full size Accuracy: 0.4746
+epoch 110, loss 0.4442964792251587
+epoch 120, loss 0.3896825909614563
+epoch 130, loss 0.3191285729408264
+epoch 140, loss 0.2724906802177429
+epoch 150, loss 0.23943328857421875
+evaluating on sampled validation set
+Sampled Accuracy: 0.4915
+evaluating on full size validation set
+Full size Accuracy: 0.4915
+epoch 160, loss 0.2197187840938568
+epoch 170, loss 0.1968764215707779
+epoch 180, loss 0.17629596590995789
+epoch 190, loss 0.15765917301177979
+evaluating on sampled test set
+Sampled Accuracy: 0.5946
+evaluating on full size test set
+Full size Accuracy: 0.5946
+Done loading data from cached files.
+Wisconsin: 1
+Dataset: WisconsinDataset
+ Original:num_edges:515
+ Synthetic: num_nodes:tensor([ 10,  70, 118,  32,  21]), num_edges:518
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 192.18it/s] 21%|██        | 42/200 [00:00<00:00, 205.08it/s] 32%|███▏      | 64/200 [00:00<00:00, 209.00it/s] 43%|████▎     | 86/200 [00:00<00:00, 211.50it/s] 54%|█████▍    | 108/200 [00:00<00:00, 213.02it/s] 65%|██████▌   | 130/200 [00:00<00:00, 214.20it/s] 76%|███████▌  | 152/200 [00:00<00:00, 213.82it/s] 87%|████████▋ | 174/200 [00:00<00:00, 215.68it/s] 98%|█████████▊| 196/200 [00:00<00:00, 216.45it/s]100%|██████████| 200/200 [00:00<00:00, 213.22it/s]
+epoch 0, loss 4.35097074508667
+evaluating on sampled validation set
+Sampled Accuracy: 0.1125
+evaluating on full size validation set
+Full size Accuracy: 0.1125
+epoch 10, loss 1.6019766330718994
+epoch 20, loss 1.5330148935317993
+epoch 30, loss 1.465697169303894
+epoch 40, loss 1.403922200202942
+epoch 50, loss 1.350317358970642
+evaluating on sampled validation set
+Sampled Accuracy: 0.4125
+evaluating on full size validation set
+Full size Accuracy: 0.4125
+epoch 60, loss 1.3076825141906738
+epoch 70, loss 1.2773462533950806
+epoch 80, loss 1.2584298849105835
+epoch 90, loss 1.2482808828353882
+epoch 100, loss 1.2436670064926147
+evaluating on sampled validation set
+Sampled Accuracy: 0.4125
+evaluating on full size validation set
+Full size Accuracy: 0.4125
+epoch 110, loss 1.2418997287750244
+epoch 120, loss 1.2413218021392822
+epoch 130, loss 1.2411479949951172
+epoch 140, loss 1.241091251373291
+epoch 150, loss 1.2410659790039062
+evaluating on sampled validation set
+Sampled Accuracy: 0.4125
+evaluating on full size validation set
+Full size Accuracy: 0.4125
+epoch 160, loss 1.2410532236099243
+epoch 170, loss 1.2410467863082886
+epoch 180, loss 1.2410439252853394
+epoch 190, loss 1.2410427331924438
+evaluating on sampled test set
+Sampled Accuracy: 0.4902
+evaluating on full size test set
+Full size Accuracy: 0.4902
+Done loading data from cached files.
+Cornell: 1
+Dataset: CornellDataset
+ Original:num_edges:298
+ Synthetic: num_nodes:tensor([38, 16, 30, 82, 17]), num_edges:301
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 197.65it/s] 20%|██        | 41/200 [00:00<00:00, 201.04it/s] 32%|███▏      | 63/200 [00:00<00:00, 208.02it/s] 42%|████▎     | 85/200 [00:00<00:00, 211.52it/s] 55%|█████▍    | 109/200 [00:00<00:00, 217.90it/s] 66%|██████▌   | 132/200 [00:00<00:00, 219.06it/s] 78%|███████▊  | 155/200 [00:00<00:00, 219.77it/s] 89%|████████▉ | 178/200 [00:00<00:00, 220.29it/s]100%|██████████| 200/200 [00:00<00:00, 216.27it/s]
+epoch 0, loss 5.486349105834961
+evaluating on sampled validation set
+Sampled Accuracy: 0.1017
+evaluating on full size validation set
+Full size Accuracy: 0.1017
+epoch 10, loss 2.863966226577759
+epoch 20, loss 1.1660712957382202
+epoch 30, loss 0.9232158660888672
+epoch 40, loss 0.6890774965286255
+epoch 50, loss 0.5716283321380615
+evaluating on sampled validation set
+Sampled Accuracy: 0.5424
+evaluating on full size validation set
+Full size Accuracy: 0.5424
+epoch 60, loss 0.45035117864608765
+epoch 70, loss 0.36795878410339355
+epoch 80, loss 0.3027649223804474
+epoch 90, loss 0.2511034905910492
+epoch 100, loss 0.2081775814294815
+evaluating on sampled validation set
+Sampled Accuracy: 0.5763
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 110, loss 0.17230504751205444
+epoch 120, loss 0.1395977884531021
+epoch 130, loss 0.11499297618865967
+epoch 140, loss 0.09588659554719925
+epoch 150, loss 0.08106748759746552
+evaluating on sampled validation set
+Sampled Accuracy: 0.6102
+evaluating on full size validation set
+Full size Accuracy: 0.6102
+epoch 160, loss 0.06915350258350372
+epoch 170, loss 0.059094302356243134
+epoch 180, loss 0.04995116963982582
+epoch 190, loss 0.0425274632871151
+evaluating on sampled test set
+Sampled Accuracy: 0.7838
+evaluating on full size test set
+Full size Accuracy: 0.7838
+Done loading data from cached files.
+Squirrel: 1
+Dataset: SquirrelDataset
+ Original:num_edges:217073
+ Synthetic: num_nodes:tensor([1042, 1040, 1039, 1040, 1040]), num_edges:217533
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 205.26it/s] 22%|██▏       | 43/200 [00:00<00:00, 209.91it/s] 32%|███▎      | 65/200 [00:00<00:00, 212.79it/s] 44%|████▎     | 87/200 [00:00<00:00, 212.70it/s] 55%|█████▍    | 109/200 [00:00<00:00, 212.49it/s] 66%|██████▌   | 131/200 [00:00<00:00, 214.83it/s] 76%|███████▋  | 153/200 [00:00<00:00, 215.00it/s] 88%|████████▊ | 175/200 [00:00<00:00, 214.84it/s] 98%|█████████▊| 197/200 [00:00<00:00, 215.10it/s]100%|██████████| 200/200 [00:00<00:00, 213.92it/s]
+epoch 0, loss 4.546675205230713
+evaluating on sampled validation set
+Sampled Accuracy: 0.1923
+evaluating on full size validation set
+Full size Accuracy: 0.1923
+epoch 10, loss 3.7121543884277344
+epoch 20, loss 1.6160989999771118
+epoch 30, loss 1.6159403324127197
+epoch 40, loss 1.6149076223373413
+epoch 50, loss 1.6136459112167358
+evaluating on sampled validation set
+Sampled Accuracy: 0.1923
+evaluating on full size validation set
+Full size Accuracy: 0.1923
+epoch 60, loss 1.6124728918075562
+epoch 70, loss 1.6114909648895264
+epoch 80, loss 1.6107203960418701
+epoch 90, loss 1.6101441383361816
+epoch 100, loss 1.6097277402877808
+evaluating on sampled validation set
+Sampled Accuracy: 0.1923
+evaluating on full size validation set
+Full size Accuracy: 0.1923
+epoch 110, loss 1.609435796737671
+epoch 120, loss 1.6092345714569092
+epoch 130, loss 1.6091008186340332
+epoch 140, loss 1.609012484550476
+epoch 150, loss 1.6089571714401245
+evaluating on sampled validation set
+Sampled Accuracy: 0.1923
+evaluating on full size validation set
+Full size Accuracy: 0.1923
+epoch 160, loss 1.6089226007461548
+epoch 170, loss 1.6089006662368774
+epoch 180, loss 1.6088875532150269
+epoch 190, loss 1.6088805198669434
+evaluating on sampled test set
+Sampled Accuracy: 0.1864
+evaluating on full size test set
+Full size Accuracy: 0.1864
+Done loading data from cached files.
+Chameleon: 1
+Dataset: ChameleonDataset
+ Original:num_edges:36101
+ Synthetic: num_nodes:tensor([456, 460, 453, 521, 387]), num_edges:35801
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 217.11it/s] 22%|██▏       | 44/200 [00:00<00:00, 217.39it/s] 33%|███▎      | 66/200 [00:00<00:00, 215.86it/s] 44%|████▍     | 88/200 [00:00<00:00, 216.58it/s] 55%|█████▌    | 110/200 [00:00<00:00, 217.08it/s] 66%|██████▋   | 133/200 [00:00<00:00, 217.98it/s] 78%|███████▊  | 155/200 [00:00<00:00, 218.25it/s] 89%|████████▉ | 178/200 [00:00<00:00, 219.23it/s]100%|██████████| 200/200 [00:00<00:00, 218.60it/s]
+epoch 0, loss 1.6822974681854248
+evaluating on sampled validation set
+Sampled Accuracy: 0.1811
+evaluating on full size validation set
+Full size Accuracy: 0.1811
+epoch 10, loss 1.1571565866470337
+epoch 20, loss 0.7133821845054626
+epoch 30, loss 0.5205957293510437
+epoch 40, loss 0.4402639865875244
+epoch 50, loss 0.3942541778087616
+evaluating on sampled validation set
+Sampled Accuracy: 0.8628
+evaluating on full size validation set
+Full size Accuracy: 0.8628
+epoch 60, loss 0.35386568307876587
+epoch 70, loss 0.3375036418437958
+epoch 80, loss 0.3031347990036011
+epoch 90, loss 0.27462485432624817
+epoch 100, loss 0.25010916590690613
+evaluating on sampled validation set
+Sampled Accuracy: 0.8752
+evaluating on full size validation set
+Full size Accuracy: 0.8752
+epoch 110, loss 0.23927022516727448
+epoch 120, loss 0.22520983219146729
+epoch 130, loss 0.24702425301074982
+epoch 140, loss 0.22057630121707916
+epoch 150, loss 0.23286089301109314
+evaluating on sampled validation set
+Sampled Accuracy: 0.8793
+evaluating on full size validation set
+Full size Accuracy: 0.8793
+epoch 160, loss 0.21181383728981018
+epoch 170, loss 0.19213521480560303
+epoch 180, loss 0.18676018714904785
+epoch 190, loss 0.1795923262834549
+evaluating on sampled test set
+Sampled Accuracy: 0.9035
+evaluating on full size test set
+Full size Accuracy: 0.9035

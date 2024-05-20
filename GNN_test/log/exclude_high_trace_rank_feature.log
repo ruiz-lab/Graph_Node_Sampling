@@ -1,0 +1,416 @@
+nohup: ignoring input
+exclude_high_
+dataset: Cora
+threshold: 0.4
+calculating hat matrix
+
+...
+
+leverage_score computed
+2263, 83.57% nodes are excluded
+sampled training set size: 20, new test set size: 182, new val set size: 73
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 14.29%, test set: 18.20%, val set: 14.60%
+full size rank time: 0:00:00.871860
+
+full size trace time: 0:00:00.028507
+
+sub rank time: 0:00:00.018345
+
+sub trace time: 0:00:00.001562
+
+full size rank: 1431
+sub rank: 173
+rank ratio: 0.1209
+
+
+full size trace: 11.788035450516986
+sub trace: 0.350561797752809
+trace ratio: 0.0297
+threshold: 0.5
+calculating hat matrix
+
+...
+
+leverage_score computed
+1771, 65.40% nodes are excluded
+sampled training set size: 46, new test set size: 366, new val set size: 163
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 32.86%, test set: 36.60%, val set: 32.60%
+full size rank time: 0:00:00.866463
+
+full size trace time: 0:00:00.027745
+
+sub rank time: 0:00:00.076553
+
+sub trace time: 0:00:00.005184
+
+full size rank: 1431
+sub rank: 526
+rank ratio: 0.3676
+
+
+full size trace: 11.788035450516986
+sub trace: 1.2294557097118464
+trace ratio: 0.1043
+threshold: 0.6000000000000001
+calculating hat matrix
+
+...
+
+leverage_score computed
+960, 35.45% nodes are excluded
+sampled training set size: 96, new test set size: 669, new val set size: 311
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 68.57%, test set: 66.90%, val set: 62.20%
+full size rank time: 0:00:00.876148
+
+full size trace time: 0:00:00.029405
+
+sub rank time: 0:00:00.280559
+
+sub trace time: 0:00:00.011891
+
+full size rank: 1431
+sub rank: 558
+rank ratio: 0.3899
+
+
+full size trace: 11.788035450516986
+sub trace: 0.8043478260869565
+trace ratio: 0.0682
+threshold: 0.7000000000000001
+calculating hat matrix
+
+...
+
+leverage_score computed
+233, 8.60% nodes are excluded
+sampled training set size: 128, new test set size: 917, new val set size: 454
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 91.43%, test set: 91.70%, val set: 90.80%
+full size rank time: 0:00:00.871230
+
+full size trace time: 0:00:00.032387
+
+sub rank time: 0:00:00.639243
+
+sub trace time: 0:00:00.024683
+
+full size rank: 1431
+sub rank: 55
+rank ratio: 0.0384
+
+
+full size trace: 11.788035450516986
+sub trace: 0.037171717171717175
+trace ratio: 0.0032
+threshold: 0.8
+calculating hat matrix
+
+...
+
+leverage_score computed
+24, 0.89% nodes are excluded
+sampled training set size: 140, new test set size: 991, new val set size: 493
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 100.00%, test set: 99.10%, val set: 98.60%
+full size rank time: 0:00:00.858536
+
+full size trace time: 0:00:00.029006
+
+sub rank time: 0:00:00.721101
+
+sub trace time: 0:00:00.028874
+
+full size rank: 1431
+sub rank: 0
+rank ratio: 0.0000
+
+
+full size trace: 11.788035450516986
+sub trace: 0.0
+trace ratio: 0.0000
+dataset: CiteSeer
+threshold: 0.9
+calculating hat matrix
+
+...
+
+leverage_score computed
+2881, 86.59% nodes are excluded
+sampled training set size: 21, new test set size: 128, new val set size: 74
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 17.50%, test set: 12.80%, val set: 14.80%
+full size rank time: 0:00:02.187934
+
+full size trace time: 0:00:00.132907
+
+sub rank time: 0:00:00.016685
+
+sub trace time: 0:00:00.003136
+
+full size rank: 2781
+sub rank: 111
+rank ratio: 0.0399
+
+
+full size trace: 17.10009017132552
+sub trace: 0.47085201793721976
+trace ratio: 0.0275
+threshold: 0.9225
+calculating hat matrix
+
+...
+
+leverage_score computed
+2541, 76.38% nodes are excluded
+sampled training set size: 32, new test set size: 229, new val set size: 130
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 26.67%, test set: 22.90%, val set: 26.00%
+full size rank time: 0:00:02.145713
+
+full size trace time: 0:00:00.127800
+
+sub rank time: 0:00:00.050613
+
+sub trace time: 0:00:00.007475
+
+full size rank: 2781
+sub rank: 284
+rank ratio: 0.1021
+
+
+full size trace: 17.10009017132552
+sub trace: 0.7455470737913485
+trace ratio: 0.0436
+threshold: 0.9450000000000001
+calculating hat matrix
+
+...
+
+leverage_score computed
+1822, 54.76% nodes are excluded
+sampled training set size: 57, new test set size: 462, new val set size: 226
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 47.50%, test set: 46.20%, val set: 45.20%
+full size rank time: 0:00:02.145657
+
+full size trace time: 0:00:00.127847
+
+sub rank time: 0:00:00.252435
+
+sub trace time: 0:00:00.023675
+
+full size rank: 2781
+sub rank: 849
+rank ratio: 0.3053
+
+
+full size trace: 17.10009017132552
+sub trace: 1.7235880398671097
+trace ratio: 0.1008
+threshold: 0.9675
+calculating hat matrix
+
+...
+
+leverage_score computed
+517, 15.54% nodes are excluded
+sampled training set size: 105, new test set size: 870, new val set size: 406
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 87.50%, test set: 87.00%, val set: 81.20%
+full size rank time: 0:00:02.193197
+
+full size trace time: 0:00:00.132316
+
+sub rank time: 0:00:00.926308
+
+sub trace time: 0:00:00.086225
+
+full size rank: 2781
+sub rank: 169
+rank ratio: 0.0608
+
+
+full size trace: 17.10009017132552
+sub trace: 0.13523131672597866
+trace ratio: 0.0079
+threshold: 0.99
+calculating hat matrix
+
+...
+
+leverage_score computed
+6, 0.18% nodes are excluded
+sampled training set size: 120, new test set size: 998, new val set size: 499
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 100.00%, test set: 99.80%, val set: 99.80%
+full size rank time: 0:00:02.182982
+
+full size trace time: 0:00:00.129057
+
+sub rank time: 0:00:01.707945
+
+sub trace time: 0:00:00.127204
+
+full size rank: 2781
+sub rank: 0
+rank ratio: 0.0000
+
+
+full size trace: 17.10009017132552
+sub trace: 0.0
+trace ratio: 0.0000
+dataset: PubMed
+threshold: 0.015
+calculating hat matrix
+
+...
+
+leverage_score computed
+16309, 82.72% nodes are excluded
+sampled training set size: 11, new test set size: 182, new val set size: 81
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 18.33%, test set: 18.20%, val set: 16.20%
+full size rank time: 0:10:14.637234
+
+full size trace time: 0:00:01.003323
+
+sub rank time: 0:00:01.837484
+
+sub trace time: 0:00:00.026083
+
+full size rank: 13013
+sub rank: 1102
+rank ratio: 0.0847
+
+
+full size trace: 0.2063645902013491
+sub trace: 0.009303323539769705
+trace ratio: 0.0451
+threshold: 0.025
+calculating hat matrix
+
+...
+
+leverage_score computed
+7621, 38.65% nodes are excluded
+sampled training set size: 37, new test set size: 587, new val set size: 300
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 61.67%, test set: 58.70%, val set: 60.00%
+full size rank time: 0:10:06.744892
+
+full size trace time: 0:00:00.944245
+
+sub rank time: 0:02:15.349138
+
+sub trace time: 0:00:00.446800
+
+full size rank: 13013
+sub rank: 3543
+rank ratio: 0.2723
+
+
+full size trace: 0.2063645902013491
+sub trace: 0.012239176129537916
+trace ratio: 0.0593
+threshold: 0.035
+calculating hat matrix
+
+...
+
+leverage_score computed
+3170, 16.08% nodes are excluded
+sampled training set size: 46, new test set size: 831, new val set size: 417
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 76.67%, test set: 83.10%, val set: 83.40%
+full size rank time: 0:10:30.310786
+
+full size trace time: 0:00:01.067061
+
+sub rank time: 0:06:20.646260
+
+sub trace time: 0:00:00.729725
+
+full size rank: 13013
+sub rank: 954
+rank ratio: 0.0733
+
+
+full size trace: 0.2063645902013491
+sub trace: 0.0016492031099948018
+trace ratio: 0.0080
+threshold: 0.045
+calculating hat matrix
+
+...
+
+leverage_score computed
+1448, 7.34% nodes are excluded
+sampled training set size: 57, new test set size: 926, new val set size: 463
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 95.00%, test set: 92.60%, val set: 92.60%
+full size rank time: 0:10:58.372542
+
+full size trace time: 0:00:01.356189
+
+sub rank time: 0:08:01.040159
+
+sub trace time: 0:00:00.902781
+
+full size rank: 13013
+sub rank: 310
+rank ratio: 0.0238
+
+
+full size trace: 0.2063645902013491
+sub trace: 0.0003110579561081822
+trace ratio: 0.0015
+threshold: 0.055
+calculating hat matrix
+
+...
+
+leverage_score computed
+697, 3.54% nodes are excluded
+sampled training set size: 59, new test set size: 965, new val set size: 481
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 98.33%, test set: 96.50%, val set: 96.20%
+full size rank time: 0:10:10.884063
+
+full size trace time: 0:00:00.916396
+
+sub rank time: 0:09:09.155418
+
+sub trace time: 0:00:00.874529
+
+full size rank: 13013
+sub rank: 84
+rank ratio: 0.0065
+
+
+full size trace: 0.2063645902013491
+sub trace: 8.413173673531486e-05
+trace ratio: 0.0004
+Traceback (most recent call last):
+  File "/home/jamesl/stats_leverage/GNN_Test/trace_rank.py", line 147, in <module>
+    main(argparser)
+  File "/home/jamesl/stats_leverage/GNN_Test/trace_rank.py", line 142, in main
+    json.dump(rst_dict, f)
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable
