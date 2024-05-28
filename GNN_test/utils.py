@@ -100,9 +100,7 @@ class A_Opt_Sampler:
         test_mask = data.test_mask & full_size_idx
         val_mask = data.val_mask & full_size_idx
         edge_index = pyg.utils.subgraph(idx, data.edge_index, relabel_nodes=False)[0]
-        new_x = data.x
-        new_y = data.y
-        return pyg.data.Data(x=new_x, edge_index=edge_index, y=new_y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
+        return pyg.data.Data(x=data.x, edge_index=edge_index, y=data.y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
 
 
 def leverage_score(data:Data):
@@ -164,6 +162,7 @@ def Laplacian_feature_homophily_score(data):
     D = torch.diag(A.sum(dim=1))
     L = D - A
     H_score = torch.trace( -L @ normed_X @ normed_X.T) / data.num_edges
+    return H_score.item()
 
 def edge_homophily_score(data:Data):
     edge_index = data.edge_index

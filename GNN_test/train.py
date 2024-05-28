@@ -67,7 +67,10 @@ def evaluate(model, sub_data, data=None):
     model.eval()
     _, pred = model(sub_data).max(dim=1)
     correct = int(pred[sub_data.test_mask].eq(sub_data.y[sub_data.test_mask]).sum().item())
-    sample_test_acc = correct / int(sub_data.test_mask.sum())
+    if int(sub_data.test_mask.sum()) == 0:
+        sample_test_acc = 0
+    else:
+        sample_test_acc = correct / int(sub_data.test_mask.sum())
     print(f"Sampled Accuracy: {sample_test_acc:.4f}")
 
     print("evaluating on full size test set")
@@ -86,13 +89,14 @@ def plot_rst(x, sampled_y, full_size_y=None, title=None, xlabel=None, ylabel=Non
         plt.plot(x, full_size_y, label="Full Size")
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
+    plt.ylim(0, 1)
     plt.title(title)
     plt.legend()
     plt.savefig(save_path)
 
 def A_opt_train(dataset_name_ls, n_epochs, device, trace_type="Laplacian", num_excluded=None):
-    sample_rate_ls = torch.linspace(0.3, 0.8, 5)
-
+    sample_rate_ls = torch.linspace(0.1, 0.9, 9)
+    plt.figure(figsize=(10, 5))
     for dataset_name in dataset_name_ls:
         print(f"\nTraining on {dataset_name}\n")
         dataset = dgl.data.__getattribute__(dataset_name)()
@@ -105,7 +109,7 @@ def A_opt_train(dataset_name_ls, n_epochs, device, trace_type="Laplacian", num_e
         full_size_test_acc_ls = []
         trace_ls = []
         for sample_rate in sample_rate_ls:
-            num_excluded = int(sample_rate * data.num_nodes)
+            num_excluded = int((1 - sample_rate) * data.num_nodes)
             if trace_type == "Laplacian":
                 idx, trace = sampler.Laplacian_Trace_Opt_Index(num_excluded=num_excluded)
             else:
@@ -128,25 +132,31 @@ def A_opt_train(dataset_name_ls, n_epochs, device, trace_type="Laplacian", num_e
             sample_test_acc_ls.append(best_sample_test_acc)
             full_size_test_acc_ls.append(best_full_size_test_acc)
         # plot validation rst
-        if trace_type == "Laplacian":
-            val_save_path = f"img/A_opt_Laplacian/{dataset_name}_val_acc.png"
-            trace_save_path = f"img/A_opt_Laplacian/{dataset_name}_train_subtrace.png"
-        else:
-            val_save_path = f"img/A_opt_Feature/{dataset_name}_val_acc.png"
-            trace_save_path = f"img/A_opt_Feature/{dataset_name}_train_subtrace.png"
-        plot_rst(sample_rate_ls, sample_val_acc_ls, full_size_val_acc_ls, title=f"{dataset_name} Validation Accuracy", xlabel="Sample Rate", ylabel="Accuracy", save_path=val_save_path)
-        plot_rst(sample_rate_ls, trace_ls, title=f"{dataset_name} Train Subtrace", xlabel="Sample Rate", ylabel="Trace", save_path=trace_save_path)
-        # plot test rst
-        if trace_type == "Laplacian":
-            test_save_path = f"img/A_opt_Laplacian/{dataset_name}_test_acc.png"
-        else:
-            test_save_path = f"img/A_opt_Feature/{dataset_name}_test_acc.png"
-        plot_rst(sample_rate_ls, sample_test_acc_ls, full_size_test_acc_ls, title=f"{dataset_name} Test Accuracy", xlabel="Sample Rate", ylabel="Accuracy", save_path=test_save_path)
-
+        # if trace_type == "Laplacian":
+        #     val_save_path = f"img/A_opt_Laplacian/{dataset_name}_val_acc.png"
+        #     trace_save_path = f"img/A_opt_Laplacian/{dataset_name}_train_subtrace.png"
+        # else:
+        #     val_save_path = f"img/A_opt_Feature/{dataset_name}_val_acc.png"
+        #     trace_save_path = f"img/A_opt_Feature/{dataset_name}_train_subtrace.png"
+        # plot_rst(sample_rate_ls, sample_val_acc_ls, full_size_val_acc_ls, title=f"{dataset_name} Validation Accuracy", xlabel="Sample Rate", ylabel="Accuracy", save_path=val_save_path)
+        # plot_rst(sample_rate_ls, trace_ls, title=f"{dataset_name} Train Subtrace", xlabel="Sample Rate", ylabel="Trace", save_path=trace_save_path)
+        # # plot test rst
+        # if trace_type == "Laplacian":
+        #     test_save_path = f"img/A_opt_Laplacian/{dataset_name}_test_acc.png"
+        # else:
+        #     test_save_path = f"img/A_opt_Feature/{dataset_name}_test_acc.png"
+        # plot_rst(sample_rate_ls, sample_test_acc_ls, full_size_test_acc_ls, title=f"{dataset_name} Test Accuracy", xlabel="Sample Rate", ylabel="Accuracy", save_path=test_save_path)
+        plt.plot(sample_rate_ls, full_size_test_acc_ls, 'o-', label=dataset_name)
+    plt.xlabel("Sample Rate")
+    plt.ylabel("Accuracy")
+    plt.title("Test Accuracy")
+    plt.legend()
+    plt.ylim(0, 1)
+    plt.savefig(f"img/A_opt_{trace_type}/test_acc.png")
 
 def leverage_train(dataset_name_ls, n_epochs, device):
-    sample_rate_ls = torch.linspace(0.3, 0.8, 5)
-
+    sample_rate_ls = torch.linspace(0.1, 0.9, 9)
+    plt.figure(figsize=(10, 5))
     for dataset_name in dataset_name_ls:
         dataset = dgl.data.__getattribute__(dataset_name)()
         data = convert_dgl_to_pyg(dataset)
@@ -155,7 +165,7 @@ def leverage_train(dataset_name_ls, n_epochs, device):
         best_sample_test_acc = []
         best_full_size_test_acc = []
         for sample_rate in sample_rate_ls:
-            num_excluded = int(sample_rate * data.num_nodes)
+            num_excluded = int((1 - sample_rate) * data.num_nodes)
             sampler = GraphNodeSampler(data, num_excluded=num_excluded)
             exclude_idx = sampler.get_idx_by_num_excluded()
             sub_data = sampler.exclude_sample(exclude_idx)
@@ -172,10 +182,18 @@ def leverage_train(dataset_name_ls, n_epochs, device):
             sample_test_acc, full_size_acc = evaluate(model, sub_data, data)
             best_sample_test_acc.append(sample_test_acc)
             best_full_size_test_acc.append(full_size_acc)
+        plt.plot(sample_rate_ls, best_full_size_test_acc, 'o-', label=dataset_name)
+    plt.xlabel("Sample Rate")
+    plt.ylabel("Accuracy")
+    plt.title("Test Accuracy")
+    plt.legend()
+    plt.ylim(0, 1)
+    plt.savefig(f"img/leverage/test_acc.png")
         # plot validation acc
-        plot_rst(sample_rate_ls, best_sample_val_acc, best_full_size_val_acc, title=f"{dataset_name} Validation Accuracy", xlabel="Sample Rate", ylabel="Accuracy", save_path=f"img/leverage/{dataset_name}_val_acc.png")
-        # plot test acc
-        plot_rst(sample_rate_ls, best_sample_test_acc, best_full_size_test_acc, title=f"{dataset_name} Test Accuracy", xlabel="Sample Rate", ylabel="Accuracy", save_path=f"img/leverage/{dataset_name}_test_acc.png")
+        # plot_rst(sample_rate_ls, best_sample_val_acc, best_full_size_val_acc, title=f"{dataset_name} Validation Accuracy", xlabel="Sample Rate", ylabel="Accuracy", save_path=f"img/leverage/{dataset_name}_val_acc.png")
+        # # plot test acc
+        # plot_rst(sample_rate_ls, best_sample_test_acc, best_full_size_test_acc, title=f"{dataset_name} Test Accuracy", xlabel="Sample Rate", ylabel="Accuracy", save_path=f"img/leverage/{dataset_name}_test_acc.png")
+
 
 dataset_name_ls = ['CoraGraphDataset', 'CiteseerGraphDataset', 'PubmedGraphDataset', 'TexasDataset', 'WisconsinDataset', 'CornellDataset', 'SquirrelDataset', 'ChameleonDataset']
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
@@ -205,8 +223,8 @@ synthetic dataset
     # plot_heatmap(generated_x, f"img/random_feature_heatmap/{pattern.sub('', dataset_name)}_cosine_similarity.png", metric="cos")
     # plot_heatmap(generated_x, f"img/random_feature_heatmap/{pattern.sub('', dataset_name)}_L2_Distance.png", metric="L2")
 
-A_opt_train(dataset_name_ls, n_epochs, device, trace_type="Feature")
-# leverage_train(dataset_name_ls, n_epochs, device)
+# A_opt_train(dataset_name_ls, n_epochs, device, trace_type="Laplacian")
+leverage_train(dataset_name_ls, n_epochs, device)
 # for dataset_name in dataset_name_ls:
 #     dataset = dgl.data.__getattribute__(dataset_name)()
 #     data = convert_dgl_to_pyg(dataset)
