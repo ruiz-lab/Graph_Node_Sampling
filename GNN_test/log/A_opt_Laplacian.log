@@ -1,0 +1,1744 @@
+nohup: ignoring input
+
+Training on CoraGraphDataset
+
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+
+num_nodes: 2708, num_edges: 10556
+
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 1/200 [00:00<01:23,  2.39it/s]  9%|▉         | 18/200 [00:00<00:04, 44.88it/s] 19%|█▉        | 38/200 [00:00<00:01, 85.86it/s] 29%|██▉       | 58/200 [00:00<00:01, 117.01it/s] 39%|███▉      | 78/200 [00:00<00:00, 140.21it/s] 49%|████▉     | 98/200 [00:00<00:00, 157.13it/s] 59%|█████▉    | 118/200 [00:01<00:00, 169.56it/s] 69%|██████▉   | 138/200 [00:01<00:00, 178.46it/s] 80%|███████▉  | 159/200 [00:01<00:00, 184.77it/s] 90%|████████▉ | 179/200 [00:01<00:00, 183.91it/s]100%|█████████▉| 199/200 [00:01<00:00, 188.14it/s]100%|██████████| 200/200 [00:01<00:00, 138.48it/s]
+epoch 0, loss 1.9558619260787964
+evaluating on sampled validation set
+Sampled Accuracy: 0.0420
+evaluating on full size validation set
+Full size Accuracy: 0.0580
+epoch 10, loss 1.8243440389633179
+epoch 20, loss 1.4457346200942993
+epoch 30, loss 0.9470372200012207
+epoch 40, loss 0.4818728566169739
+epoch 50, loss 0.18889853358268738
+evaluating on sampled validation set
+Sampled Accuracy: 0.2920
+evaluating on full size validation set
+Full size Accuracy: 0.4920
+epoch 60, loss 0.06976929306983948
+epoch 70, loss 0.04509798809885979
+epoch 80, loss 0.04269147291779518
+epoch 90, loss 0.03956220671534538
+epoch 100, loss 0.03434112295508385
+evaluating on sampled validation set
+Sampled Accuracy: 0.3500
+evaluating on full size validation set
+Full size Accuracy: 0.5760
+epoch 110, loss 0.030345391482114792
+epoch 120, loss 0.027782754972577095
+epoch 130, loss 0.025897275656461716
+epoch 140, loss 0.024144893512129784
+epoch 150, loss 0.02263661101460457
+evaluating on sampled validation set
+Sampled Accuracy: 0.3520
+evaluating on full size validation set
+Full size Accuracy: 0.6020
+epoch 160, loss 0.021395709365606308
+epoch 170, loss 0.020316090434789658
+epoch 180, loss 0.01938101463019848
+epoch 190, loss 0.018599282950162888
+evaluating on sampled test set
+Sampled Accuracy: 0.5110
+evaluating on full size test set
+Full size Accuracy: 0.6320
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 194.74it/s] 20%|██        | 40/200 [00:00<00:00, 196.87it/s] 30%|███       | 60/200 [00:00<00:00, 197.55it/s] 40%|████      | 81/200 [00:00<00:00, 198.69it/s] 51%|█████     | 102/200 [00:00<00:00, 199.43it/s] 62%|██████▏   | 123/200 [00:00<00:00, 199.84it/s] 72%|███████▏  | 144/200 [00:00<00:00, 199.98it/s] 82%|████████▎ | 165/200 [00:00<00:00, 200.13it/s] 93%|█████████▎| 186/200 [00:00<00:00, 200.20it/s]100%|██████████| 200/200 [00:01<00:00, 199.42it/s]
+epoch 0, loss 1.9524818658828735
+evaluating on sampled validation set
+Sampled Accuracy: 0.1260
+evaluating on full size validation set
+Full size Accuracy: 0.1620
+epoch 10, loss 1.8685449361801147
+epoch 20, loss 1.58718740940094
+epoch 30, loss 1.0748364925384521
+epoch 40, loss 0.49919593334198
+epoch 50, loss 0.1427011787891388
+evaluating on sampled validation set
+Sampled Accuracy: 0.2600
+evaluating on full size validation set
+Full size Accuracy: 0.5160
+epoch 60, loss 0.051029518246650696
+epoch 70, loss 0.0396135114133358
+epoch 80, loss 0.03947252407670021
+epoch 90, loss 0.0327388197183609
+epoch 100, loss 0.025805072858929634
+evaluating on sampled validation set
+Sampled Accuracy: 0.2780
+evaluating on full size validation set
+Full size Accuracy: 0.6000
+epoch 110, loss 0.022524412721395493
+epoch 120, loss 0.020526347681879997
+epoch 130, loss 0.018754107877612114
+epoch 140, loss 0.017435597255825996
+epoch 150, loss 0.016343947499990463
+evaluating on sampled validation set
+Sampled Accuracy: 0.2780
+evaluating on full size validation set
+Full size Accuracy: 0.6020
+epoch 160, loss 0.01547247264534235
+epoch 170, loss 0.014771988615393639
+epoch 180, loss 0.014162259176373482
+epoch 190, loss 0.013649859465658665
+evaluating on sampled test set
+Sampled Accuracy: 0.4698
+evaluating on full size test set
+Full size Accuracy: 0.6130
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 199.08it/s] 20%|██        | 41/200 [00:00<00:00, 199.76it/s] 30%|███       | 61/200 [00:00<00:00, 199.35it/s] 40%|████      | 81/200 [00:00<00:00, 198.83it/s] 50%|█████     | 101/200 [00:00<00:00, 198.56it/s] 60%|██████    | 121/200 [00:00<00:00, 198.25it/s] 70%|███████   | 141/200 [00:00<00:00, 192.05it/s] 80%|████████  | 161/200 [00:00<00:00, 193.84it/s] 90%|█████████ | 181/200 [00:00<00:00, 195.56it/s]100%|██████████| 200/200 [00:01<00:00, 196.77it/s]
+epoch 0, loss 1.9535084962844849
+evaluating on sampled validation set
+Sampled Accuracy: 0.1620
+evaluating on full size validation set
+Full size Accuracy: 0.3160
+epoch 10, loss 1.7721774578094482
+epoch 20, loss 1.3086680173873901
+epoch 30, loss 0.7992553114891052
+epoch 40, loss 0.4218139946460724
+epoch 50, loss 0.16656751930713654
+evaluating on sampled validation set
+Sampled Accuracy: 0.1780
+evaluating on full size validation set
+Full size Accuracy: 0.4440
+epoch 60, loss 0.05729211866855621
+epoch 70, loss 0.039312686771154404
+epoch 80, loss 0.03906538337469101
+epoch 90, loss 0.03579062968492508
+epoch 100, loss 0.02831973135471344
+evaluating on sampled validation set
+Sampled Accuracy: 0.1940
+evaluating on full size validation set
+Full size Accuracy: 0.4900
+epoch 110, loss 0.023336974903941154
+epoch 120, loss 0.020077405497431755
+epoch 130, loss 0.017518339678645134
+epoch 140, loss 0.015836820006370544
+epoch 150, loss 0.014865357428789139
+evaluating on sampled validation set
+Sampled Accuracy: 0.2140
+evaluating on full size validation set
+Full size Accuracy: 0.5460
+epoch 160, loss 0.014081872068345547
+epoch 170, loss 0.013399073854088783
+epoch 180, loss 0.012872599996626377
+epoch 190, loss 0.012465246021747589
+evaluating on sampled test set
+Sampled Accuracy: 0.4625
+evaluating on full size test set
+Full size Accuracy: 0.5210
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 198.22it/s] 20%|██        | 40/200 [00:00<00:00, 198.18it/s] 30%|███       | 60/200 [00:00<00:00, 198.41it/s] 40%|████      | 80/200 [00:00<00:00, 198.56it/s] 50%|█████     | 100/200 [00:00<00:00, 198.62it/s] 60%|██████    | 120/200 [00:00<00:00, 198.65it/s] 70%|███████   | 140/200 [00:00<00:00, 198.76it/s] 80%|████████  | 160/200 [00:00<00:00, 198.61it/s] 90%|█████████ | 180/200 [00:00<00:00, 198.61it/s]100%|██████████| 200/200 [00:01<00:00, 198.62it/s]100%|██████████| 200/200 [00:01<00:00, 198.55it/s]
+epoch 0, loss 1.9649434089660645
+evaluating on sampled validation set
+Sampled Accuracy: 0.0300
+evaluating on full size validation set
+Full size Accuracy: 0.1220
+epoch 10, loss 1.775288462638855
+epoch 20, loss 1.28858482837677
+epoch 30, loss 0.8824149370193481
+epoch 40, loss 0.4250398874282837
+epoch 50, loss 0.11809331923723221
+evaluating on sampled validation set
+Sampled Accuracy: 0.1200
+evaluating on full size validation set
+Full size Accuracy: 0.5040
+epoch 60, loss 0.03918410837650299
+epoch 70, loss 0.027420397847890854
+epoch 80, loss 0.030712641775608063
+epoch 90, loss 0.030733831226825714
+epoch 100, loss 0.025371747091412544
+evaluating on sampled validation set
+Sampled Accuracy: 0.1440
+evaluating on full size validation set
+Full size Accuracy: 0.4860
+epoch 110, loss 0.021469978615641594
+epoch 120, loss 0.019715189933776855
+epoch 130, loss 0.018483204767107964
+epoch 140, loss 0.0171921718865633
+epoch 150, loss 0.01609829068183899
+evaluating on sampled validation set
+Sampled Accuracy: 0.1480
+evaluating on full size validation set
+Full size Accuracy: 0.4740
+epoch 160, loss 0.015288331545889378
+epoch 170, loss 0.014564180746674538
+epoch 180, loss 0.013935234397649765
+epoch 190, loss 0.013397143222391605
+evaluating on sampled test set
+Sampled Accuracy: 0.4475
+evaluating on full size test set
+Full size Accuracy: 0.5060
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 196.59it/s] 20%|██        | 40/200 [00:00<00:00, 197.84it/s] 30%|███       | 60/200 [00:00<00:00, 197.74it/s] 40%|████      | 80/200 [00:00<00:00, 198.04it/s] 50%|█████     | 100/200 [00:00<00:00, 198.20it/s] 60%|██████    | 120/200 [00:00<00:00, 197.61it/s] 70%|███████   | 140/200 [00:00<00:00, 191.98it/s] 80%|████████  | 160/200 [00:00<00:00, 193.13it/s] 90%|█████████ | 180/200 [00:00<00:00, 194.86it/s]100%|██████████| 200/200 [00:01<00:00, 196.06it/s]100%|██████████| 200/200 [00:01<00:00, 195.93it/s]
+epoch 0, loss 2.009862184524536
+evaluating on sampled validation set
+Sampled Accuracy: 0.0720
+evaluating on full size validation set
+Full size Accuracy: 0.3160
+epoch 10, loss 1.7654879093170166
+epoch 20, loss 1.3217289447784424
+epoch 30, loss 0.7869153618812561
+epoch 40, loss 0.35235992074012756
+epoch 50, loss 0.13991175591945648
+evaluating on sampled validation set
+Sampled Accuracy: 0.0560
+evaluating on full size validation set
+Full size Accuracy: 0.2820
+epoch 60, loss 0.06563419848680496
+epoch 70, loss 0.03294657543301582
+epoch 80, loss 0.024637090042233467
+epoch 90, loss 0.021414944902062416
+epoch 100, loss 0.019414367154240608
+evaluating on sampled validation set
+Sampled Accuracy: 0.0560
+evaluating on full size validation set
+Full size Accuracy: 0.2580
+epoch 110, loss 0.017892803996801376
+epoch 120, loss 0.01698472537100315
+epoch 130, loss 0.01614636369049549
+epoch 140, loss 0.015137733891606331
+epoch 150, loss 0.014212451875209808
+evaluating on sampled validation set
+Sampled Accuracy: 0.0560
+evaluating on full size validation set
+Full size Accuracy: 0.2640
+epoch 160, loss 0.013458880595862865
+epoch 170, loss 0.012843030504882336
+epoch 180, loss 0.012310868129134178
+epoch 190, loss 0.011845721863210201
+evaluating on sampled test set
+Sampled Accuracy: 0.2857
+evaluating on full size test set
+Full size Accuracy: 0.2790
+torch.Size([5]) 5
+torch.Size([5]) 5
+torch.Size([5]) 5
+
+Training on CiteseerGraphDataset
+
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+
+num_nodes: 3327, num_edges: 9228
+
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|▉         | 19/200 [00:00<00:00, 184.11it/s] 20%|█▉        | 39/200 [00:00<00:00, 187.71it/s] 30%|██▉       | 59/200 [00:00<00:00, 189.59it/s] 40%|███▉      | 79/200 [00:00<00:00, 191.93it/s] 50%|████▉     | 99/200 [00:00<00:00, 194.19it/s] 60%|██████    | 120/200 [00:00<00:00, 196.49it/s] 70%|███████   | 141/200 [00:00<00:00, 198.40it/s] 81%|████████  | 162/200 [00:00<00:00, 199.69it/s] 92%|█████████▏| 183/200 [00:00<00:00, 200.62it/s]100%|██████████| 200/200 [00:01<00:00, 197.00it/s]
+epoch 0, loss 1.795008897781372
+evaluating on sampled validation set
+Sampled Accuracy: 0.0420
+evaluating on full size validation set
+Full size Accuracy: 0.0580
+epoch 10, loss 1.7024937868118286
+epoch 20, loss 1.382269024848938
+epoch 30, loss 0.859845757484436
+epoch 40, loss 0.3713895380496979
+epoch 50, loss 0.13570627570152283
+evaluating on sampled validation set
+Sampled Accuracy: 0.2740
+evaluating on full size validation set
+Full size Accuracy: 0.4080
+epoch 60, loss 0.07865925133228302
+epoch 70, loss 0.0675366148352623
+epoch 80, loss 0.05185554176568985
+epoch 90, loss 0.04026806354522705
+epoch 100, loss 0.03438945859670639
+evaluating on sampled validation set
+Sampled Accuracy: 0.2920
+evaluating on full size validation set
+Full size Accuracy: 0.5040
+epoch 110, loss 0.02961721085011959
+epoch 120, loss 0.02598942629992962
+epoch 130, loss 0.023392008617520332
+epoch 140, loss 0.021335462108254433
+epoch 150, loss 0.019667301326990128
+evaluating on sampled validation set
+Sampled Accuracy: 0.3000
+evaluating on full size validation set
+Full size Accuracy: 0.5400
+epoch 160, loss 0.018349872902035713
+epoch 170, loss 0.017282238230109215
+epoch 180, loss 0.016407372429966927
+epoch 190, loss 0.015699263662099838
+evaluating on sampled test set
+Sampled Accuracy: 0.4705
+evaluating on full size test set
+Full size Accuracy: 0.5710
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 205.91it/s] 21%|██        | 42/200 [00:00<00:00, 195.68it/s] 31%|███       | 62/200 [00:00<00:00, 186.16it/s] 40%|████      | 81/200 [00:00<00:00, 184.49it/s] 50%|█████     | 100/200 [00:00<00:00, 179.63it/s] 60%|██████    | 120/200 [00:00<00:00, 185.35it/s] 70%|███████   | 141/200 [00:00<00:00, 191.75it/s] 81%|████████  | 162/200 [00:00<00:00, 196.06it/s] 92%|█████████▏| 183/200 [00:00<00:00, 198.95it/s]100%|██████████| 200/200 [00:01<00:00, 193.57it/s]
+epoch 0, loss 1.8093459606170654
+evaluating on sampled validation set
+Sampled Accuracy: 0.0340
+evaluating on full size validation set
+Full size Accuracy: 0.0580
+epoch 10, loss 1.6857142448425293
+epoch 20, loss 1.3013395071029663
+epoch 30, loss 0.6903983354568481
+epoch 40, loss 0.22979100048542023
+epoch 50, loss 0.0692320391535759
+evaluating on sampled validation set
+Sampled Accuracy: 0.2320
+evaluating on full size validation set
+Full size Accuracy: 0.4360
+epoch 60, loss 0.04741692543029785
+epoch 70, loss 0.04813523218035698
+epoch 80, loss 0.04244751110672951
+epoch 90, loss 0.033923983573913574
+epoch 100, loss 0.03023248165845871
+evaluating on sampled validation set
+Sampled Accuracy: 0.2580
+evaluating on full size validation set
+Full size Accuracy: 0.5520
+epoch 110, loss 0.028302045539021492
+epoch 120, loss 0.025814251974225044
+epoch 130, loss 0.02390001341700554
+epoch 140, loss 0.022456545382738113
+epoch 150, loss 0.02114633470773697
+evaluating on sampled validation set
+Sampled Accuracy: 0.2780
+evaluating on full size validation set
+Full size Accuracy: 0.5820
+epoch 160, loss 0.02003553695976734
+epoch 170, loss 0.019076013937592506
+epoch 180, loss 0.018248913809657097
+epoch 190, loss 0.01751241832971573
+evaluating on sampled test set
+Sampled Accuracy: 0.4800
+evaluating on full size test set
+Full size Accuracy: 0.5730
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 205.04it/s] 21%|██        | 42/200 [00:00<00:00, 205.50it/s] 32%|███▏      | 63/200 [00:00<00:00, 205.58it/s] 42%|████▏     | 84/200 [00:00<00:00, 205.53it/s] 52%|█████▎    | 105/200 [00:00<00:00, 205.64it/s] 63%|██████▎   | 126/200 [00:00<00:00, 205.66it/s] 74%|███████▎  | 147/200 [00:00<00:00, 205.64it/s] 84%|████████▍ | 168/200 [00:00<00:00, 205.65it/s] 94%|█████████▍| 189/200 [00:00<00:00, 205.62it/s]100%|██████████| 200/200 [00:00<00:00, 205.59it/s]
+epoch 0, loss 1.787865161895752
+evaluating on sampled validation set
+Sampled Accuracy: 0.0880
+evaluating on full size validation set
+Full size Accuracy: 0.2120
+epoch 10, loss 1.6115670204162598
+epoch 20, loss 1.0450563430786133
+epoch 30, loss 0.43306559324264526
+epoch 40, loss 0.17169108986854553
+epoch 50, loss 0.06358940899372101
+evaluating on sampled validation set
+Sampled Accuracy: 0.1540
+evaluating on full size validation set
+Full size Accuracy: 0.4320
+epoch 60, loss 0.0450957715511322
+epoch 70, loss 0.04284686595201492
+epoch 80, loss 0.03618333488702774
+epoch 90, loss 0.029781624674797058
+epoch 100, loss 0.026736736297607422
+evaluating on sampled validation set
+Sampled Accuracy: 0.1780
+evaluating on full size validation set
+Full size Accuracy: 0.4680
+epoch 110, loss 0.024509813636541367
+epoch 120, loss 0.022598503157496452
+epoch 130, loss 0.02108021453022957
+epoch 140, loss 0.019676845520734787
+epoch 150, loss 0.018591023981571198
+evaluating on sampled validation set
+Sampled Accuracy: 0.1780
+evaluating on full size validation set
+Full size Accuracy: 0.4740
+epoch 160, loss 0.01760224997997284
+epoch 170, loss 0.016720838844776154
+epoch 180, loss 0.01598469167947769
+epoch 190, loss 0.015309113077819347
+evaluating on sampled test set
+Sampled Accuracy: 0.3801
+evaluating on full size test set
+Full size Accuracy: 0.4560
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 204.18it/s] 21%|██        | 42/200 [00:00<00:00, 204.31it/s] 32%|███▏      | 63/200 [00:00<00:00, 204.33it/s] 42%|████▏     | 84/200 [00:00<00:00, 204.35it/s] 52%|█████▎    | 105/200 [00:00<00:00, 204.42it/s] 63%|██████▎   | 126/200 [00:00<00:00, 204.42it/s] 74%|███████▎  | 147/200 [00:00<00:00, 204.44it/s] 84%|████████▍ | 168/200 [00:00<00:00, 204.40it/s] 94%|█████████▍| 189/200 [00:00<00:00, 204.43it/s]100%|██████████| 200/200 [00:00<00:00, 204.39it/s]
+epoch 0, loss 1.8133546113967896
+evaluating on sampled validation set
+Sampled Accuracy: 0.0540
+evaluating on full size validation set
+Full size Accuracy: 0.1720
+epoch 10, loss 1.6201939582824707
+epoch 20, loss 1.1286940574645996
+epoch 30, loss 0.5866484642028809
+epoch 40, loss 0.18173277378082275
+epoch 50, loss 0.0425746850669384
+evaluating on sampled validation set
+Sampled Accuracy: 0.0960
+evaluating on full size validation set
+Full size Accuracy: 0.2880
+epoch 60, loss 0.026572944596409798
+epoch 70, loss 0.030862407758831978
+epoch 80, loss 0.031183883547782898
+epoch 90, loss 0.025122789666056633
+epoch 100, loss 0.02098630741238594
+evaluating on sampled validation set
+Sampled Accuracy: 0.1100
+evaluating on full size validation set
+Full size Accuracy: 0.3800
+epoch 110, loss 0.019287968054413795
+epoch 120, loss 0.017997531220316887
+epoch 130, loss 0.01646251417696476
+epoch 140, loss 0.01536624412983656
+epoch 150, loss 0.014490067027509212
+evaluating on sampled validation set
+Sampled Accuracy: 0.1060
+evaluating on full size validation set
+Full size Accuracy: 0.3460
+epoch 160, loss 0.013747207820415497
+epoch 170, loss 0.013091878034174442
+epoch 180, loss 0.012536443769931793
+epoch 190, loss 0.012074222788214684
+evaluating on sampled test set
+Sampled Accuracy: 0.2907
+evaluating on full size test set
+Full size Accuracy: 0.3370
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 204.00it/s] 21%|██        | 42/200 [00:00<00:00, 204.15it/s] 32%|███▏      | 63/200 [00:00<00:00, 204.15it/s] 42%|████▏     | 84/200 [00:00<00:00, 204.03it/s] 52%|█████▎    | 105/200 [00:00<00:00, 204.15it/s] 63%|██████▎   | 126/200 [00:00<00:00, 204.13it/s] 74%|███████▎  | 147/200 [00:00<00:00, 204.09it/s] 84%|████████▍ | 168/200 [00:00<00:00, 204.10it/s] 94%|█████████▍| 189/200 [00:00<00:00, 204.08it/s]100%|██████████| 200/200 [00:00<00:00, 204.10it/s]
+epoch 0, loss 1.778412103652954
+evaluating on sampled validation set
+Sampled Accuracy: 0.0120
+evaluating on full size validation set
+Full size Accuracy: 0.0580
+epoch 10, loss 1.60870361328125
+epoch 20, loss 1.2051085233688354
+epoch 30, loss 0.7898612022399902
+epoch 40, loss 0.36505672335624695
+epoch 50, loss 0.09245707094669342
+evaluating on sampled validation set
+Sampled Accuracy: 0.0540
+evaluating on full size validation set
+Full size Accuracy: 0.3340
+epoch 60, loss 0.027571164071559906
+epoch 70, loss 0.020254625007510185
+epoch 80, loss 0.023201214149594307
+epoch 90, loss 0.024657651782035828
+epoch 100, loss 0.022020241245627403
+evaluating on sampled validation set
+Sampled Accuracy: 0.0560
+evaluating on full size validation set
+Full size Accuracy: 0.3740
+epoch 110, loss 0.019109036773443222
+epoch 120, loss 0.017587289214134216
+epoch 130, loss 0.01652086339890957
+epoch 140, loss 0.015441038645803928
+epoch 150, loss 0.014424974098801613
+evaluating on sampled validation set
+Sampled Accuracy: 0.0620
+evaluating on full size validation set
+Full size Accuracy: 0.3820
+epoch 160, loss 0.013577336445450783
+epoch 170, loss 0.012919878587126732
+epoch 180, loss 0.012346349656581879
+epoch 190, loss 0.01181730255484581
+evaluating on sampled test set
+Sampled Accuracy: 0.2844
+evaluating on full size test set
+Full size Accuracy: 0.3980
+torch.Size([5]) 5
+torch.Size([5]) 5
+torch.Size([5]) 5
+
+Training on PubmedGraphDataset
+
+  NumNodes: 19717
+  NumEdges: 88651
+  NumFeats: 500
+  NumClasses: 3
+  NumTrainingSamples: 60
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+
+num_nodes: 19717, num_edges: 88651
+
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|▉         | 19/200 [00:00<00:00, 186.47it/s] 20%|█▉        | 39/200 [00:00<00:00, 190.89it/s] 30%|██▉       | 59/200 [00:00<00:00, 192.01it/s] 40%|███▉      | 79/200 [00:00<00:00, 192.65it/s] 50%|████▉     | 99/200 [00:00<00:00, 193.03it/s] 60%|█████▉    | 119/200 [00:00<00:00, 193.11it/s] 70%|██████▉   | 139/200 [00:00<00:00, 193.27it/s] 80%|███████▉  | 159/200 [00:00<00:00, 191.62it/s] 90%|████████▉ | 179/200 [00:00<00:00, 189.36it/s] 99%|█████████▉| 198/200 [00:01<00:00, 187.91it/s]100%|██████████| 200/200 [00:01<00:00, 190.43it/s]
+epoch 0, loss 1.106903314590454
+evaluating on sampled validation set
+Sampled Accuracy: 0.2800
+evaluating on full size validation set
+Full size Accuracy: 0.4160
+epoch 10, loss 0.9733493328094482
+epoch 20, loss 0.5681998133659363
+epoch 30, loss 0.13266631960868835
+epoch 40, loss 0.016956336796283722
+epoch 50, loss 0.006992669310420752
+evaluating on sampled validation set
+Sampled Accuracy: 0.4660
+evaluating on full size validation set
+Full size Accuracy: 0.7480
+epoch 60, loss 0.00816412828862667
+epoch 70, loss 0.011492603458464146
+epoch 80, loss 0.012454945594072342
+epoch 90, loss 0.01095255184918642
+epoch 100, loss 0.009522776119410992
+evaluating on sampled validation set
+Sampled Accuracy: 0.4680
+evaluating on full size validation set
+Full size Accuracy: 0.7260
+epoch 110, loss 0.008818641304969788
+epoch 120, loss 0.008385433815419674
+epoch 130, loss 0.007991364225745201
+epoch 140, loss 0.007620176300406456
+epoch 150, loss 0.007267353590577841
+evaluating on sampled validation set
+Sampled Accuracy: 0.4680
+evaluating on full size validation set
+Full size Accuracy: 0.7340
+epoch 160, loss 0.0069671510718762875
+epoch 170, loss 0.0067147985100746155
+epoch 180, loss 0.006488553248345852
+epoch 190, loss 0.006284728180617094
+evaluating on sampled test set
+Sampled Accuracy: 0.7052
+evaluating on full size test set
+Full size Accuracy: 0.7210
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 194.66it/s] 20%|██        | 40/200 [00:00<00:00, 194.59it/s] 30%|███       | 60/200 [00:00<00:00, 195.41it/s] 40%|████      | 80/200 [00:00<00:00, 195.63it/s] 50%|█████     | 100/200 [00:00<00:00, 195.76it/s] 60%|██████    | 120/200 [00:00<00:00, 195.70it/s] 70%|███████   | 140/200 [00:00<00:00, 195.65it/s] 80%|████████  | 160/200 [00:00<00:00, 195.76it/s] 90%|█████████ | 180/200 [00:00<00:00, 195.80it/s]100%|██████████| 200/200 [00:01<00:00, 195.83it/s]100%|██████████| 200/200 [00:01<00:00, 195.63it/s]
+epoch 0, loss 1.138825535774231
+evaluating on sampled validation set
+Sampled Accuracy: 0.0700
+evaluating on full size validation set
+Full size Accuracy: 0.1960
+epoch 10, loss 0.9749739766120911
+epoch 20, loss 0.6926396489143372
+epoch 30, loss 0.35621148347854614
+epoch 40, loss 0.19537127017974854
+epoch 50, loss 0.1042233482003212
+evaluating on sampled validation set
+Sampled Accuracy: 0.3300
+evaluating on full size validation set
+Full size Accuracy: 0.5880
+epoch 60, loss 0.041028425097465515
+epoch 70, loss 0.021384496241807938
+epoch 80, loss 0.013069245964288712
+epoch 90, loss 0.010098874568939209
+epoch 100, loss 0.009191013872623444
+evaluating on sampled validation set
+Sampled Accuracy: 0.3880
+evaluating on full size validation set
+Full size Accuracy: 0.7280
+epoch 110, loss 0.008546589873731136
+epoch 120, loss 0.007766398135572672
+epoch 130, loss 0.0070907301269471645
+epoch 140, loss 0.0066420393995940685
+epoch 150, loss 0.006326664704829454
+evaluating on sampled validation set
+Sampled Accuracy: 0.3800
+evaluating on full size validation set
+Full size Accuracy: 0.7060
+epoch 160, loss 0.0060898540541529655
+epoch 170, loss 0.005881832912564278
+epoch 180, loss 0.0056718927808105946
+epoch 190, loss 0.005506483837962151
+evaluating on sampled test set
+Sampled Accuracy: 0.6750
+evaluating on full size test set
+Full size Accuracy: 0.6650
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 193.53it/s] 20%|██        | 40/200 [00:00<00:00, 194.59it/s] 30%|███       | 60/200 [00:00<00:00, 194.88it/s] 40%|████      | 80/200 [00:00<00:00, 193.34it/s] 50%|█████     | 100/200 [00:00<00:00, 186.42it/s] 60%|█████▉    | 119/200 [00:00<00:00, 183.70it/s] 69%|██████▉   | 138/200 [00:00<00:00, 179.93it/s] 78%|███████▊  | 157/200 [00:00<00:00, 178.99it/s] 88%|████████▊ | 175/200 [00:00<00:00, 178.17it/s] 97%|█████████▋| 194/200 [00:01<00:00, 179.02it/s]100%|██████████| 200/200 [00:01<00:00, 183.10it/s]
+epoch 0, loss 1.1467127799987793
+evaluating on sampled validation set
+Sampled Accuracy: 0.0380
+evaluating on full size validation set
+Full size Accuracy: 0.1960
+epoch 10, loss 1.0133987665176392
+epoch 20, loss 0.7167510390281677
+epoch 30, loss 0.3821884095668793
+epoch 40, loss 0.19674448668956757
+epoch 50, loss 0.14737750589847565
+evaluating on sampled validation set
+Sampled Accuracy: 0.2540
+evaluating on full size validation set
+Full size Accuracy: 0.5960
+epoch 60, loss 0.10937052965164185
+epoch 70, loss 0.0681799128651619
+epoch 80, loss 0.03597189858555794
+epoch 90, loss 0.017594071105122566
+epoch 100, loss 0.011601455509662628
+evaluating on sampled validation set
+Sampled Accuracy: 0.2840
+evaluating on full size validation set
+Full size Accuracy: 0.6640
+epoch 110, loss 0.010135377757251263
+epoch 120, loss 0.009282438084483147
+epoch 130, loss 0.0084886085242033
+epoch 140, loss 0.007966212928295135
+epoch 150, loss 0.007579368073493242
+evaluating on sampled validation set
+Sampled Accuracy: 0.2860
+evaluating on full size validation set
+Full size Accuracy: 0.6640
+epoch 160, loss 0.007125800009816885
+epoch 170, loss 0.006755726877599955
+epoch 180, loss 0.00641603022813797
+epoch 190, loss 0.0061437468975782394
+evaluating on sampled test set
+Sampled Accuracy: 0.6477
+evaluating on full size test set
+Full size Accuracy: 0.6660
+  0%|          | 0/200 [00:00<?, ?it/s]  9%|▉         | 18/200 [00:00<00:01, 173.83it/s] 18%|█▊        | 36/200 [00:00<00:00, 174.08it/s] 27%|██▋       | 54/200 [00:00<00:00, 174.47it/s] 36%|███▌      | 72/200 [00:00<00:00, 174.77it/s] 45%|████▌     | 90/200 [00:00<00:00, 175.85it/s] 54%|█████▍    | 108/200 [00:00<00:00, 175.58it/s] 63%|██████▎   | 126/200 [00:00<00:00, 176.08it/s] 72%|███████▏  | 144/200 [00:00<00:00, 176.82it/s] 81%|████████  | 162/200 [00:00<00:00, 176.63it/s] 90%|█████████ | 180/200 [00:01<00:00, 176.58it/s] 99%|█████████▉| 198/200 [00:01<00:00, 176.96it/s]100%|██████████| 200/200 [00:01<00:00, 176.07it/s]
+epoch 0, loss 1.1019558906555176
+evaluating on sampled validation set
+Sampled Accuracy: 0.1740
+evaluating on full size validation set
+Full size Accuracy: 0.3880
+epoch 10, loss 0.9964154958724976
+epoch 20, loss 0.7699674963951111
+epoch 30, loss 0.3868200182914734
+epoch 40, loss 0.1050606444478035
+epoch 50, loss 0.020605579018592834
+evaluating on sampled validation set
+Sampled Accuracy: 0.1820
+evaluating on full size validation set
+Full size Accuracy: 0.6380
+epoch 60, loss 0.008905444294214249
+epoch 70, loss 0.007724397350102663
+epoch 80, loss 0.008213895373046398
+epoch 90, loss 0.008467592298984528
+epoch 100, loss 0.008036312647163868
+evaluating on sampled validation set
+Sampled Accuracy: 0.1840
+evaluating on full size validation set
+Full size Accuracy: 0.6020
+epoch 110, loss 0.007361436728388071
+epoch 120, loss 0.006819070316851139
+epoch 130, loss 0.006312352605164051
+epoch 140, loss 0.005783508066087961
+epoch 150, loss 0.0053984927944839
+evaluating on sampled validation set
+Sampled Accuracy: 0.1820
+evaluating on full size validation set
+Full size Accuracy: 0.5900
+epoch 160, loss 0.00505761569365859
+epoch 170, loss 0.004573383834213018
+epoch 180, loss 0.004106409382075071
+epoch 190, loss 0.0038523369003087282
+evaluating on sampled test set
+Sampled Accuracy: 0.6486
+evaluating on full size test set
+Full size Accuracy: 0.6010
+  0%|          | 0/200 [00:00<?, ?it/s]  9%|▉         | 18/200 [00:00<00:01, 176.70it/s] 18%|█▊        | 37/200 [00:00<00:00, 179.40it/s] 28%|██▊       | 55/200 [00:00<00:00, 178.22it/s] 36%|███▋      | 73/200 [00:00<00:00, 177.11it/s] 46%|████▌     | 91/200 [00:00<00:00, 176.62it/s] 56%|█████▌    | 111/200 [00:00<00:00, 182.28it/s] 66%|██████▌   | 131/200 [00:00<00:00, 186.20it/s] 76%|███████▌  | 151/200 [00:00<00:00, 188.80it/s] 85%|████████▌ | 170/200 [00:00<00:00, 177.69it/s] 94%|█████████▍| 188/200 [00:01<00:00, 170.13it/s]100%|██████████| 200/200 [00:01<00:00, 177.52it/s]
+epoch 0, loss 1.0463967323303223
+evaluating on sampled validation set
+Sampled Accuracy: 0.0980
+evaluating on full size validation set
+Full size Accuracy: 0.3880
+epoch 10, loss 0.8784389495849609
+epoch 20, loss 0.5926467180252075
+epoch 30, loss 0.3067113161087036
+epoch 40, loss 0.14305637776851654
+epoch 50, loss 0.04238975793123245
+evaluating on sampled validation set
+Sampled Accuracy: 0.0980
+evaluating on full size validation set
+Full size Accuracy: 0.5280
+epoch 60, loss 0.011352719739079475
+epoch 70, loss 0.006236381828784943
+epoch 80, loss 0.004933184944093227
+epoch 90, loss 0.00383820291608572
+epoch 100, loss 0.0032386030070483685
+evaluating on sampled validation set
+Sampled Accuracy: 0.0980
+evaluating on full size validation set
+Full size Accuracy: 0.5420
+epoch 110, loss 0.003307715058326721
+epoch 120, loss 0.0034514956641942263
+epoch 130, loss 0.003297144081443548
+epoch 140, loss 0.0029912032186985016
+epoch 150, loss 0.002824340248480439
+evaluating on sampled validation set
+Sampled Accuracy: 0.0980
+evaluating on full size validation set
+Full size Accuracy: 0.5280
+epoch 160, loss 0.0027796896174550056
+epoch 170, loss 0.002767373574897647
+epoch 180, loss 0.0027538081631064415
+epoch 190, loss 0.0027124155312776566
+evaluating on sampled test set
+Sampled Accuracy: 0.6526
+evaluating on full size test set
+Full size Accuracy: 0.5630
+torch.Size([5]) 5
+torch.Size([5]) 5
+torch.Size([5]) 5
+
+Training on TexasDataset
+
+Done loading data from cached files.
+
+num_nodes: 183, num_edges: 325
+
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 204.83it/s] 22%|██▏       | 43/200 [00:00<00:00, 208.30it/s] 32%|███▏      | 64/200 [00:00<00:00, 203.70it/s] 42%|████▎     | 85/200 [00:00<00:00, 202.12it/s] 53%|█████▎    | 106/200 [00:00<00:00, 201.21it/s] 64%|██████▎   | 127/200 [00:00<00:00, 200.69it/s] 74%|███████▍  | 148/200 [00:00<00:00, 200.33it/s] 84%|████████▍ | 169/200 [00:00<00:00, 200.13it/s] 95%|█████████▌| 190/200 [00:00<00:00, 199.96it/s]100%|██████████| 200/200 [00:00<00:00, 201.18it/s]
+epoch 0, loss 1.6490384340286255
+evaluating on sampled validation set
+Sampled Accuracy: 0.3898
+evaluating on full size validation set
+Full size Accuracy: 0.4915
+epoch 10, loss 0.2553751468658447
+epoch 20, loss 0.07966960966587067
+epoch 30, loss 0.007356893736869097
+epoch 40, loss 0.0003610450366977602
+epoch 50, loss 0.00013506162213161588
+evaluating on sampled validation set
+Sampled Accuracy: 0.5254
+evaluating on full size validation set
+Full size Accuracy: 0.5932
+epoch 60, loss 0.000114033704448957
+epoch 70, loss 0.00014282489428296685
+epoch 80, loss 0.0002246725489385426
+epoch 90, loss 0.00028432492399588227
+epoch 100, loss 0.0003457017592154443
+evaluating on sampled validation set
+Sampled Accuracy: 0.5593
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 110, loss 0.0004097036726307124
+epoch 120, loss 0.0004600361571647227
+epoch 130, loss 0.0004726206825580448
+epoch 140, loss 0.0004670538182836026
+epoch 150, loss 0.00043533279676921666
+evaluating on sampled validation set
+Sampled Accuracy: 0.5424
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 160, loss 0.000437074777437374
+epoch 170, loss 0.000460624520201236
+epoch 180, loss 0.0004771905951201916
+epoch 190, loss 0.0004843095375690609
+evaluating on sampled test set
+Sampled Accuracy: 0.7308
+evaluating on full size test set
+Full size Accuracy: 0.6486
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 199.79it/s] 20%|██        | 40/200 [00:00<00:00, 199.78it/s] 30%|███       | 60/200 [00:00<00:00, 199.71it/s] 40%|████      | 80/200 [00:00<00:00, 199.65it/s] 50%|█████     | 100/200 [00:00<00:00, 199.63it/s] 60%|██████    | 120/200 [00:00<00:00, 199.63it/s] 70%|███████   | 140/200 [00:00<00:00, 199.64it/s] 80%|████████  | 160/200 [00:00<00:00, 199.66it/s] 90%|█████████ | 180/200 [00:00<00:00, 199.62it/s]100%|██████████| 200/200 [00:01<00:00, 199.63it/s]100%|██████████| 200/200 [00:01<00:00, 199.64it/s]
+epoch 0, loss 1.6113883256912231
+evaluating on sampled validation set
+Sampled Accuracy: 0.3220
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 10, loss 0.3838575780391693
+epoch 20, loss 0.15941669046878815
+epoch 30, loss 0.007856299169361591
+epoch 40, loss 0.00024947954807430506
+epoch 50, loss 0.00015496090054512024
+evaluating on sampled validation set
+Sampled Accuracy: 0.4576
+evaluating on full size validation set
+Full size Accuracy: 0.6271
+epoch 60, loss 0.00013765585026703775
+epoch 70, loss 0.00013447970559354872
+epoch 80, loss 0.00015531826647929847
+epoch 90, loss 0.00020428317657206208
+epoch 100, loss 0.00026084258570335805
+evaluating on sampled validation set
+Sampled Accuracy: 0.4237
+evaluating on full size validation set
+Full size Accuracy: 0.5932
+epoch 110, loss 0.0003216609766241163
+epoch 120, loss 0.00037813835660927
+epoch 130, loss 0.00042057482642121613
+epoch 140, loss 0.00045213260455057025
+epoch 150, loss 0.0004794452397618443
+evaluating on sampled validation set
+Sampled Accuracy: 0.4407
+evaluating on full size validation set
+Full size Accuracy: 0.6271
+epoch 160, loss 0.0005012163892388344
+epoch 170, loss 0.0005180919542908669
+epoch 180, loss 0.000529698038008064
+epoch 190, loss 0.0005364188691601157
+evaluating on sampled test set
+Sampled Accuracy: 0.6818
+evaluating on full size test set
+Full size Accuracy: 0.6486
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 199.68it/s] 20%|██        | 40/200 [00:00<00:00, 199.66it/s] 30%|███       | 60/200 [00:00<00:00, 199.64it/s] 40%|████      | 80/200 [00:00<00:00, 199.63it/s] 50%|█████     | 100/200 [00:00<00:00, 199.63it/s] 60%|██████    | 120/200 [00:00<00:00, 199.64it/s] 70%|███████   | 140/200 [00:00<00:00, 199.63it/s] 80%|████████  | 160/200 [00:00<00:00, 199.63it/s] 90%|█████████ | 180/200 [00:00<00:00, 199.64it/s]100%|██████████| 200/200 [00:01<00:00, 199.60it/s]100%|██████████| 200/200 [00:01<00:00, 199.61it/s]
+epoch 0, loss 1.7147871255874634
+evaluating on sampled validation set
+Sampled Accuracy: 0.1525
+evaluating on full size validation set
+Full size Accuracy: 0.2203
+epoch 10, loss 0.22223298251628876
+epoch 20, loss 0.002730882726609707
+epoch 30, loss 6.348963506752625e-05
+epoch 40, loss 2.3654958567931317e-05
+epoch 50, loss 1.976269413717091e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.3390
+evaluating on full size validation set
+Full size Accuracy: 0.6102
+epoch 60, loss 2.1143567209946923e-05
+epoch 70, loss 2.5614619517000392e-05
+epoch 80, loss 3.4771823266055435e-05
+epoch 90, loss 5.108561526867561e-05
+epoch 100, loss 7.744128379272297e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.3390
+evaluating on full size validation set
+Full size Accuracy: 0.6441
+epoch 110, loss 0.0001170447503682226
+epoch 120, loss 0.00016970583237707615
+epoch 130, loss 0.00023342843633145094
+epoch 140, loss 0.0003052653628401458
+epoch 150, loss 0.0003747988084796816
+evaluating on sampled validation set
+Sampled Accuracy: 0.3390
+evaluating on full size validation set
+Full size Accuracy: 0.6271
+epoch 160, loss 0.0004355070705059916
+epoch 170, loss 0.00048451151815243065
+epoch 180, loss 0.0005171867087483406
+epoch 190, loss 0.0005356649635359645
+evaluating on sampled test set
+Sampled Accuracy: 0.7333
+evaluating on full size test set
+Full size Accuracy: 0.6486
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 200.01it/s] 21%|██        | 42/200 [00:00<00:00, 199.82it/s] 31%|███       | 62/200 [00:00<00:00, 199.71it/s] 41%|████      | 82/200 [00:00<00:00, 199.69it/s] 51%|█████     | 102/200 [00:00<00:00, 199.66it/s] 61%|██████    | 122/200 [00:00<00:00, 199.65it/s] 71%|███████   | 142/200 [00:00<00:00, 199.61it/s] 81%|████████  | 162/200 [00:00<00:00, 199.66it/s] 91%|█████████ | 182/200 [00:00<00:00, 199.61it/s]100%|██████████| 200/200 [00:01<00:00, 199.65it/s]
+epoch 0, loss 1.5736478567123413
+evaluating on sampled validation set
+Sampled Accuracy: 0.1695
+evaluating on full size validation set
+Full size Accuracy: 0.2373
+epoch 10, loss 0.2340567708015442
+epoch 20, loss 0.005099939182400703
+epoch 30, loss 0.0001777137367753312
+epoch 40, loss 9.037576091941446e-05
+epoch 50, loss 7.13549306965433e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.1695
+evaluating on full size validation set
+Full size Accuracy: 0.5424
+epoch 60, loss 6.301376561168581e-05
+epoch 70, loss 6.504954944830388e-05
+epoch 80, loss 7.157462096074596e-05
+epoch 90, loss 8.226674981415272e-05
+epoch 100, loss 9.859129204414785e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.2034
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 110, loss 0.00012327088916208595
+epoch 120, loss 0.00015731023449916393
+epoch 130, loss 0.00019973177404608577
+epoch 140, loss 0.00024522937019355595
+epoch 150, loss 0.00029159648693166673
+evaluating on sampled validation set
+Sampled Accuracy: 0.2203
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 160, loss 0.00033672511926852167
+epoch 170, loss 0.00037986686220392585
+epoch 180, loss 0.00041693972889333963
+epoch 190, loss 0.0004440750926733017
+evaluating on sampled test set
+Sampled Accuracy: 0.7692
+evaluating on full size test set
+Full size Accuracy: 0.6216
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 199.70it/s] 20%|██        | 40/200 [00:00<00:00, 199.67it/s] 30%|███       | 60/200 [00:00<00:00, 199.60it/s] 40%|████      | 80/200 [00:00<00:00, 199.59it/s] 50%|█████     | 100/200 [00:00<00:00, 199.66it/s] 60%|██████    | 120/200 [00:00<00:00, 199.65it/s] 70%|███████   | 140/200 [00:00<00:00, 199.64it/s] 80%|████████  | 160/200 [00:00<00:00, 199.63it/s] 90%|█████████ | 180/200 [00:00<00:00, 199.62it/s]100%|██████████| 200/200 [00:01<00:00, 199.61it/s]100%|██████████| 200/200 [00:01<00:00, 199.61it/s]
+epoch 0, loss 1.537535309791565
+evaluating on sampled validation set
+Sampled Accuracy: 0.1017
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 10, loss 0.23845058679580688
+epoch 20, loss 0.009296027943491936
+epoch 30, loss 0.0006719733937643468
+epoch 40, loss 3.893808025168255e-05
+epoch 50, loss 1.978082218556665e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.1186
+evaluating on full size validation set
+Full size Accuracy: 0.5085
+epoch 60, loss 3.1026123906485736e-05
+epoch 70, loss 6.492985994555056e-05
+epoch 80, loss 5.301127748680301e-05
+epoch 90, loss 7.059871859382838e-05
+epoch 100, loss 9.550272807246074e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.1186
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 110, loss 0.00011137894762214273
+epoch 120, loss 0.00013251959171611816
+epoch 130, loss 0.00014962622663006186
+epoch 140, loss 0.00016740216233301908
+epoch 150, loss 0.0001856612943811342
+evaluating on sampled validation set
+Sampled Accuracy: 0.1186
+evaluating on full size validation set
+Full size Accuracy: 0.4915
+epoch 160, loss 0.00020484124252106994
+epoch 170, loss 0.00022327291662804782
+epoch 180, loss 0.00024088981444947422
+epoch 190, loss 0.00026295060524716973
+evaluating on sampled test set
+Sampled Accuracy: 0.5000
+evaluating on full size test set
+Full size Accuracy: 0.5405
+torch.Size([5]) 5
+torch.Size([5]) 5
+torch.Size([5]) 5
+
+Training on WisconsinDataset
+
+Done loading data from cached files.
+
+num_nodes: 251, num_edges: 515
+
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|▉         | 19/200 [00:00<00:00, 185.17it/s] 20%|██        | 40/200 [00:00<00:00, 196.17it/s] 31%|███       | 62/200 [00:00<00:00, 203.23it/s] 42%|████▏     | 84/200 [00:00<00:00, 207.15it/s] 53%|█████▎    | 106/200 [00:00<00:00, 208.63it/s] 64%|██████▍   | 128/200 [00:00<00:00, 210.39it/s] 75%|███████▌  | 150/200 [00:00<00:00, 211.35it/s] 86%|████████▌ | 172/200 [00:00<00:00, 211.91it/s] 97%|█████████▋| 194/200 [00:00<00:00, 212.19it/s]100%|██████████| 200/200 [00:00<00:00, 208.83it/s]
+epoch 0, loss 1.6092838048934937
+evaluating on sampled validation set
+Sampled Accuracy: 0.4375
+evaluating on full size validation set
+Full size Accuracy: 0.5125
+epoch 10, loss 0.1979779750108719
+epoch 20, loss 0.04308344051241875
+epoch 30, loss 0.013773306272923946
+epoch 40, loss 0.007425942923873663
+epoch 50, loss 0.003570206928998232
+evaluating on sampled validation set
+Sampled Accuracy: 0.5625
+evaluating on full size validation set
+Full size Accuracy: 0.4875
+epoch 60, loss 0.0016048585530370474
+epoch 70, loss 0.000907929555978626
+epoch 80, loss 0.0007141029345802963
+epoch 90, loss 0.0006848570774309337
+epoch 100, loss 0.0006970239337533712
+evaluating on sampled validation set
+Sampled Accuracy: 0.5875
+evaluating on full size validation set
+Full size Accuracy: 0.5500
+epoch 110, loss 0.0007177115767262876
+epoch 120, loss 0.0007367082289420068
+epoch 130, loss 0.0007614229107275605
+epoch 140, loss 0.0007633621571585536
+epoch 150, loss 0.000753344560507685
+evaluating on sampled validation set
+Sampled Accuracy: 0.5875
+evaluating on full size validation set
+Full size Accuracy: 0.5375
+epoch 160, loss 0.0007417058222927153
+epoch 170, loss 0.0007353730034083128
+epoch 180, loss 0.0007432615966536105
+epoch 190, loss 0.0007506243418902159
+evaluating on sampled test set
+Sampled Accuracy: 0.8378
+evaluating on full size test set
+Full size Accuracy: 0.5098
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 211.42it/s] 22%|██▏       | 44/200 [00:00<00:00, 211.74it/s] 33%|███▎      | 66/200 [00:00<00:00, 212.39it/s] 44%|████▍     | 88/200 [00:00<00:00, 211.80it/s] 55%|█████▌    | 110/200 [00:00<00:00, 212.36it/s] 66%|██████▌   | 132/200 [00:00<00:00, 212.13it/s] 77%|███████▋  | 154/200 [00:00<00:00, 212.10it/s] 88%|████████▊ | 176/200 [00:00<00:00, 212.47it/s] 99%|█████████▉| 198/200 [00:00<00:00, 212.15it/s]100%|██████████| 200/200 [00:00<00:00, 212.05it/s]
+epoch 0, loss 1.53554368019104
+evaluating on sampled validation set
+Sampled Accuracy: 0.2000
+evaluating on full size validation set
+Full size Accuracy: 0.2750
+epoch 10, loss 0.2699390947818756
+epoch 20, loss 0.05411913990974426
+epoch 30, loss 0.020893435925245285
+epoch 40, loss 0.0098338657990098
+epoch 50, loss 0.004475280176848173
+evaluating on sampled validation set
+Sampled Accuracy: 0.5250
+evaluating on full size validation set
+Full size Accuracy: 0.4875
+epoch 60, loss 0.002036557300016284
+epoch 70, loss 0.0011710711987689137
+epoch 80, loss 0.0008667042711749673
+epoch 90, loss 0.0007626694859936833
+epoch 100, loss 0.0007468256517313421
+evaluating on sampled validation set
+Sampled Accuracy: 0.5375
+evaluating on full size validation set
+Full size Accuracy: 0.5125
+epoch 110, loss 0.000762901792768389
+epoch 120, loss 0.0008003202965483069
+epoch 130, loss 0.0008497483213432133
+epoch 140, loss 0.0008953160722739995
+epoch 150, loss 0.0009277253411710262
+evaluating on sampled validation set
+Sampled Accuracy: 0.5500
+evaluating on full size validation set
+Full size Accuracy: 0.5125
+epoch 160, loss 0.0009445289033465087
+epoch 170, loss 0.0009505136986263096
+epoch 180, loss 0.0009490768425166607
+epoch 190, loss 0.0009453525999560952
+evaluating on sampled test set
+Sampled Accuracy: 0.8889
+evaluating on full size test set
+Full size Accuracy: 0.4902
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.10it/s] 22%|██▏       | 44/200 [00:00<00:00, 212.82it/s] 33%|███▎      | 66/200 [00:00<00:00, 213.21it/s] 44%|████▍     | 88/200 [00:00<00:00, 213.04it/s] 55%|█████▌    | 110/200 [00:00<00:00, 213.40it/s] 66%|██████▌   | 132/200 [00:00<00:00, 213.30it/s] 77%|███████▋  | 154/200 [00:00<00:00, 213.20it/s] 88%|████████▊ | 176/200 [00:00<00:00, 213.24it/s] 99%|█████████▉| 198/200 [00:00<00:00, 213.22it/s]100%|██████████| 200/200 [00:00<00:00, 213.20it/s]
+epoch 0, loss 1.5306817293167114
+evaluating on sampled validation set
+Sampled Accuracy: 0.1125
+evaluating on full size validation set
+Full size Accuracy: 0.2500
+epoch 10, loss 0.30907973647117615
+epoch 20, loss 0.06348270177841187
+epoch 30, loss 0.02053108997642994
+epoch 40, loss 0.0096944784745574
+epoch 50, loss 0.004234993830323219
+evaluating on sampled validation set
+Sampled Accuracy: 0.4250
+evaluating on full size validation set
+Full size Accuracy: 0.5125
+epoch 60, loss 0.002069328911602497
+epoch 70, loss 0.0012685899855569005
+epoch 80, loss 0.0009522862965241075
+epoch 90, loss 0.0008512575877830386
+epoch 100, loss 0.0008259400492534041
+evaluating on sampled validation set
+Sampled Accuracy: 0.4500
+evaluating on full size validation set
+Full size Accuracy: 0.5250
+epoch 110, loss 0.0008194726542569697
+epoch 120, loss 0.000830672332085669
+epoch 130, loss 0.0008551049395464361
+epoch 140, loss 0.0008828842546790838
+epoch 150, loss 0.0009081487078219652
+evaluating on sampled validation set
+Sampled Accuracy: 0.4500
+evaluating on full size validation set
+Full size Accuracy: 0.5250
+epoch 160, loss 0.0009282631217502058
+epoch 170, loss 0.0009456953266635537
+epoch 180, loss 0.0009614910231903195
+epoch 190, loss 0.0009697036584839225
+evaluating on sampled test set
+Sampled Accuracy: 0.8571
+evaluating on full size test set
+Full size Accuracy: 0.4902
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 212.81it/s] 22%|██▏       | 44/200 [00:00<00:00, 212.72it/s] 33%|███▎      | 66/200 [00:00<00:00, 213.34it/s] 44%|████▍     | 88/200 [00:00<00:00, 213.17it/s] 55%|█████▌    | 110/200 [00:00<00:00, 211.75it/s] 66%|██████▌   | 132/200 [00:00<00:00, 210.54it/s] 77%|███████▋  | 154/200 [00:00<00:00, 210.19it/s] 88%|████████▊ | 176/200 [00:00<00:00, 209.99it/s] 99%|█████████▉| 198/200 [00:00<00:00, 208.51it/s]100%|██████████| 200/200 [00:00<00:00, 210.37it/s]
+epoch 0, loss 1.7253313064575195
+evaluating on sampled validation set
+Sampled Accuracy: 0.0125
+evaluating on full size validation set
+Full size Accuracy: 0.0875
+epoch 10, loss 0.4476829767227173
+epoch 20, loss 0.12178748100996017
+epoch 30, loss 0.03567678853869438
+epoch 40, loss 0.013444749638438225
+epoch 50, loss 0.005096307024359703
+evaluating on sampled validation set
+Sampled Accuracy: 0.3625
+evaluating on full size validation set
+Full size Accuracy: 0.5500
+epoch 60, loss 0.0018470257055014372
+epoch 70, loss 0.0009352288325317204
+epoch 80, loss 0.0006628980045206845
+epoch 90, loss 0.0005879762466065586
+epoch 100, loss 0.0005886527360416949
+evaluating on sampled validation set
+Sampled Accuracy: 0.3500
+evaluating on full size validation set
+Full size Accuracy: 0.5750
+epoch 110, loss 0.0006131752743385732
+epoch 120, loss 0.0006510867387987673
+epoch 130, loss 0.0006963008781895041
+epoch 140, loss 0.0007360804011113942
+epoch 150, loss 0.0007681444403715432
+evaluating on sampled validation set
+Sampled Accuracy: 0.3250
+evaluating on full size validation set
+Full size Accuracy: 0.4875
+epoch 160, loss 0.00078606914030388
+epoch 170, loss 0.0007866084924899042
+epoch 180, loss 0.0007795179262757301
+epoch 190, loss 0.0007827834924682975
+evaluating on sampled test set
+Sampled Accuracy: 0.8571
+evaluating on full size test set
+Full size Accuracy: 0.4706
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.42it/s] 22%|██▏       | 44/200 [00:00<00:00, 213.03it/s] 33%|███▎      | 66/200 [00:00<00:00, 212.96it/s] 44%|████▍     | 88/200 [00:00<00:00, 212.83it/s] 55%|█████▌    | 110/200 [00:00<00:00, 212.63it/s] 66%|██████▌   | 132/200 [00:00<00:00, 212.64it/s] 77%|███████▋  | 154/200 [00:00<00:00, 212.81it/s] 88%|████████▊ | 176/200 [00:00<00:00, 213.08it/s] 99%|█████████▉| 198/200 [00:00<00:00, 212.83it/s]100%|██████████| 200/200 [00:00<00:00, 212.78it/s]
+epoch 0, loss 1.5655237436294556
+evaluating on sampled validation set
+Sampled Accuracy: 0.2125
+evaluating on full size validation set
+Full size Accuracy: 0.5000
+epoch 10, loss 0.35911083221435547
+epoch 20, loss 0.05499892681837082
+epoch 30, loss 0.01256740652024746
+epoch 40, loss 0.0035494444891810417
+epoch 50, loss 0.0014410950243473053
+evaluating on sampled validation set
+Sampled Accuracy: 0.2250
+evaluating on full size validation set
+Full size Accuracy: 0.4750
+epoch 60, loss 0.0008514325600117445
+epoch 70, loss 0.0006454337271861732
+epoch 80, loss 0.0005601231823675334
+epoch 90, loss 0.0005224174819886684
+epoch 100, loss 0.0005001773242838681
+evaluating on sampled validation set
+Sampled Accuracy: 0.2000
+evaluating on full size validation set
+Full size Accuracy: 0.4875
+epoch 110, loss 0.0004868901742156595
+epoch 120, loss 0.0004706777399405837
+epoch 130, loss 0.00045337682240642607
+epoch 140, loss 0.0004420213808771223
+epoch 150, loss 0.00043888535583391786
+evaluating on sampled validation set
+Sampled Accuracy: 0.2125
+evaluating on full size validation set
+Full size Accuracy: 0.5250
+epoch 160, loss 0.00043957927846349776
+epoch 170, loss 0.00044379994506016374
+epoch 180, loss 0.0004523624083958566
+epoch 190, loss 0.0004649730399250984
+evaluating on sampled test set
+Sampled Accuracy: 1.0000
+evaluating on full size test set
+Full size Accuracy: 0.5294
+torch.Size([5]) 5
+torch.Size([5]) 5
+torch.Size([5]) 5
+
+Training on CornellDataset
+
+Done loading data from cached files.
+
+num_nodes: 183, num_edges: 298
+
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 211.47it/s] 22%|██▏       | 44/200 [00:00<00:00, 212.98it/s] 33%|███▎      | 66/200 [00:00<00:00, 213.25it/s] 44%|████▍     | 88/200 [00:00<00:00, 213.13it/s] 55%|█████▌    | 110/200 [00:00<00:00, 213.32it/s] 66%|██████▌   | 132/200 [00:00<00:00, 213.47it/s] 77%|███████▋  | 154/200 [00:00<00:00, 213.69it/s] 88%|████████▊ | 176/200 [00:00<00:00, 213.81it/s] 99%|█████████▉| 198/200 [00:00<00:00, 213.95it/s]100%|██████████| 200/200 [00:00<00:00, 213.54it/s]
+epoch 0, loss 1.6871976852416992
+evaluating on sampled validation set
+Sampled Accuracy: 0.3220
+evaluating on full size validation set
+Full size Accuracy: 0.4915
+epoch 10, loss 0.24419841170310974
+epoch 20, loss 0.010909931734204292
+epoch 30, loss 0.0010013013379648328
+epoch 40, loss 0.00028717677923850715
+epoch 50, loss 0.00019757884729187936
+evaluating on sampled validation set
+Sampled Accuracy: 0.4746
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 60, loss 0.00021409531473182142
+epoch 70, loss 0.00026918514049611986
+epoch 80, loss 0.0003447502385824919
+epoch 90, loss 0.0004390008107293397
+epoch 100, loss 0.0005552051006816328
+evaluating on sampled validation set
+Sampled Accuracy: 0.5254
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 110, loss 0.00068020133767277
+epoch 120, loss 0.0007864122744649649
+epoch 130, loss 0.0008763236692175269
+epoch 140, loss 0.0009419479174539447
+epoch 150, loss 0.0009891155641525984
+evaluating on sampled validation set
+Sampled Accuracy: 0.5424
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 160, loss 0.0010169261367991567
+epoch 170, loss 0.0010271818609908223
+epoch 180, loss 0.0010255450615659356
+epoch 190, loss 0.0010161593090742826
+evaluating on sampled test set
+Sampled Accuracy: 0.7407
+evaluating on full size test set
+Full size Accuracy: 0.5135
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.19it/s] 22%|██▏       | 44/200 [00:00<00:00, 213.84it/s] 33%|███▎      | 66/200 [00:00<00:00, 213.82it/s] 44%|████▍     | 88/200 [00:00<00:00, 213.83it/s] 55%|█████▌    | 110/200 [00:00<00:00, 214.23it/s] 66%|██████▌   | 132/200 [00:00<00:00, 214.05it/s] 77%|███████▋  | 154/200 [00:00<00:00, 213.86it/s] 88%|████████▊ | 176/200 [00:00<00:00, 214.00it/s] 99%|█████████▉| 198/200 [00:00<00:00, 213.91it/s]100%|██████████| 200/200 [00:00<00:00, 213.91it/s]
+epoch 0, loss 1.6100040674209595
+evaluating on sampled validation set
+Sampled Accuracy: 0.3051
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 10, loss 0.2528563141822815
+epoch 20, loss 0.012707174755632877
+epoch 30, loss 0.0010297136614099145
+epoch 40, loss 0.00026022567180916667
+epoch 50, loss 0.00014749474939890206
+evaluating on sampled validation set
+Sampled Accuracy: 0.4407
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 60, loss 0.00014904269482940435
+epoch 70, loss 0.00018447375623509288
+epoch 80, loss 0.000231830810662359
+epoch 90, loss 0.0003008554340340197
+epoch 100, loss 0.00039610397652722895
+evaluating on sampled validation set
+Sampled Accuracy: 0.4407
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 110, loss 0.0005031912005506456
+epoch 120, loss 0.0005966378375887871
+epoch 130, loss 0.0006154209841042757
+epoch 140, loss 0.0006399253034032881
+epoch 150, loss 0.0006793284555897117
+evaluating on sampled validation set
+Sampled Accuracy: 0.4407
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 160, loss 0.0006973025156185031
+epoch 170, loss 0.000724984856788069
+epoch 180, loss 0.0007392395054921508
+epoch 190, loss 0.0007556815398856997
+evaluating on sampled test set
+Sampled Accuracy: 0.7000
+evaluating on full size test set
+Full size Accuracy: 0.5135
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 214.31it/s] 22%|██▏       | 44/200 [00:00<00:00, 213.52it/s] 33%|███▎      | 66/200 [00:00<00:00, 213.04it/s] 44%|████▍     | 88/200 [00:00<00:00, 213.14it/s] 55%|█████▌    | 110/200 [00:00<00:00, 213.22it/s] 66%|██████▌   | 132/200 [00:00<00:00, 212.48it/s] 77%|███████▋  | 154/200 [00:00<00:00, 211.07it/s] 88%|████████▊ | 176/200 [00:00<00:00, 211.29it/s] 99%|█████████▉| 198/200 [00:00<00:00, 211.93it/s]100%|██████████| 200/200 [00:00<00:00, 212.31it/s]
+epoch 0, loss 1.6535314321517944
+evaluating on sampled validation set
+Sampled Accuracy: 0.1525
+evaluating on full size validation set
+Full size Accuracy: 0.3898
+epoch 10, loss 0.3048185110092163
+epoch 20, loss 0.008129597641527653
+epoch 30, loss 0.0006371220806613564
+epoch 40, loss 0.00019717164104804397
+epoch 50, loss 0.00014598070993088186
+evaluating on sampled validation set
+Sampled Accuracy: 0.3390
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 60, loss 0.00015936487761791795
+epoch 70, loss 0.0001855196460383013
+epoch 80, loss 0.00021070719230920076
+epoch 90, loss 0.00024283405218739063
+epoch 100, loss 0.0002850386663340032
+evaluating on sampled validation set
+Sampled Accuracy: 0.4068
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 110, loss 0.00033555604750290513
+epoch 120, loss 0.00039911043131724
+epoch 130, loss 0.0004796666034962982
+epoch 140, loss 0.0005718208849430084
+epoch 150, loss 0.0006566641968674958
+evaluating on sampled validation set
+Sampled Accuracy: 0.4068
+evaluating on full size validation set
+Full size Accuracy: 0.5424
+epoch 160, loss 0.0007208962924778461
+epoch 170, loss 0.0007629698957316577
+epoch 180, loss 0.0007939080242067575
+epoch 190, loss 0.0008187877829186618
+evaluating on sampled test set
+Sampled Accuracy: 0.8667
+evaluating on full size test set
+Full size Accuracy: 0.4865
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.74it/s] 22%|██▏       | 44/200 [00:00<00:00, 214.55it/s] 33%|███▎      | 66/200 [00:00<00:00, 214.29it/s] 44%|████▍     | 88/200 [00:00<00:00, 214.21it/s] 55%|█████▌    | 110/200 [00:00<00:00, 213.94it/s] 66%|██████▌   | 132/200 [00:00<00:00, 214.29it/s] 77%|███████▋  | 154/200 [00:00<00:00, 213.34it/s] 88%|████████▊ | 176/200 [00:00<00:00, 213.47it/s] 99%|█████████▉| 198/200 [00:00<00:00, 213.56it/s]100%|██████████| 200/200 [00:00<00:00, 213.80it/s]
+epoch 0, loss 1.5709803104400635
+evaluating on sampled validation set
+Sampled Accuracy: 0.1186
+evaluating on full size validation set
+Full size Accuracy: 0.2034
+epoch 10, loss 0.490670770406723
+epoch 20, loss 0.09275620430707932
+epoch 30, loss 0.004749984480440617
+epoch 40, loss 0.0008919363608583808
+epoch 50, loss 0.000306289701256901
+evaluating on sampled validation set
+Sampled Accuracy: 0.2542
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 60, loss 0.00023924950801301748
+epoch 70, loss 0.00025151431327685714
+epoch 80, loss 0.0002873835328500718
+epoch 90, loss 0.0003312864282634109
+epoch 100, loss 0.00037692318437621
+evaluating on sampled validation set
+Sampled Accuracy: 0.2712
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 110, loss 0.00043142586946487427
+epoch 120, loss 0.000499095709528774
+epoch 130, loss 0.0005726629169657826
+epoch 140, loss 0.0006518641603179276
+epoch 150, loss 0.0007250410271808505
+evaluating on sampled validation set
+Sampled Accuracy: 0.2712
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 160, loss 0.0007872909191064537
+epoch 170, loss 0.0008315202430821955
+epoch 180, loss 0.0008611495140939951
+epoch 190, loss 0.0008759699994698167
+evaluating on sampled test set
+Sampled Accuracy: 1.0000
+evaluating on full size test set
+Full size Accuracy: 0.5135
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.47it/s] 22%|██▏       | 44/200 [00:00<00:00, 212.93it/s] 33%|███▎      | 66/200 [00:00<00:00, 213.34it/s] 44%|████▍     | 88/200 [00:00<00:00, 213.20it/s] 55%|█████▌    | 110/200 [00:00<00:00, 213.72it/s] 66%|██████▌   | 132/200 [00:00<00:00, 213.60it/s] 77%|███████▋  | 154/200 [00:00<00:00, 213.29it/s] 88%|████████▊ | 176/200 [00:00<00:00, 213.47it/s] 99%|█████████▉| 198/200 [00:00<00:00, 213.45it/s]100%|██████████| 200/200 [00:00<00:00, 213.42it/s]
+epoch 0, loss 1.671910285949707
+evaluating on sampled validation set
+Sampled Accuracy: 0.0508
+evaluating on full size validation set
+Full size Accuracy: 0.2034
+epoch 10, loss 0.2656770348548889
+epoch 20, loss 0.008616577833890915
+epoch 30, loss 0.0006654629250988364
+epoch 40, loss 0.00022431174875237048
+epoch 50, loss 0.0001305818441323936
+evaluating on sampled validation set
+Sampled Accuracy: 0.0508
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 60, loss 0.0001206545130116865
+epoch 70, loss 0.00013109049177728593
+epoch 80, loss 0.0001479496422689408
+epoch 90, loss 0.00017153254884760827
+epoch 100, loss 0.00020104409486521035
+evaluating on sampled validation set
+Sampled Accuracy: 0.0508
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 110, loss 0.0002319886552868411
+epoch 120, loss 0.00026460870867595077
+epoch 130, loss 0.0002964641316793859
+epoch 140, loss 0.0003328656021039933
+epoch 150, loss 0.0003740354732144624
+evaluating on sampled validation set
+Sampled Accuracy: 0.0678
+evaluating on full size validation set
+Full size Accuracy: 0.5424
+epoch 160, loss 0.0004190352337900549
+epoch 170, loss 0.0004641253617592156
+epoch 180, loss 0.0005065119476057589
+epoch 190, loss 0.0005397761124186218
+evaluating on sampled test set
+Sampled Accuracy: 1.0000
+evaluating on full size test set
+Full size Accuracy: 0.5135
+torch.Size([5]) 5
+torch.Size([5]) 5
+torch.Size([5]) 5
+
+Training on SquirrelDataset
+
+Done loading data from cached files.
+
+num_nodes: 5201, num_edges: 217073
+
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 190.64it/s] 20%|██        | 40/200 [00:00<00:00, 191.52it/s] 30%|███       | 60/200 [00:00<00:00, 191.85it/s] 40%|████      | 80/200 [00:00<00:00, 191.93it/s] 50%|█████     | 100/200 [00:00<00:00, 191.98it/s] 60%|██████    | 120/200 [00:00<00:00, 191.94it/s] 70%|███████   | 140/200 [00:00<00:00, 191.99it/s] 80%|████████  | 160/200 [00:00<00:00, 192.02it/s] 90%|█████████ | 180/200 [00:00<00:00, 192.17it/s]100%|██████████| 200/200 [00:01<00:00, 192.26it/s]100%|██████████| 200/200 [00:01<00:00, 192.00it/s]
+epoch 0, loss 1.6115689277648926
+evaluating on sampled validation set
+Sampled Accuracy: 0.1659
+evaluating on full size validation set
+Full size Accuracy: 0.2043
+epoch 10, loss 1.2674452066421509
+epoch 20, loss 0.6695188283920288
+epoch 30, loss 0.2930821180343628
+epoch 40, loss 0.14375633001327515
+epoch 50, loss 0.08992127329111099
+evaluating on sampled validation set
+Sampled Accuracy: 0.2326
+evaluating on full size validation set
+Full size Accuracy: 0.2206
+epoch 60, loss 0.07326827943325043
+epoch 70, loss 0.06810697168111801
+epoch 80, loss 0.06546762585639954
+epoch 90, loss 0.06268227100372314
+epoch 100, loss 0.0599566251039505
+evaluating on sampled validation set
+Sampled Accuracy: 0.2290
+evaluating on full size validation set
+Full size Accuracy: 0.2218
+epoch 110, loss 0.05776563659310341
+epoch 120, loss 0.05611293762922287
+epoch 130, loss 0.05488510802388191
+epoch 140, loss 0.053878702223300934
+epoch 150, loss 0.053031597286462784
+evaluating on sampled validation set
+Sampled Accuracy: 0.2212
+evaluating on full size validation set
+Full size Accuracy: 0.2218
+epoch 160, loss 0.0523529052734375
+epoch 170, loss 0.05180235579609871
+epoch 180, loss 0.051358629018068314
+epoch 190, loss 0.051045291125774384
+evaluating on sampled test set
+Sampled Accuracy: 0.3105
+evaluating on full size test set
+Full size Accuracy: 0.2152
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 192.77it/s] 20%|██        | 40/200 [00:00<00:00, 193.01it/s] 30%|███       | 60/200 [00:00<00:00, 193.23it/s] 40%|████      | 80/200 [00:00<00:00, 193.27it/s] 50%|█████     | 100/200 [00:00<00:00, 193.30it/s] 60%|██████    | 120/200 [00:00<00:00, 193.40it/s] 70%|███████   | 140/200 [00:00<00:00, 193.36it/s] 80%|████████  | 160/200 [00:00<00:00, 193.35it/s] 90%|█████████ | 180/200 [00:00<00:00, 193.34it/s]100%|██████████| 200/200 [00:01<00:00, 193.40it/s]100%|██████████| 200/200 [00:01<00:00, 193.30it/s]
+epoch 0, loss 1.6462526321411133
+evaluating on sampled validation set
+Sampled Accuracy: 0.0781
+evaluating on full size validation set
+Full size Accuracy: 0.1851
+epoch 10, loss 1.2743502855300903
+epoch 20, loss 0.7384938597679138
+epoch 30, loss 0.3239535093307495
+epoch 40, loss 0.1494872123003006
+epoch 50, loss 0.09346627444028854
+evaluating on sampled validation set
+Sampled Accuracy: 0.1881
+evaluating on full size validation set
+Full size Accuracy: 0.2416
+epoch 60, loss 0.07733229547739029
+epoch 70, loss 0.07296857237815857
+epoch 80, loss 0.07108045369386673
+epoch 90, loss 0.06911590695381165
+epoch 100, loss 0.06688366085290909
+evaluating on sampled validation set
+Sampled Accuracy: 0.1911
+evaluating on full size validation set
+Full size Accuracy: 0.2332
+epoch 110, loss 0.06489720195531845
+epoch 120, loss 0.06336380541324615
+epoch 130, loss 0.062224872410297394
+epoch 140, loss 0.06130962073802948
+epoch 150, loss 0.06071382761001587
+evaluating on sampled validation set
+Sampled Accuracy: 0.1881
+evaluating on full size validation set
+Full size Accuracy: 0.2386
+epoch 160, loss 0.06008480489253998
+epoch 170, loss 0.05952758342027664
+epoch 180, loss 0.05914052575826645
+epoch 190, loss 0.058939456939697266
+evaluating on sampled test set
+Sampled Accuracy: 0.3131
+evaluating on full size test set
+Full size Accuracy: 0.2478
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 191.99it/s] 20%|██        | 40/200 [00:00<00:00, 192.36it/s] 30%|███       | 60/200 [00:00<00:00, 192.55it/s] 40%|████      | 80/200 [00:00<00:00, 192.64it/s] 50%|█████     | 100/200 [00:00<00:00, 192.60it/s] 60%|██████    | 120/200 [00:00<00:00, 192.58it/s] 70%|███████   | 140/200 [00:00<00:00, 192.61it/s] 80%|████████  | 160/200 [00:00<00:00, 192.84it/s] 90%|█████████ | 180/200 [00:00<00:00, 192.73it/s]100%|██████████| 200/200 [00:01<00:00, 192.67it/s]100%|██████████| 200/200 [00:01<00:00, 192.61it/s]
+epoch 0, loss 1.6485525369644165
+evaluating on sampled validation set
+Sampled Accuracy: 0.0601
+evaluating on full size validation set
+Full size Accuracy: 0.1496
+epoch 10, loss 1.2585314512252808
+epoch 20, loss 0.683447003364563
+epoch 30, loss 0.3011818528175354
+epoch 40, loss 0.15233474969863892
+epoch 50, loss 0.10703054815530777
+evaluating on sampled validation set
+Sampled Accuracy: 0.1490
+evaluating on full size validation set
+Full size Accuracy: 0.2037
+epoch 60, loss 0.09213616698980331
+epoch 70, loss 0.08733809739351273
+epoch 80, loss 0.08390764147043228
+epoch 90, loss 0.08080857247114182
+epoch 100, loss 0.07845103740692139
+evaluating on sampled validation set
+Sampled Accuracy: 0.1556
+evaluating on full size validation set
+Full size Accuracy: 0.2386
+epoch 110, loss 0.07672329992055893
+epoch 120, loss 0.07551432400941849
+epoch 130, loss 0.07458337396383286
+epoch 140, loss 0.07379721105098724
+epoch 150, loss 0.07318740338087082
+evaluating on sampled validation set
+Sampled Accuracy: 0.1508
+evaluating on full size validation set
+Full size Accuracy: 0.2530
+epoch 160, loss 0.07269906252622604
+epoch 170, loss 0.0722818523645401
+epoch 180, loss 0.07195784896612167
+epoch 190, loss 0.07163403928279877
+evaluating on sampled test set
+Sampled Accuracy: 0.3159
+evaluating on full size test set
+Full size Accuracy: 0.2949
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|▉         | 19/200 [00:00<00:00, 187.52it/s] 20%|█▉        | 39/200 [00:00<00:00, 189.18it/s] 30%|██▉       | 59/200 [00:00<00:00, 189.80it/s] 40%|███▉      | 79/200 [00:00<00:00, 190.19it/s] 50%|████▉     | 99/200 [00:00<00:00, 190.44it/s] 60%|█████▉    | 119/200 [00:00<00:00, 190.56it/s] 70%|██████▉   | 139/200 [00:00<00:00, 190.61it/s] 80%|███████▉  | 159/200 [00:00<00:00, 190.41it/s] 90%|████████▉ | 179/200 [00:00<00:00, 190.59it/s]100%|█████████▉| 199/200 [00:01<00:00, 190.49it/s]100%|██████████| 200/200 [00:01<00:00, 190.26it/s]
+epoch 0, loss 1.5688598155975342
+evaluating on sampled validation set
+Sampled Accuracy: 0.0841
+evaluating on full size validation set
+Full size Accuracy: 0.2049
+epoch 10, loss 1.3575376272201538
+epoch 20, loss 0.8507188558578491
+epoch 30, loss 0.38083305954933167
+epoch 40, loss 0.17787185311317444
+epoch 50, loss 0.12451048940420151
+evaluating on sampled validation set
+Sampled Accuracy: 0.1106
+evaluating on full size validation set
+Full size Accuracy: 0.2073
+epoch 60, loss 0.10960298031568527
+epoch 70, loss 0.10564237087965012
+epoch 80, loss 0.10363078117370605
+epoch 90, loss 0.10203106701374054
+epoch 100, loss 0.10054502636194229
+evaluating on sampled validation set
+Sampled Accuracy: 0.1130
+evaluating on full size validation set
+Full size Accuracy: 0.2314
+epoch 110, loss 0.09927845001220703
+epoch 120, loss 0.09827423095703125
+epoch 130, loss 0.09744320064783096
+epoch 140, loss 0.09675478935241699
+epoch 150, loss 0.09615146368741989
+evaluating on sampled validation set
+Sampled Accuracy: 0.1118
+evaluating on full size validation set
+Full size Accuracy: 0.2410
+epoch 160, loss 0.0956750139594078
+epoch 170, loss 0.09521351754665375
+epoch 180, loss 0.09482327103614807
+epoch 190, loss 0.09450110793113708
+evaluating on sampled test set
+Sampled Accuracy: 0.3664
+evaluating on full size test set
+Full size Accuracy: 0.2536
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|▉         | 19/200 [00:00<00:00, 187.38it/s] 19%|█▉        | 38/200 [00:00<00:00, 187.44it/s] 28%|██▊       | 57/200 [00:00<00:00, 187.47it/s] 38%|███▊      | 76/200 [00:00<00:00, 187.32it/s] 48%|████▊     | 95/200 [00:00<00:00, 187.45it/s] 57%|█████▋    | 114/200 [00:00<00:00, 187.57it/s] 66%|██████▋   | 133/200 [00:00<00:00, 187.73it/s] 76%|███████▌  | 152/200 [00:00<00:00, 187.59it/s] 86%|████████▌ | 171/200 [00:00<00:00, 187.63it/s] 95%|█████████▌| 190/200 [00:01<00:00, 187.43it/s]100%|██████████| 200/200 [00:01<00:00, 187.54it/s]
+/home/jamesl/stats_leverage/GNN_test/train.py:82: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure()
+epoch 0, loss 1.640669345855713
+evaluating on sampled validation set
+Sampled Accuracy: 0.0198
+evaluating on full size validation set
+Full size Accuracy: 0.1256
+epoch 10, loss 1.2293328046798706
+epoch 20, loss 0.7381271719932556
+epoch 30, loss 0.38036397099494934
+epoch 40, loss 0.22851534187793732
+epoch 50, loss 0.1700190156698227
+evaluating on sampled validation set
+Sampled Accuracy: 0.0847
+evaluating on full size validation set
+Full size Accuracy: 0.2091
+epoch 60, loss 0.1544380784034729
+epoch 70, loss 0.15091370046138763
+epoch 80, loss 0.15066860616207123
+epoch 90, loss 0.15073364973068237
+epoch 100, loss 0.15042713284492493
+evaluating on sampled validation set
+Sampled Accuracy: 0.0823
+evaluating on full size validation set
+Full size Accuracy: 0.2049
+epoch 110, loss 0.14992371201515198
+epoch 120, loss 0.14940467476844788
+epoch 130, loss 0.1488964557647705
+epoch 140, loss 0.14843732118606567
+epoch 150, loss 0.14803560078144073
+evaluating on sampled validation set
+Sampled Accuracy: 0.0829
+evaluating on full size validation set
+Full size Accuracy: 0.2037
+epoch 160, loss 0.1476888656616211
+epoch 170, loss 0.14738260209560394
+epoch 180, loss 0.14712464809417725
+epoch 190, loss 0.14689506590366364
+evaluating on sampled test set
+Sampled Accuracy: 0.4182
+evaluating on full size test set
+Full size Accuracy: 0.2008
+torch.Size([5]) 5
+torch.Size([5]) 5
+torch.Size([5]) 5
+
+Training on ChameleonDataset
+
+Done loading data from cached files.
+
+num_nodes: 2277, num_edges: 36101
+
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 200.37it/s] 21%|██        | 42/200 [00:00<00:00, 202.22it/s] 32%|███▏      | 63/200 [00:00<00:00, 202.86it/s] 42%|████▏     | 84/200 [00:00<00:00, 202.96it/s] 52%|█████▎    | 105/200 [00:00<00:00, 203.00it/s] 63%|██████▎   | 126/200 [00:00<00:00, 203.07it/s] 74%|███████▎  | 147/200 [00:00<00:00, 203.07it/s] 84%|████████▍ | 168/200 [00:00<00:00, 203.08it/s] 94%|█████████▍| 189/200 [00:00<00:00, 203.06it/s]100%|██████████| 200/200 [00:00<00:00, 202.88it/s]
+epoch 0, loss 1.6075587272644043
+evaluating on sampled validation set
+Sampled Accuracy: 0.1674
+evaluating on full size validation set
+Full size Accuracy: 0.2387
+epoch 10, loss 1.2138832807540894
+epoch 20, loss 0.5603047013282776
+epoch 30, loss 0.28154224157333374
+epoch 40, loss 0.21643859148025513
+epoch 50, loss 0.19710053503513336
+evaluating on sampled validation set
+Sampled Accuracy: 0.3224
+evaluating on full size validation set
+Full size Accuracy: 0.2730
+epoch 60, loss 0.19078512489795685
+epoch 70, loss 0.18763607740402222
+epoch 80, loss 0.18514768779277802
+epoch 90, loss 0.182678684592247
+epoch 100, loss 0.18061037361621857
+evaluating on sampled validation set
+Sampled Accuracy: 0.3032
+evaluating on full size validation set
+Full size Accuracy: 0.2689
+epoch 110, loss 0.178975909948349
+epoch 120, loss 0.1776309311389923
+epoch 130, loss 0.17652148008346558
+epoch 140, loss 0.17554472386837006
+epoch 150, loss 0.17470118403434753
+evaluating on sampled validation set
+Sampled Accuracy: 0.2949
+evaluating on full size validation set
+Full size Accuracy: 0.2661
+epoch 160, loss 0.17400608956813812
+epoch 170, loss 0.17372511327266693
+epoch 180, loss 0.1730213761329651
+epoch 190, loss 0.1726328730583191
+evaluating on sampled test set
+Sampled Accuracy: 0.3944
+evaluating on full size test set
+Full size Accuracy: 0.2325
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 202.62it/s] 21%|██        | 42/200 [00:00<00:00, 203.35it/s] 32%|███▏      | 63/200 [00:00<00:00, 203.18it/s] 42%|████▏     | 84/200 [00:00<00:00, 202.94it/s] 52%|█████▎    | 105/200 [00:00<00:00, 203.37it/s] 63%|██████▎   | 126/200 [00:00<00:00, 202.63it/s] 74%|███████▎  | 147/200 [00:00<00:00, 202.61it/s] 84%|████████▍ | 168/200 [00:00<00:00, 202.78it/s] 94%|█████████▍| 189/200 [00:00<00:00, 203.01it/s]100%|██████████| 200/200 [00:00<00:00, 202.98it/s]
+epoch 0, loss 1.5840786695480347
+evaluating on sampled validation set
+Sampled Accuracy: 0.1975
+evaluating on full size validation set
+Full size Accuracy: 0.2030
+epoch 10, loss 1.2673442363739014
+epoch 20, loss 0.6845137476921082
+epoch 30, loss 0.3571811020374298
+epoch 40, loss 0.259056031703949
+epoch 50, loss 0.224331796169281
+evaluating on sampled validation set
+Sampled Accuracy: 0.2826
+evaluating on full size validation set
+Full size Accuracy: 0.2154
+epoch 60, loss 0.21629512310028076
+epoch 70, loss 0.21438007056713104
+epoch 80, loss 0.21311187744140625
+epoch 90, loss 0.211619034409523
+epoch 100, loss 0.21000903844833374
+evaluating on sampled validation set
+Sampled Accuracy: 0.2771
+evaluating on full size validation set
+Full size Accuracy: 0.2840
+epoch 110, loss 0.20858074724674225
+epoch 120, loss 0.20733176171779633
+epoch 130, loss 0.2063291221857071
+epoch 140, loss 0.20557579398155212
+epoch 150, loss 0.20492884516716003
+evaluating on sampled validation set
+Sampled Accuracy: 0.2620
+evaluating on full size validation set
+Full size Accuracy: 0.2867
+epoch 160, loss 0.20442627370357513
+epoch 170, loss 0.20397785305976868
+epoch 180, loss 0.20364497601985931
+epoch 190, loss 0.2033746987581253
+evaluating on sampled test set
+Sampled Accuracy: 0.4213
+evaluating on full size test set
+Full size Accuracy: 0.2654
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 203.04it/s] 21%|██        | 42/200 [00:00<00:00, 202.48it/s] 32%|███▏      | 63/200 [00:00<00:00, 202.77it/s] 42%|████▏     | 84/200 [00:00<00:00, 203.15it/s] 52%|█████▎    | 105/200 [00:00<00:00, 203.25it/s] 63%|██████▎   | 126/200 [00:00<00:00, 203.10it/s] 74%|███████▎  | 147/200 [00:00<00:00, 202.97it/s] 84%|████████▍ | 168/200 [00:00<00:00, 202.93it/s] 94%|█████████▍| 189/200 [00:00<00:00, 202.39it/s]100%|██████████| 200/200 [00:00<00:00, 202.74it/s]
+epoch 0, loss 1.7242040634155273
+evaluating on sampled validation set
+Sampled Accuracy: 0.0096
+evaluating on full size validation set
+Full size Accuracy: 0.1536
+epoch 10, loss 1.2507025003433228
+epoch 20, loss 0.7169719338417053
+epoch 30, loss 0.40832415223121643
+epoch 40, loss 0.314913809299469
+epoch 50, loss 0.2907191216945648
+evaluating on sampled validation set
+Sampled Accuracy: 0.2181
+evaluating on full size validation set
+Full size Accuracy: 0.2387
+epoch 60, loss 0.2786898910999298
+epoch 70, loss 0.2708400785923004
+epoch 80, loss 0.266956627368927
+epoch 90, loss 0.26369529962539673
+epoch 100, loss 0.2615143656730652
+evaluating on sampled validation set
+Sampled Accuracy: 0.2181
+evaluating on full size validation set
+Full size Accuracy: 0.2332
+epoch 110, loss 0.2599879205226898
+epoch 120, loss 0.25878089666366577
+epoch 130, loss 0.2578164339065552
+epoch 140, loss 0.25705522298812866
+epoch 150, loss 0.25619256496429443
+evaluating on sampled validation set
+Sampled Accuracy: 0.2112
+evaluating on full size validation set
+Full size Accuracy: 0.2387
+epoch 160, loss 0.255524218082428
+epoch 170, loss 0.2551707625389099
+epoch 180, loss 0.25477340817451477
+epoch 190, loss 0.2543736696243286
+evaluating on sampled test set
+Sampled Accuracy: 0.5000
+evaluating on full size test set
+Full size Accuracy: 0.2215
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 202.36it/s] 21%|██        | 42/200 [00:00<00:00, 202.72it/s] 32%|███▏      | 63/200 [00:00<00:00, 202.38it/s] 42%|████▏     | 84/200 [00:00<00:00, 202.70it/s] 52%|█████▎    | 105/200 [00:00<00:00, 202.76it/s] 63%|██████▎   | 126/200 [00:00<00:00, 202.86it/s] 74%|███████▎  | 147/200 [00:00<00:00, 203.07it/s] 84%|████████▍ | 168/200 [00:00<00:00, 202.92it/s] 94%|█████████▍| 189/200 [00:00<00:00, 202.88it/s]100%|██████████| 200/200 [00:00<00:00, 202.87it/s]
+epoch 0, loss 1.646562933921814
+evaluating on sampled validation set
+Sampled Accuracy: 0.0370
+evaluating on full size validation set
+Full size Accuracy: 0.2030
+epoch 10, loss 1.2722896337509155
+epoch 20, loss 0.8806549906730652
+epoch 30, loss 0.5749847888946533
+epoch 40, loss 0.40775206685066223
+epoch 50, loss 0.3596850335597992
+evaluating on sampled validation set
+Sampled Accuracy: 0.1646
+evaluating on full size validation set
+Full size Accuracy: 0.2003
+epoch 60, loss 0.34398311376571655
+epoch 70, loss 0.33751553297042847
+epoch 80, loss 0.33538416028022766
+epoch 90, loss 0.3344101905822754
+epoch 100, loss 0.33362430334091187
+evaluating on sampled validation set
+Sampled Accuracy: 0.1660
+evaluating on full size validation set
+Full size Accuracy: 0.2455
+epoch 110, loss 0.3328914940357208
+epoch 120, loss 0.3323870599269867
+epoch 130, loss 0.3320019543170929
+epoch 140, loss 0.3316366374492645
+epoch 150, loss 0.33130329847335815
+evaluating on sampled validation set
+Sampled Accuracy: 0.1605
+evaluating on full size validation set
+Full size Accuracy: 0.2250
+epoch 160, loss 0.33099642395973206
+epoch 170, loss 0.3307284116744995
+epoch 180, loss 0.3304947316646576
+epoch 190, loss 0.3302766680717468
+evaluating on sampled test set
+Sampled Accuracy: 0.5310
+evaluating on full size test set
+Full size Accuracy: 0.1952
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 202.08it/s] 21%|██        | 42/200 [00:00<00:00, 197.59it/s] 32%|███▏      | 63/200 [00:00<00:00, 199.93it/s] 42%|████▏     | 84/200 [00:00<00:00, 201.16it/s] 52%|█████▎    | 105/200 [00:00<00:00, 201.67it/s] 63%|██████▎   | 126/200 [00:00<00:00, 202.27it/s] 74%|███████▎  | 147/200 [00:00<00:00, 202.61it/s] 84%|████████▍ | 168/200 [00:00<00:00, 202.67it/s] 94%|█████████▍| 189/200 [00:00<00:00, 203.02it/s]100%|██████████| 200/200 [00:00<00:00, 201.86it/s]
+epoch 0, loss 1.6214964389801025
+evaluating on sampled validation set
+Sampled Accuracy: 0.0604
+evaluating on full size validation set
+Full size Accuracy: 0.2003
+epoch 10, loss 1.3516966104507446
+epoch 20, loss 0.9318066239356995
+epoch 30, loss 0.7035900354385376
+epoch 40, loss 0.5854329466819763
+epoch 50, loss 0.5487924814224243
+evaluating on sampled validation set
+Sampled Accuracy: 0.1029
+evaluating on full size validation set
+Full size Accuracy: 0.2277
+epoch 60, loss 0.5314024686813354
+epoch 70, loss 0.5158702731132507
+epoch 80, loss 0.5081325769424438
+epoch 90, loss 0.5047410130500793
+epoch 100, loss 0.5019177198410034
+evaluating on sampled validation set
+Sampled Accuracy: 0.1029
+evaluating on full size validation set
+Full size Accuracy: 0.1907
+epoch 110, loss 0.49928605556488037
+epoch 120, loss 0.4978463649749756
+epoch 130, loss 0.49711844325065613
+epoch 140, loss 0.49676141142845154
+epoch 150, loss 0.4965510964393616
+evaluating on sampled validation set
+Sampled Accuracy: 0.1084
+evaluating on full size validation set
+Full size Accuracy: 0.2222
+epoch 160, loss 0.4965694546699524
+epoch 170, loss 0.49637335538864136
+epoch 180, loss 0.4964122176170349
+epoch 190, loss 0.49627822637557983
+evaluating on sampled test set
+Sampled Accuracy: 0.6087
+evaluating on full size test set
+Full size Accuracy: 0.2171
+torch.Size([5]) 5
+torch.Size([5]) 5
+torch.Size([5]) 5

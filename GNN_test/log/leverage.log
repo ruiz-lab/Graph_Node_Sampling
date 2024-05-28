@@ -1,0 +1,2006 @@
+nohup: ignoring input
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 94, new test set size: 690, new val set size: 365
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 67.14%, test set: 69.00%, val set: 73.00%
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 1/200 [00:00<01:21,  2.43it/s] 11%|█         | 22/200 [00:00<00:03, 55.71it/s] 22%|██▏       | 43/200 [00:00<00:01, 96.87it/s] 32%|███▏      | 64/200 [00:00<00:01, 127.78it/s] 42%|████▎     | 85/200 [00:00<00:00, 150.54it/s] 53%|█████▎    | 106/200 [00:00<00:00, 167.05it/s] 64%|██████▎   | 127/200 [00:01<00:00, 178.87it/s] 74%|███████▍  | 148/200 [00:01<00:00, 187.35it/s] 84%|████████▍ | 169/200 [00:01<00:00, 193.42it/s] 95%|█████████▌| 190/200 [00:01<00:00, 197.68it/s]100%|██████████| 200/200 [00:01<00:00, 146.02it/s]
+epoch 0, loss 1.9690327644348145
+evaluating on sampled validation set
+Sampled Accuracy: 0.1080
+evaluating on full size validation set
+Full size Accuracy: 0.1280
+epoch 10, loss 1.765735387802124
+epoch 20, loss 1.2636024951934814
+epoch 30, loss 0.6220632195472717
+epoch 40, loss 0.23858311772346497
+epoch 50, loss 0.0788666382431984
+evaluating on sampled validation set
+Sampled Accuracy: 0.1800
+evaluating on full size validation set
+Full size Accuracy: 0.2800
+epoch 60, loss 0.0433255173265934
+epoch 70, loss 0.04009076952934265
+epoch 80, loss 0.038226451724767685
+epoch 90, loss 0.03307134658098221
+epoch 100, loss 0.02841908298432827
+evaluating on sampled validation set
+Sampled Accuracy: 0.2240
+evaluating on full size validation set
+Full size Accuracy: 0.3120
+epoch 110, loss 0.025475425645709038
+epoch 120, loss 0.023378456011414528
+epoch 130, loss 0.021605491638183594
+epoch 140, loss 0.020083624869585037
+epoch 150, loss 0.018832005560398102
+evaluating on sampled validation set
+Sampled Accuracy: 0.2340
+evaluating on full size validation set
+Full size Accuracy: 0.3220
+epoch 160, loss 0.017776744440197945
+epoch 170, loss 0.016902964562177658
+epoch 180, loss 0.01617068611085415
+epoch 190, loss 0.015541600063443184
+evaluating on sampled test set
+Sampled Accuracy: 0.3203
+evaluating on full size test set
+Full size Accuracy: 0.3880
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 77, new test set size: 566, new val set size: 295
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 55.00%, test set: 56.60%, val set: 59.00%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 207.65it/s] 22%|██▏       | 43/200 [00:00<00:00, 210.35it/s] 32%|███▎      | 65/200 [00:00<00:00, 211.18it/s] 44%|████▎     | 87/200 [00:00<00:00, 211.41it/s] 55%|█████▍    | 109/200 [00:00<00:00, 211.68it/s] 66%|██████▌   | 131/200 [00:00<00:00, 211.84it/s] 76%|███████▋  | 153/200 [00:00<00:00, 211.82it/s] 88%|████████▊ | 175/200 [00:00<00:00, 211.96it/s] 98%|█████████▊| 197/200 [00:00<00:00, 212.14it/s]100%|██████████| 200/200 [00:00<00:00, 211.62it/s]
+epoch 0, loss 1.9433625936508179
+evaluating on sampled validation set
+Sampled Accuracy: 0.0320
+evaluating on full size validation set
+Full size Accuracy: 0.0720
+epoch 10, loss 1.7959468364715576
+epoch 20, loss 1.3301244974136353
+epoch 30, loss 0.6262885928153992
+epoch 40, loss 0.16948339343070984
+epoch 50, loss 0.04217946156859398
+evaluating on sampled validation set
+Sampled Accuracy: 0.1420
+evaluating on full size validation set
+Full size Accuracy: 0.2520
+epoch 60, loss 0.026638399809598923
+epoch 70, loss 0.029745198786258698
+epoch 80, loss 0.030603278428316116
+epoch 90, loss 0.0271573718637228
+epoch 100, loss 0.023504026234149933
+evaluating on sampled validation set
+Sampled Accuracy: 0.1600
+evaluating on full size validation set
+Full size Accuracy: 0.3520
+epoch 110, loss 0.0211116224527359
+epoch 120, loss 0.019552776589989662
+epoch 130, loss 0.01824757270514965
+epoch 140, loss 0.017082232981920242
+epoch 150, loss 0.016092628240585327
+evaluating on sampled validation set
+Sampled Accuracy: 0.1880
+evaluating on full size validation set
+Full size Accuracy: 0.3780
+epoch 160, loss 0.015300670638680458
+epoch 170, loss 0.014615565538406372
+epoch 180, loss 0.014015985652804375
+epoch 190, loss 0.013499823398888111
+evaluating on sampled test set
+Sampled Accuracy: 0.3481
+evaluating on full size test set
+Full size Accuracy: 0.3990
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 55, new test set size: 434, new val set size: 230
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 39.29%, test set: 43.40%, val set: 46.00%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 209.38it/s] 22%|██▏       | 43/200 [00:00<00:00, 210.61it/s] 32%|███▎      | 65/200 [00:00<00:00, 211.14it/s] 44%|████▎     | 87/200 [00:00<00:00, 211.53it/s] 55%|█████▍    | 109/200 [00:00<00:00, 211.66it/s] 66%|██████▌   | 131/200 [00:00<00:00, 211.58it/s] 76%|███████▋  | 153/200 [00:00<00:00, 211.67it/s] 88%|████████▊ | 175/200 [00:00<00:00, 211.77it/s] 98%|█████████▊| 197/200 [00:00<00:00, 211.83it/s]100%|██████████| 200/200 [00:00<00:00, 211.54it/s]
+epoch 0, loss 1.9879522323608398
+evaluating on sampled validation set
+Sampled Accuracy: 0.0680
+evaluating on full size validation set
+Full size Accuracy: 0.1500
+epoch 10, loss 1.7449029684066772
+epoch 20, loss 1.2041428089141846
+epoch 30, loss 0.6216136813163757
+epoch 40, loss 0.2526029050350189
+epoch 50, loss 0.09179326146841049
+evaluating on sampled validation set
+Sampled Accuracy: 0.1060
+evaluating on full size validation set
+Full size Accuracy: 0.2400
+epoch 60, loss 0.03675445169210434
+epoch 70, loss 0.024527406319975853
+epoch 80, loss 0.023216446861624718
+epoch 90, loss 0.022736545652151108
+epoch 100, loss 0.02085859514772892
+evaluating on sampled validation set
+Sampled Accuracy: 0.1100
+evaluating on full size validation set
+Full size Accuracy: 0.2740
+epoch 110, loss 0.01896675117313862
+epoch 120, loss 0.01772901974618435
+epoch 130, loss 0.016648078337311745
+epoch 140, loss 0.015693044289946556
+epoch 150, loss 0.014838667586445808
+evaluating on sampled validation set
+Sampled Accuracy: 0.1240
+evaluating on full size validation set
+Full size Accuracy: 0.3000
+epoch 160, loss 0.014093003235757351
+epoch 170, loss 0.013449491932988167
+epoch 180, loss 0.012897207401692867
+epoch 190, loss 0.012390483170747757
+evaluating on sampled test set
+Sampled Accuracy: 0.2811
+evaluating on full size test set
+Full size Accuracy: 0.3520
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 36, new test set size: 328, new val set size: 162
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 25.71%, test set: 32.80%, val set: 32.40%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 207.47it/s] 22%|██▏       | 43/200 [00:00<00:00, 209.10it/s] 32%|███▎      | 65/200 [00:00<00:00, 209.59it/s] 44%|████▎     | 87/200 [00:00<00:00, 209.86it/s] 55%|█████▍    | 109/200 [00:00<00:00, 210.06it/s] 66%|██████▌   | 131/200 [00:00<00:00, 210.14it/s] 76%|███████▋  | 153/200 [00:00<00:00, 210.38it/s] 88%|████████▊ | 175/200 [00:00<00:00, 210.30it/s] 98%|█████████▊| 197/200 [00:00<00:00, 210.39it/s]100%|██████████| 200/200 [00:00<00:00, 210.02it/s]
+epoch 0, loss 1.9444994926452637
+evaluating on sampled validation set
+Sampled Accuracy: 0.0160
+evaluating on full size validation set
+Full size Accuracy: 0.0720
+epoch 10, loss 1.80593740940094
+epoch 20, loss 1.3777941465377808
+epoch 30, loss 0.8047229051589966
+epoch 40, loss 0.2928764820098877
+epoch 50, loss 0.058545276522636414
+evaluating on sampled validation set
+Sampled Accuracy: 0.0700
+evaluating on full size validation set
+Full size Accuracy: 0.1840
+epoch 60, loss 0.019761137664318085
+epoch 70, loss 0.017003057524561882
+epoch 80, loss 0.020035937428474426
+epoch 90, loss 0.021502060815691948
+epoch 100, loss 0.020493123680353165
+evaluating on sampled validation set
+Sampled Accuracy: 0.0680
+evaluating on full size validation set
+Full size Accuracy: 0.1760
+epoch 110, loss 0.018656454980373383
+epoch 120, loss 0.01709304191172123
+epoch 130, loss 0.01598738692700863
+epoch 140, loss 0.015105792321264744
+epoch 150, loss 0.014280173927545547
+evaluating on sampled validation set
+Sampled Accuracy: 0.0700
+evaluating on full size validation set
+Full size Accuracy: 0.1860
+epoch 160, loss 0.01352083869278431
+epoch 170, loss 0.01284765638411045
+epoch 180, loss 0.012236650101840496
+epoch 190, loss 0.011693457141518593
+evaluating on sampled test set
+Sampled Accuracy: 0.2043
+evaluating on full size test set
+Full size Accuracy: 0.2200
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 23, new test set size: 206, new val set size: 99
+original: training set size: 140, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 16.43%, test set: 20.60%, val set: 19.80%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 207.77it/s] 22%|██▏       | 43/200 [00:00<00:00, 209.21it/s] 32%|███▎      | 65/200 [00:00<00:00, 209.72it/s] 44%|████▎     | 87/200 [00:00<00:00, 210.09it/s] 55%|█████▍    | 109/200 [00:00<00:00, 210.26it/s] 66%|██████▌   | 131/200 [00:00<00:00, 210.41it/s] 76%|███████▋  | 153/200 [00:00<00:00, 210.36it/s] 88%|████████▊ | 175/200 [00:00<00:00, 210.41it/s] 98%|█████████▊| 197/200 [00:00<00:00, 210.43it/s]100%|██████████| 200/200 [00:00<00:00, 210.15it/s]
+epoch 0, loss 1.9471359252929688
+evaluating on sampled validation set
+Sampled Accuracy: 0.0180
+evaluating on full size validation set
+Full size Accuracy: 0.1560
+epoch 10, loss 1.7434344291687012
+epoch 20, loss 1.2065494060516357
+epoch 30, loss 0.5602829456329346
+epoch 40, loss 0.12187740951776505
+epoch 50, loss 0.019890587776899338
+evaluating on sampled validation set
+Sampled Accuracy: 0.0560
+evaluating on full size validation set
+Full size Accuracy: 0.3340
+epoch 60, loss 0.008500341325998306
+epoch 70, loss 0.007315867114812136
+epoch 80, loss 0.009061886928975582
+epoch 90, loss 0.010996732860803604
+epoch 100, loss 0.011754072271287441
+evaluating on sampled validation set
+Sampled Accuracy: 0.0320
+evaluating on full size validation set
+Full size Accuracy: 0.2000
+epoch 110, loss 0.011517108418047428
+epoch 120, loss 0.01086520403623581
+epoch 130, loss 0.010267513804137707
+epoch 140, loss 0.009869370609521866
+epoch 150, loss 0.009553450159728527
+evaluating on sampled validation set
+Sampled Accuracy: 0.0320
+evaluating on full size validation set
+Full size Accuracy: 0.1380
+epoch 160, loss 0.009248636662960052
+epoch 170, loss 0.00895522441715002
+epoch 180, loss 0.008674884214997292
+epoch 190, loss 0.008407032117247581
+evaluating on sampled test set
+Sampled Accuracy: 0.1456
+evaluating on full size test set
+Full size Accuracy: 0.1450
+torch.Size([5]) 5
+torch.Size([5]) 5
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 84, new test set size: 680, new val set size: 361
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 70.00%, test set: 68.00%, val set: 72.20%
+  0%|          | 0/200 [00:00<?, ?it/s]  8%|▊         | 17/200 [00:00<00:01, 167.04it/s] 17%|█▋        | 34/200 [00:00<00:00, 168.59it/s] 26%|██▌       | 51/200 [00:00<00:00, 167.14it/s] 34%|███▍      | 68/200 [00:00<00:00, 167.17it/s] 42%|████▎     | 85/200 [00:00<00:00, 167.40it/s] 51%|█████     | 102/200 [00:00<00:00, 167.46it/s] 60%|█████▉    | 119/200 [00:00<00:00, 167.34it/s] 68%|██████▊   | 136/200 [00:00<00:00, 166.98it/s] 76%|███████▋  | 153/200 [00:00<00:00, 166.54it/s] 85%|████████▌ | 170/200 [00:01<00:00, 166.38it/s] 94%|█████████▎| 187/200 [00:01<00:00, 166.53it/s]100%|██████████| 200/200 [00:01<00:00, 166.95it/s]
+epoch 0, loss 1.8024940490722656
+evaluating on sampled validation set
+Sampled Accuracy: 0.1800
+evaluating on full size validation set
+Full size Accuracy: 0.2320
+epoch 10, loss 1.726409912109375
+epoch 20, loss 1.4819568395614624
+epoch 30, loss 0.997978687286377
+epoch 40, loss 0.4510708749294281
+epoch 50, loss 0.16135524213314056
+evaluating on sampled validation set
+Sampled Accuracy: 0.2420
+evaluating on full size validation set
+Full size Accuracy: 0.3700
+epoch 60, loss 0.07957344502210617
+epoch 70, loss 0.06524480879306793
+epoch 80, loss 0.05344933643937111
+epoch 90, loss 0.042087942361831665
+epoch 100, loss 0.03713465854525566
+evaluating on sampled validation set
+Sampled Accuracy: 0.2800
+evaluating on full size validation set
+Full size Accuracy: 0.4880
+epoch 110, loss 0.033234018832445145
+epoch 120, loss 0.029870953410863876
+epoch 130, loss 0.027404602617025375
+epoch 140, loss 0.025258654728531837
+epoch 150, loss 0.023507284000515938
+evaluating on sampled validation set
+Sampled Accuracy: 0.2980
+evaluating on full size validation set
+Full size Accuracy: 0.5280
+epoch 160, loss 0.02198522910475731
+epoch 170, loss 0.020663999021053314
+epoch 180, loss 0.019518686458468437
+epoch 190, loss 0.01849609985947609
+evaluating on sampled test set
+Sampled Accuracy: 0.4574
+evaluating on full size test set
+Full size Accuracy: 0.5540
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 70, new test set size: 548, new val set size: 302
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 58.33%, test set: 54.80%, val set: 60.40%
+  0%|          | 0/200 [00:00<?, ?it/s]  8%|▊         | 17/200 [00:00<00:01, 162.61it/s] 17%|█▋        | 34/200 [00:00<00:01, 164.82it/s] 26%|██▌       | 51/200 [00:00<00:00, 165.50it/s] 34%|███▍      | 68/200 [00:00<00:00, 165.69it/s] 43%|████▎     | 86/200 [00:00<00:00, 167.24it/s] 52%|█████▏    | 103/200 [00:00<00:00, 167.09it/s] 62%|██████▏   | 123/200 [00:00<00:00, 177.19it/s] 72%|███████▏  | 144/200 [00:00<00:00, 186.72it/s] 82%|████████▎ | 165/200 [00:00<00:00, 193.31it/s] 93%|█████████▎| 186/200 [00:01<00:00, 197.81it/s]100%|██████████| 200/200 [00:01<00:00, 183.34it/s]
+epoch 0, loss 1.8027443885803223
+evaluating on sampled validation set
+Sampled Accuracy: 0.1300
+evaluating on full size validation set
+Full size Accuracy: 0.2120
+epoch 10, loss 1.7006120681762695
+epoch 20, loss 1.3512028455734253
+epoch 30, loss 0.8011902570724487
+epoch 40, loss 0.2922171652317047
+epoch 50, loss 0.08632748574018478
+evaluating on sampled validation set
+Sampled Accuracy: 0.2060
+evaluating on full size validation set
+Full size Accuracy: 0.3400
+epoch 60, loss 0.05375802516937256
+epoch 70, loss 0.05376400798559189
+epoch 80, loss 0.047923531383275986
+epoch 90, loss 0.0386895015835762
+epoch 100, loss 0.033884286880493164
+evaluating on sampled validation set
+Sampled Accuracy: 0.2200
+evaluating on full size validation set
+Full size Accuracy: 0.4160
+epoch 110, loss 0.031004244461655617
+epoch 120, loss 0.028239436447620392
+epoch 130, loss 0.025964166969060898
+epoch 140, loss 0.024155687540769577
+epoch 150, loss 0.02257721498608589
+evaluating on sampled validation set
+Sampled Accuracy: 0.2420
+evaluating on full size validation set
+Full size Accuracy: 0.4720
+epoch 160, loss 0.021246543154120445
+epoch 170, loss 0.02009005658328533
+epoch 180, loss 0.01910203881561756
+epoch 190, loss 0.018218811601400375
+evaluating on sampled test set
+Sampled Accuracy: 0.4617
+evaluating on full size test set
+Full size Accuracy: 0.5120
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 53, new test set size: 432, new val set size: 233
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 44.17%, test set: 43.20%, val set: 46.60%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 206.52it/s] 21%|██        | 42/200 [00:00<00:00, 207.70it/s] 32%|███▏      | 63/200 [00:00<00:00, 208.05it/s] 42%|████▏     | 84/200 [00:00<00:00, 208.25it/s] 52%|█████▎    | 105/200 [00:00<00:00, 207.71it/s] 63%|██████▎   | 126/200 [00:00<00:00, 207.57it/s] 74%|███████▎  | 147/200 [00:00<00:00, 207.84it/s] 84%|████████▍ | 168/200 [00:00<00:00, 207.76it/s] 94%|█████████▍| 189/200 [00:00<00:00, 208.07it/s]100%|██████████| 200/200 [00:00<00:00, 207.88it/s]
+epoch 0, loss 1.796637773513794
+evaluating on sampled validation set
+Sampled Accuracy: 0.0720
+evaluating on full size validation set
+Full size Accuracy: 0.1720
+epoch 10, loss 1.692748785018921
+epoch 20, loss 1.2842237949371338
+epoch 30, loss 0.6384864449501038
+epoch 40, loss 0.16847912967205048
+epoch 50, loss 0.05056535825133324
+evaluating on sampled validation set
+Sampled Accuracy: 0.0900
+evaluating on full size validation set
+Full size Accuracy: 0.2080
+epoch 60, loss 0.04273577779531479
+epoch 70, loss 0.04720081388950348
+epoch 80, loss 0.039216168224811554
+epoch 90, loss 0.030347391963005066
+epoch 100, loss 0.02699817530810833
+evaluating on sampled validation set
+Sampled Accuracy: 0.1420
+evaluating on full size validation set
+Full size Accuracy: 0.3180
+epoch 110, loss 0.02493762969970703
+epoch 120, loss 0.022538643330335617
+epoch 130, loss 0.02062545344233513
+epoch 140, loss 0.019167643040418625
+epoch 150, loss 0.017901284620165825
+evaluating on sampled validation set
+Sampled Accuracy: 0.1700
+evaluating on full size validation set
+Full size Accuracy: 0.4280
+epoch 160, loss 0.016872074455022812
+epoch 170, loss 0.015925275161862373
+epoch 180, loss 0.015130016021430492
+epoch 190, loss 0.014460483565926552
+evaluating on sampled test set
+Sampled Accuracy: 0.3773
+evaluating on full size test set
+Full size Accuracy: 0.4210
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 37, new test set size: 307, new val set size: 166
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 30.83%, test set: 30.70%, val set: 33.20%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 202.96it/s] 21%|██        | 42/200 [00:00<00:00, 205.27it/s] 32%|███▏      | 63/200 [00:00<00:00, 205.96it/s] 42%|████▏     | 84/200 [00:00<00:00, 206.25it/s] 52%|█████▎    | 105/200 [00:00<00:00, 206.32it/s] 63%|██████▎   | 126/200 [00:00<00:00, 206.53it/s] 74%|███████▎  | 147/200 [00:00<00:00, 206.54it/s] 84%|████████▍ | 168/200 [00:00<00:00, 206.73it/s] 94%|█████████▍| 189/200 [00:00<00:00, 206.66it/s]100%|██████████| 200/200 [00:00<00:00, 206.27it/s]
+epoch 0, loss 1.8054252862930298
+evaluating on sampled validation set
+Sampled Accuracy: 0.0840
+evaluating on full size validation set
+Full size Accuracy: 0.2320
+epoch 10, loss 1.6684638261795044
+epoch 20, loss 1.3498752117156982
+epoch 30, loss 0.8585706949234009
+epoch 40, loss 0.384143203496933
+epoch 50, loss 0.18422937393188477
+evaluating on sampled validation set
+Sampled Accuracy: 0.0800
+evaluating on full size validation set
+Full size Accuracy: 0.2060
+epoch 60, loss 0.11190861463546753
+epoch 70, loss 0.06654876470565796
+epoch 80, loss 0.04184867441654205
+epoch 90, loss 0.03195052966475487
+epoch 100, loss 0.02759099379181862
+evaluating on sampled validation set
+Sampled Accuracy: 0.0920
+evaluating on full size validation set
+Full size Accuracy: 0.2300
+epoch 110, loss 0.025098148733377457
+epoch 120, loss 0.022816013544797897
+epoch 130, loss 0.02081139385700226
+epoch 140, loss 0.019258754327893257
+epoch 150, loss 0.018052484840154648
+evaluating on sampled validation set
+Sampled Accuracy: 0.1120
+evaluating on full size validation set
+Full size Accuracy: 0.3380
+epoch 160, loss 0.01692023128271103
+epoch 170, loss 0.016022874042391777
+epoch 180, loss 0.015201873145997524
+epoch 190, loss 0.014525064267218113
+evaluating on sampled test set
+Sampled Accuracy: 0.3322
+evaluating on full size test set
+Full size Accuracy: 0.3920
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 21, new test set size: 178, new val set size: 110
+original: training set size: 120, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 17.50%, test set: 17.80%, val set: 22.00%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 204.29it/s] 21%|██        | 42/200 [00:00<00:00, 205.63it/s] 32%|███▏      | 63/200 [00:00<00:00, 205.80it/s] 42%|████▏     | 84/200 [00:00<00:00, 206.28it/s] 52%|█████▎    | 105/200 [00:00<00:00, 206.40it/s] 63%|██████▎   | 126/200 [00:00<00:00, 206.69it/s] 74%|███████▎  | 147/200 [00:00<00:00, 206.69it/s] 84%|████████▍ | 168/200 [00:00<00:00, 206.89it/s] 94%|█████████▍| 189/200 [00:00<00:00, 206.70it/s]100%|██████████| 200/200 [00:00<00:00, 206.46it/s]
+epoch 0, loss 1.782448410987854
+evaluating on sampled validation set
+Sampled Accuracy: 0.0400
+evaluating on full size validation set
+Full size Accuracy: 0.1380
+epoch 10, loss 1.6081408262252808
+epoch 20, loss 1.155534267425537
+epoch 30, loss 0.5411163568496704
+epoch 40, loss 0.14449751377105713
+epoch 50, loss 0.027758873999118805
+evaluating on sampled validation set
+Sampled Accuracy: 0.0720
+evaluating on full size validation set
+Full size Accuracy: 0.3340
+epoch 60, loss 0.01502519566565752
+epoch 70, loss 0.016114676371216774
+epoch 80, loss 0.018681641668081284
+epoch 90, loss 0.01884288713335991
+epoch 100, loss 0.01748611591756344
+evaluating on sampled validation set
+Sampled Accuracy: 0.0700
+evaluating on full size validation set
+Full size Accuracy: 0.2980
+epoch 110, loss 0.016416609287261963
+epoch 120, loss 0.01545668113976717
+epoch 130, loss 0.014412431046366692
+epoch 140, loss 0.013541814871132374
+epoch 150, loss 0.012877456843852997
+evaluating on sampled validation set
+Sampled Accuracy: 0.0720
+evaluating on full size validation set
+Full size Accuracy: 0.3260
+epoch 160, loss 0.012309480458498001
+epoch 170, loss 0.01181311346590519
+epoch 180, loss 0.011327862739562988
+epoch 190, loss 0.01088007166981697
+evaluating on sampled test set
+Sampled Accuracy: 0.2978
+evaluating on full size test set
+Full size Accuracy: 0.3430
+torch.Size([5]) 5
+torch.Size([5]) 5
+  NumNodes: 19717
+  NumEdges: 88651
+  NumFeats: 500
+  NumClasses: 3
+  NumTrainingSamples: 60
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 44, new test set size: 703, new val set size: 360
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 73.33%, test set: 70.30%, val set: 72.00%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 193.96it/s] 20%|██        | 40/200 [00:00<00:00, 196.13it/s] 30%|███       | 60/200 [00:00<00:00, 195.75it/s] 40%|████      | 80/200 [00:00<00:00, 196.24it/s] 50%|█████     | 100/200 [00:00<00:00, 196.63it/s] 60%|██████    | 120/200 [00:00<00:00, 195.58it/s] 70%|███████   | 140/200 [00:00<00:00, 196.11it/s] 80%|████████  | 160/200 [00:00<00:00, 196.50it/s] 90%|█████████ | 180/200 [00:00<00:00, 196.84it/s]100%|██████████| 200/200 [00:01<00:00, 196.89it/s]100%|██████████| 200/200 [00:01<00:00, 196.37it/s]
+epoch 0, loss 1.0988938808441162
+evaluating on sampled validation set
+Sampled Accuracy: 0.3080
+evaluating on full size validation set
+Full size Accuracy: 0.4160
+epoch 10, loss 1.010693073272705
+epoch 20, loss 0.6544113755226135
+epoch 30, loss 0.17363053560256958
+epoch 40, loss 0.021193398162722588
+epoch 50, loss 0.006904900074005127
+evaluating on sampled validation set
+Sampled Accuracy: 0.4860
+evaluating on full size validation set
+Full size Accuracy: 0.7660
+epoch 60, loss 0.007623037789016962
+epoch 70, loss 0.011021149344742298
+epoch 80, loss 0.012094211764633656
+epoch 90, loss 0.0104900561273098
+epoch 100, loss 0.00914131198078394
+evaluating on sampled validation set
+Sampled Accuracy: 0.4820
+evaluating on full size validation set
+Full size Accuracy: 0.7780
+epoch 110, loss 0.008656672202050686
+epoch 120, loss 0.008264669217169285
+epoch 130, loss 0.007840011268854141
+epoch 140, loss 0.007424180395901203
+epoch 150, loss 0.007098865695297718
+evaluating on sampled validation set
+Sampled Accuracy: 0.4820
+evaluating on full size validation set
+Full size Accuracy: 0.7760
+epoch 160, loss 0.006825665012001991
+epoch 170, loss 0.006587473675608635
+epoch 180, loss 0.006370654795318842
+epoch 190, loss 0.0061811418272554874
+evaluating on sampled test set
+Sampled Accuracy: 0.6799
+evaluating on full size test set
+Full size Accuracy: 0.7420
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 38, new test set size: 579, new val set size: 297
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 63.33%, test set: 57.90%, val set: 59.40%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 198.69it/s] 20%|██        | 40/200 [00:00<00:00, 199.15it/s] 30%|███       | 60/200 [00:00<00:00, 199.04it/s] 40%|████      | 80/200 [00:00<00:00, 199.13it/s] 50%|█████     | 100/200 [00:00<00:00, 198.36it/s] 60%|██████    | 120/200 [00:00<00:00, 195.57it/s] 70%|███████   | 140/200 [00:00<00:00, 196.85it/s] 80%|████████  | 160/200 [00:00<00:00, 197.60it/s] 90%|█████████ | 180/200 [00:00<00:00, 198.16it/s]100%|██████████| 200/200 [00:01<00:00, 197.98it/s]100%|██████████| 200/200 [00:01<00:00, 197.89it/s]
+epoch 0, loss 1.107366681098938
+evaluating on sampled validation set
+Sampled Accuracy: 0.2060
+evaluating on full size validation set
+Full size Accuracy: 0.3880
+epoch 10, loss 1.0259186029434204
+epoch 20, loss 0.7122982740402222
+epoch 30, loss 0.2540004551410675
+epoch 40, loss 0.03834441304206848
+epoch 50, loss 0.007385870907455683
+evaluating on sampled validation set
+Sampled Accuracy: 0.4260
+evaluating on full size validation set
+Full size Accuracy: 0.6920
+epoch 60, loss 0.0056005679070949554
+epoch 70, loss 0.008229072205722332
+epoch 80, loss 0.00999502558261156
+epoch 90, loss 0.008948284201323986
+epoch 100, loss 0.007439070846885443
+evaluating on sampled validation set
+Sampled Accuracy: 0.4260
+evaluating on full size validation set
+Full size Accuracy: 0.7500
+epoch 110, loss 0.006677604746073484
+epoch 120, loss 0.006333820056170225
+epoch 130, loss 0.005989761557430029
+epoch 140, loss 0.0056322175078094006
+epoch 150, loss 0.005350250285118818
+evaluating on sampled validation set
+Sampled Accuracy: 0.4240
+evaluating on full size validation set
+Full size Accuracy: 0.7460
+epoch 160, loss 0.005134832579642534
+epoch 170, loss 0.004955633543431759
+epoch 180, loss 0.004799687769263983
+epoch 190, loss 0.004669943358749151
+evaluating on sampled test set
+Sampled Accuracy: 0.6770
+evaluating on full size test set
+Full size Accuracy: 0.7170
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 30, new test set size: 457, new val set size: 240
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 50.00%, test set: 45.70%, val set: 48.00%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 197.65it/s] 20%|██        | 40/200 [00:00<00:00, 198.13it/s] 30%|███       | 60/200 [00:00<00:00, 198.17it/s] 40%|████      | 80/200 [00:00<00:00, 197.58it/s] 50%|█████     | 100/200 [00:00<00:00, 194.07it/s] 60%|██████    | 120/200 [00:00<00:00, 191.02it/s] 70%|███████   | 140/200 [00:00<00:00, 188.81it/s] 80%|███████▉  | 159/200 [00:00<00:00, 187.97it/s] 89%|████████▉ | 178/200 [00:00<00:00, 187.29it/s] 98%|█████████▊| 197/200 [00:01<00:00, 186.88it/s]100%|██████████| 200/200 [00:01<00:00, 190.49it/s]
+epoch 0, loss 1.1093181371688843
+evaluating on sampled validation set
+Sampled Accuracy: 0.2040
+evaluating on full size validation set
+Full size Accuracy: 0.4160
+epoch 10, loss 0.9930040240287781
+epoch 20, loss 0.6183639168739319
+epoch 30, loss 0.271849125623703
+epoch 40, loss 0.07100018113851547
+epoch 50, loss 0.013393840752542019
+evaluating on sampled validation set
+Sampled Accuracy: 0.3180
+evaluating on full size validation set
+Full size Accuracy: 0.6900
+epoch 60, loss 0.007098471280187368
+epoch 70, loss 0.008233001455664635
+epoch 80, loss 0.009761432185769081
+epoch 90, loss 0.008815822191536427
+epoch 100, loss 0.006977906916290522
+evaluating on sampled validation set
+Sampled Accuracy: 0.3380
+evaluating on full size validation set
+Full size Accuracy: 0.7440
+epoch 110, loss 0.006003732793033123
+epoch 120, loss 0.005698038265109062
+epoch 130, loss 0.005419387016445398
+epoch 140, loss 0.005170775577425957
+epoch 150, loss 0.004931781906634569
+evaluating on sampled validation set
+Sampled Accuracy: 0.3300
+evaluating on full size validation set
+Full size Accuracy: 0.7380
+epoch 160, loss 0.004756963811814785
+epoch 170, loss 0.0046244519762694836
+epoch 180, loss 0.004494301974773407
+epoch 190, loss 0.004395433235913515
+evaluating on sampled test set
+Sampled Accuracy: 0.6718
+evaluating on full size test set
+Full size Accuracy: 0.7120
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 21, new test set size: 341, new val set size: 160
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 35.00%, test set: 34.10%, val set: 32.00%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 197.00it/s] 20%|██        | 40/200 [00:00<00:00, 197.70it/s] 30%|███       | 60/200 [00:00<00:00, 197.22it/s] 40%|████      | 80/200 [00:00<00:00, 197.52it/s] 50%|█████     | 100/200 [00:00<00:00, 197.81it/s] 60%|██████    | 120/200 [00:00<00:00, 197.95it/s] 70%|███████   | 140/200 [00:00<00:00, 198.08it/s] 80%|████████  | 160/200 [00:00<00:00, 198.18it/s] 90%|█████████ | 180/200 [00:00<00:00, 198.26it/s]100%|██████████| 200/200 [00:01<00:00, 197.86it/s]100%|██████████| 200/200 [00:01<00:00, 197.84it/s]
+epoch 0, loss 1.1173694133758545
+evaluating on sampled validation set
+Sampled Accuracy: 0.0720
+evaluating on full size validation set
+Full size Accuracy: 0.1960
+epoch 10, loss 0.9950587153434753
+epoch 20, loss 0.6614669561386108
+epoch 30, loss 0.2832064628601074
+epoch 40, loss 0.0565144345164299
+epoch 50, loss 0.011952503584325314
+evaluating on sampled validation set
+Sampled Accuracy: 0.1900
+evaluating on full size validation set
+Full size Accuracy: 0.5480
+epoch 60, loss 0.0064906408078968525
+epoch 70, loss 0.005977682303637266
+epoch 80, loss 0.006278435233980417
+epoch 90, loss 0.006367928348481655
+epoch 100, loss 0.00614300649613142
+evaluating on sampled validation set
+Sampled Accuracy: 0.1920
+evaluating on full size validation set
+Full size Accuracy: 0.4980
+epoch 110, loss 0.0057968515902757645
+epoch 120, loss 0.005394473671913147
+epoch 130, loss 0.005102654453366995
+epoch 140, loss 0.004871205426752567
+epoch 150, loss 0.004688289947807789
+evaluating on sampled validation set
+Sampled Accuracy: 0.1980
+evaluating on full size validation set
+Full size Accuracy: 0.4800
+epoch 160, loss 0.004541152156889439
+epoch 170, loss 0.004388573579490185
+epoch 180, loss 0.004242295864969492
+epoch 190, loss 0.004126589745283127
+evaluating on sampled test set
+Sampled Accuracy: 0.5865
+evaluating on full size test set
+Full size Accuracy: 0.4610
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 13, new test set size: 228, new val set size: 100
+original: training set size: 60, original test set size: 1000, original val set size: 500
+percentage preserved: training set: 21.67%, test set: 22.80%, val set: 20.00%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 196.84it/s] 20%|██        | 40/200 [00:00<00:00, 197.13it/s] 30%|███       | 60/200 [00:00<00:00, 197.07it/s] 40%|████      | 80/200 [00:00<00:00, 197.19it/s] 50%|█████     | 100/200 [00:00<00:00, 197.26it/s] 60%|██████    | 120/200 [00:00<00:00, 197.44it/s] 70%|███████   | 140/200 [00:00<00:00, 197.37it/s] 80%|████████  | 160/200 [00:00<00:00, 197.34it/s] 90%|█████████ | 180/200 [00:00<00:00, 197.52it/s]100%|██████████| 200/200 [00:01<00:00, 197.55it/s]100%|██████████| 200/200 [00:01<00:00, 197.36it/s]
+epoch 0, loss 1.1270145177841187
+evaluating on sampled validation set
+Sampled Accuracy: 0.0540
+evaluating on full size validation set
+Full size Accuracy: 0.3740
+epoch 10, loss 0.89350426197052
+epoch 20, loss 0.4492424428462982
+epoch 30, loss 0.18347397446632385
+epoch 40, loss 0.11025495827198029
+epoch 50, loss 0.03951690346002579
+evaluating on sampled validation set
+Sampled Accuracy: 0.1160
+evaluating on full size validation set
+Full size Accuracy: 0.5260
+epoch 60, loss 0.011584820225834846
+epoch 70, loss 0.006260905880481005
+epoch 80, loss 0.004955410957336426
+epoch 90, loss 0.004659595899283886
+epoch 100, loss 0.004646396264433861
+evaluating on sampled validation set
+Sampled Accuracy: 0.1300
+evaluating on full size validation set
+Full size Accuracy: 0.5600
+epoch 110, loss 0.0046698604710400105
+epoch 120, loss 0.004590664524585009
+epoch 130, loss 0.004452896770089865
+epoch 140, loss 0.004288397263735533
+epoch 150, loss 0.004142398945987225
+evaluating on sampled validation set
+Sampled Accuracy: 0.1320
+evaluating on full size validation set
+Full size Accuracy: 0.5580
+epoch 160, loss 0.004009297117590904
+epoch 170, loss 0.0038834975566715
+epoch 180, loss 0.003763363230973482
+epoch 190, loss 0.003654170548543334
+evaluating on sampled test set
+Sampled Accuracy: 0.5482
+evaluating on full size test set
+Full size Accuracy: 0.5170
+torch.Size([5]) 5
+torch.Size([5]) 5
+Done loading data from cached files.
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 60, new test set size: 26, new val set size: 43
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 68.97%, test set: 70.27%, val set: 72.88%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 214.81it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.93it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.25it/s] 44%|████▍     | 88/200 [00:00<00:00, 216.49it/s] 55%|█████▌    | 110/200 [00:00<00:00, 216.55it/s] 66%|██████▌   | 132/200 [00:00<00:00, 216.56it/s] 77%|███████▋  | 154/200 [00:00<00:00, 216.57it/s] 88%|████████▊ | 176/200 [00:00<00:00, 216.56it/s] 99%|█████████▉| 198/200 [00:00<00:00, 216.61it/s]100%|██████████| 200/200 [00:00<00:00, 216.42it/s]
+epoch 0, loss 1.6818069219589233
+evaluating on sampled validation set
+Sampled Accuracy: 0.1695
+evaluating on full size validation set
+Full size Accuracy: 0.2373
+epoch 10, loss 0.3352662920951843
+epoch 20, loss 0.006870130077004433
+epoch 30, loss 0.0002693961141631007
+epoch 40, loss 7.828949310351163e-05
+epoch 50, loss 5.951161074335687e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.5593
+evaluating on full size validation set
+Full size Accuracy: 0.6610
+epoch 60, loss 7.641621778020635e-05
+epoch 70, loss 0.00012276708730496466
+epoch 80, loss 0.00016473884170409292
+epoch 90, loss 0.00021333778568077832
+epoch 100, loss 0.0002825226401910186
+evaluating on sampled validation set
+Sampled Accuracy: 0.5932
+evaluating on full size validation set
+Full size Accuracy: 0.6610
+epoch 110, loss 0.00036203337367624044
+epoch 120, loss 0.00043630291474983096
+epoch 130, loss 0.0004943822859786451
+epoch 140, loss 0.0005345875397324562
+epoch 150, loss 0.0005731156561523676
+evaluating on sampled validation set
+Sampled Accuracy: 0.5932
+evaluating on full size validation set
+Full size Accuracy: 0.6102
+epoch 160, loss 0.0005872112815268338
+epoch 170, loss 0.0005743423826061189
+epoch 180, loss 0.0005356553592719138
+epoch 190, loss 0.0004980207304470241
+evaluating on sampled test set
+Sampled Accuracy: 0.6923
+evaluating on full size test set
+Full size Accuracy: 0.6216
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 49, new test set size: 20, new val set size: 37
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 56.32%, test set: 54.05%, val set: 62.71%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 214.51it/s] 22%|██▏       | 44/200 [00:00<00:00, 216.34it/s] 33%|███▎      | 66/200 [00:00<00:00, 217.24it/s] 44%|████▍     | 88/200 [00:00<00:00, 217.73it/s] 55%|█████▌    | 110/200 [00:00<00:00, 218.06it/s] 66%|██████▌   | 132/200 [00:00<00:00, 218.23it/s] 77%|███████▋  | 154/200 [00:00<00:00, 218.33it/s] 88%|████████▊ | 176/200 [00:00<00:00, 218.48it/s] 99%|█████████▉| 198/200 [00:00<00:00, 218.53it/s]100%|██████████| 200/200 [00:00<00:00, 218.00it/s]
+epoch 0, loss 1.5033351182937622
+evaluating on sampled validation set
+Sampled Accuracy: 0.3898
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 10, loss 0.18237082660198212
+epoch 20, loss 0.004593615420162678
+epoch 30, loss 0.000244997936533764
+epoch 40, loss 7.341670425375924e-05
+epoch 50, loss 5.91584830544889e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.4576
+evaluating on full size validation set
+Full size Accuracy: 0.6441
+epoch 60, loss 6.947269139345735e-05
+epoch 70, loss 9.510709787718952e-05
+epoch 80, loss 0.00013481183850672096
+epoch 90, loss 0.00017771021521184593
+epoch 100, loss 0.00023087323643267155
+evaluating on sampled validation set
+Sampled Accuracy: 0.4576
+evaluating on full size validation set
+Full size Accuracy: 0.6441
+epoch 110, loss 0.0002957521937787533
+epoch 120, loss 0.00034932492417283356
+epoch 130, loss 0.0003830026835203171
+epoch 140, loss 0.0004146444262005389
+epoch 150, loss 0.0004479284107219428
+evaluating on sampled validation set
+Sampled Accuracy: 0.4576
+evaluating on full size validation set
+Full size Accuracy: 0.6441
+epoch 160, loss 0.00047597591765224934
+epoch 170, loss 0.0004939219215884805
+epoch 180, loss 0.000504000810906291
+epoch 190, loss 0.0005138980923220515
+evaluating on sampled test set
+Sampled Accuracy: 0.7500
+evaluating on full size test set
+Full size Accuracy: 0.6216
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 39, new test set size: 16, new val set size: 28
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 44.83%, test set: 43.24%, val set: 47.46%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 214.02it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.95it/s] 33%|███▎      | 66/200 [00:00<00:00, 217.01it/s] 44%|████▍     | 88/200 [00:00<00:00, 217.50it/s] 55%|█████▌    | 110/200 [00:00<00:00, 217.68it/s] 66%|██████▌   | 132/200 [00:00<00:00, 217.88it/s] 77%|███████▋  | 154/200 [00:00<00:00, 217.96it/s] 88%|████████▊ | 176/200 [00:00<00:00, 217.96it/s] 99%|█████████▉| 198/200 [00:00<00:00, 218.00it/s]100%|██████████| 200/200 [00:00<00:00, 217.57it/s]
+epoch 0, loss 1.5764662027359009
+evaluating on sampled validation set
+Sampled Accuracy: 0.3051
+evaluating on full size validation set
+Full size Accuracy: 0.5085
+epoch 10, loss 0.3732626140117645
+epoch 20, loss 0.02428465150296688
+epoch 30, loss 0.0012154264841228724
+epoch 40, loss 0.0002461237309034914
+epoch 50, loss 0.00011284379434073344
+evaluating on sampled validation set
+Sampled Accuracy: 0.3390
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 60, loss 0.00010193772322963923
+epoch 70, loss 0.00011856279888888821
+epoch 80, loss 0.00013728949124924839
+epoch 90, loss 0.0001629006874281913
+epoch 100, loss 0.000189633370609954
+evaluating on sampled validation set
+Sampled Accuracy: 0.3390
+evaluating on full size validation set
+Full size Accuracy: 0.5932
+epoch 110, loss 0.00021580721659120172
+epoch 120, loss 0.00024367746664211154
+epoch 130, loss 0.00025428005028516054
+epoch 140, loss 0.00028755428502336144
+epoch 150, loss 0.00033596146386116743
+evaluating on sampled validation set
+Sampled Accuracy: 0.3390
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 160, loss 0.00038107956061139703
+epoch 170, loss 0.0004107951244805008
+epoch 180, loss 0.0004279254353605211
+epoch 190, loss 0.0004347314534243196
+evaluating on sampled test set
+Sampled Accuracy: 0.7500
+evaluating on full size test set
+Full size Accuracy: 0.6216
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 25, new test set size: 14, new val set size: 21
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 28.74%, test set: 37.84%, val set: 35.59%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 214.32it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.93it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.99it/s] 44%|████▍     | 88/200 [00:00<00:00, 217.44it/s] 55%|█████▌    | 110/200 [00:00<00:00, 217.67it/s] 66%|██████▌   | 132/200 [00:00<00:00, 217.81it/s] 77%|███████▋  | 154/200 [00:00<00:00, 217.82it/s] 88%|████████▊ | 176/200 [00:00<00:00, 217.84it/s] 99%|█████████▉| 198/200 [00:00<00:00, 217.95it/s]100%|██████████| 200/200 [00:00<00:00, 217.50it/s]
+epoch 0, loss 1.5487933158874512
+evaluating on sampled validation set
+Sampled Accuracy: 0.2373
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 10, loss 0.2829152047634125
+epoch 20, loss 0.044832415878772736
+epoch 30, loss 0.0013901263009756804
+epoch 40, loss 0.00014107447350397706
+epoch 50, loss 7.15565838618204e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.2373
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 60, loss 6.413493974832818e-05
+epoch 70, loss 6.985116488067433e-05
+epoch 80, loss 8.311857527587563e-05
+epoch 90, loss 0.00010160014062421396
+epoch 100, loss 0.00012839843111578375
+evaluating on sampled validation set
+Sampled Accuracy: 0.2373
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 110, loss 0.00016119929205160588
+epoch 120, loss 0.00020042549294885248
+epoch 130, loss 0.00024451682111248374
+epoch 140, loss 0.00029182451544329524
+epoch 150, loss 0.000337463803589344
+evaluating on sampled validation set
+Sampled Accuracy: 0.2373
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 160, loss 0.00038534816121682525
+epoch 170, loss 0.0004254341183695942
+epoch 180, loss 0.0004580836684908718
+epoch 190, loss 0.0004845990624744445
+evaluating on sampled test set
+Sampled Accuracy: 0.7143
+evaluating on full size test set
+Full size Accuracy: 0.6216
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 13, new test set size: 10, new val set size: 14
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 14.94%, test set: 27.03%, val set: 23.73%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.92it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.43it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.35it/s] 44%|████▍     | 88/200 [00:00<00:00, 216.84it/s] 55%|█████▌    | 110/200 [00:00<00:00, 217.08it/s] 66%|██████▌   | 132/200 [00:00<00:00, 217.28it/s] 77%|███████▋  | 154/200 [00:00<00:00, 217.46it/s] 88%|████████▊ | 176/200 [00:00<00:00, 217.52it/s] 99%|█████████▉| 198/200 [00:00<00:00, 217.58it/s]100%|██████████| 200/200 [00:00<00:00, 217.07it/s]
+epoch 0, loss 1.5634459257125854
+evaluating on sampled validation set
+Sampled Accuracy: 0.1525
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 10, loss 0.42971980571746826
+epoch 20, loss 0.046001143753528595
+epoch 30, loss 0.0010929190320894122
+epoch 40, loss 0.00022322752920445055
+epoch 50, loss 0.0001273294910788536
+evaluating on sampled validation set
+Sampled Accuracy: 0.1525
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 60, loss 0.00010053491132566705
+epoch 70, loss 9.330225293524563e-05
+epoch 80, loss 9.45769643294625e-05
+epoch 90, loss 9.966545621864498e-05
+epoch 100, loss 0.00010689919872675091
+evaluating on sampled validation set
+Sampled Accuracy: 0.1525
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 110, loss 0.0001160764877567999
+epoch 120, loss 0.00012732554750982672
+epoch 130, loss 0.00014070110046304762
+epoch 140, loss 0.00015699118375778198
+epoch 150, loss 0.00017610380018595606
+evaluating on sampled validation set
+Sampled Accuracy: 0.1525
+evaluating on full size validation set
+Full size Accuracy: 0.5424
+epoch 160, loss 0.0001978463405976072
+epoch 170, loss 0.00022104530944488943
+epoch 180, loss 0.00024419763940386474
+epoch 190, loss 0.000266845163423568
+evaluating on sampled test set
+Sampled Accuracy: 0.6000
+evaluating on full size test set
+Full size Accuracy: 0.6216
+torch.Size([5]) 5
+torch.Size([5]) 5
+Done loading data from cached files.
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 94, new test set size: 35, new val set size: 47
+original: training set size: 120, original test set size: 51, original val set size: 80
+percentage preserved: training set: 78.33%, test set: 68.63%, val set: 58.75%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 215.98it/s] 22%|██▏       | 44/200 [00:00<00:00, 216.68it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.85it/s] 44%|████▍     | 88/200 [00:00<00:00, 216.94it/s] 55%|█████▌    | 110/200 [00:00<00:00, 217.05it/s] 66%|██████▌   | 132/200 [00:00<00:00, 216.62it/s] 77%|███████▋  | 154/200 [00:00<00:00, 216.20it/s] 88%|████████▊ | 176/200 [00:00<00:00, 215.95it/s] 99%|█████████▉| 198/200 [00:00<00:00, 215.75it/s]100%|██████████| 200/200 [00:00<00:00, 216.24it/s]
+epoch 0, loss 1.5924897193908691
+evaluating on sampled validation set
+Sampled Accuracy: 0.2625
+evaluating on full size validation set
+Full size Accuracy: 0.5125
+epoch 10, loss 0.1877734214067459
+epoch 20, loss 0.010647444985806942
+epoch 30, loss 0.0012528778752312064
+epoch 40, loss 0.00015727966092526913
+epoch 50, loss 8.700534090166911e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.4750
+evaluating on full size validation set
+Full size Accuracy: 0.5125
+epoch 60, loss 0.00010075753380078822
+epoch 70, loss 0.00015031469229143113
+epoch 80, loss 0.00022609674488194287
+epoch 90, loss 0.0003192642761860043
+epoch 100, loss 0.00041842489736154675
+evaluating on sampled validation set
+Sampled Accuracy: 0.4750
+evaluating on full size validation set
+Full size Accuracy: 0.5250
+epoch 110, loss 0.0005129202618263662
+epoch 120, loss 0.0005866456194780767
+epoch 130, loss 0.0006292284233495593
+epoch 140, loss 0.0006580933695659041
+epoch 150, loss 0.0006832494982518256
+evaluating on sampled validation set
+Sampled Accuracy: 0.4625
+evaluating on full size validation set
+Full size Accuracy: 0.5250
+epoch 160, loss 0.000694274203851819
+epoch 170, loss 0.0006946614012122154
+epoch 180, loss 0.0006914088153280318
+epoch 190, loss 0.0006902525201439857
+evaluating on sampled test set
+Sampled Accuracy: 0.8000
+evaluating on full size test set
+Full size Accuracy: 0.4706
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 76, new test set size: 30, new val set size: 39
+original: training set size: 120, original test set size: 51, original val set size: 80
+percentage preserved: training set: 63.33%, test set: 58.82%, val set: 48.75%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 212.94it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.11it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.01it/s] 44%|████▍     | 88/200 [00:00<00:00, 216.47it/s] 55%|█████▌    | 110/200 [00:00<00:00, 216.69it/s] 66%|██████▌   | 132/200 [00:00<00:00, 216.76it/s] 77%|███████▋  | 154/200 [00:00<00:00, 216.93it/s] 88%|████████▊ | 176/200 [00:00<00:00, 216.94it/s] 99%|█████████▉| 198/200 [00:00<00:00, 216.94it/s]100%|██████████| 200/200 [00:00<00:00, 216.54it/s]
+epoch 0, loss 1.6523572206497192
+evaluating on sampled validation set
+Sampled Accuracy: 0.2125
+evaluating on full size validation set
+Full size Accuracy: 0.3750
+epoch 10, loss 0.08580882102251053
+epoch 20, loss 0.0009766094153746963
+epoch 30, loss 0.0001160650936071761
+epoch 40, loss 5.478913226397708e-05
+epoch 50, loss 3.906068013748154e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.3500
+evaluating on full size validation set
+Full size Accuracy: 0.5625
+epoch 60, loss 4.8662677727406844e-05
+epoch 70, loss 7.524002285208553e-05
+epoch 80, loss 0.00011853530304506421
+epoch 90, loss 0.00018262580852024257
+epoch 100, loss 0.0002812843304127455
+evaluating on sampled validation set
+Sampled Accuracy: 0.3625
+evaluating on full size validation set
+Full size Accuracy: 0.5375
+epoch 110, loss 0.00040289165917783976
+epoch 120, loss 0.0005074019427411258
+epoch 130, loss 0.0005709354300051928
+epoch 140, loss 0.0006059362203814089
+epoch 150, loss 0.000628785346634686
+evaluating on sampled validation set
+Sampled Accuracy: 0.3750
+evaluating on full size validation set
+Full size Accuracy: 0.5125
+epoch 160, loss 0.0006468056235462427
+epoch 170, loss 0.0006608030525967479
+epoch 180, loss 0.0006752798799425364
+epoch 190, loss 0.0006885313196107745
+evaluating on sampled test set
+Sampled Accuracy: 0.8000
+evaluating on full size test set
+Full size Accuracy: 0.4706
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 59, new test set size: 20, new val set size: 34
+original: training set size: 120, original test set size: 51, original val set size: 80
+percentage preserved: training set: 49.17%, test set: 39.22%, val set: 42.50%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.63it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.41it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.26it/s] 44%|████▍     | 88/200 [00:00<00:00, 216.61it/s] 55%|█████▌    | 110/200 [00:00<00:00, 216.90it/s] 66%|██████▌   | 132/200 [00:00<00:00, 217.07it/s] 77%|███████▋  | 154/200 [00:00<00:00, 217.10it/s] 88%|████████▊ | 176/200 [00:00<00:00, 217.17it/s] 99%|█████████▉| 198/200 [00:00<00:00, 217.29it/s]100%|██████████| 200/200 [00:00<00:00, 216.82it/s]
+epoch 0, loss 1.591705560684204
+evaluating on sampled validation set
+Sampled Accuracy: 0.1750
+evaluating on full size validation set
+Full size Accuracy: 0.2000
+epoch 10, loss 0.1945272833108902
+epoch 20, loss 0.004872547462582588
+epoch 30, loss 0.00018996503786183894
+epoch 40, loss 7.034155714791268e-05
+epoch 50, loss 5.651709216181189e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.2750
+evaluating on full size validation set
+Full size Accuracy: 0.5625
+epoch 60, loss 7.248197653098032e-05
+epoch 70, loss 9.973967826226726e-05
+epoch 80, loss 0.00013546989066526294
+epoch 90, loss 0.00019145045371260494
+epoch 100, loss 0.0002766932302620262
+evaluating on sampled validation set
+Sampled Accuracy: 0.3125
+evaluating on full size validation set
+Full size Accuracy: 0.5750
+epoch 110, loss 0.0003961448965128511
+epoch 120, loss 0.0005182656459510326
+epoch 130, loss 0.0005946958553977311
+epoch 140, loss 0.0006231417064554989
+epoch 150, loss 0.0006251627928577363
+evaluating on sampled validation set
+Sampled Accuracy: 0.3000
+evaluating on full size validation set
+Full size Accuracy: 0.5625
+epoch 160, loss 0.000613808399066329
+epoch 170, loss 0.0006048224749974906
+epoch 180, loss 0.0005976957036182284
+epoch 190, loss 0.0005950736813247204
+evaluating on sampled test set
+Sampled Accuracy: 0.8000
+evaluating on full size test set
+Full size Accuracy: 0.4706
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 41, new test set size: 15, new val set size: 26
+original: training set size: 120, original test set size: 51, original val set size: 80
+percentage preserved: training set: 34.17%, test set: 29.41%, val set: 32.50%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.38it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.30it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.03it/s] 44%|████▍     | 88/200 [00:00<00:00, 216.47it/s] 55%|█████▌    | 110/200 [00:00<00:00, 216.65it/s] 66%|██████▌   | 132/200 [00:00<00:00, 216.83it/s] 77%|███████▋  | 154/200 [00:00<00:00, 216.89it/s] 88%|████████▊ | 176/200 [00:00<00:00, 216.95it/s] 99%|█████████▉| 198/200 [00:00<00:00, 217.09it/s]100%|██████████| 200/200 [00:00<00:00, 216.63it/s]
+epoch 0, loss 1.6203958988189697
+evaluating on sampled validation set
+Sampled Accuracy: 0.1000
+evaluating on full size validation set
+Full size Accuracy: 0.2625
+epoch 10, loss 0.04071016609668732
+epoch 20, loss 0.0008341457578353584
+epoch 30, loss 7.600407843710855e-05
+epoch 40, loss 5.221416722633876e-05
+epoch 50, loss 5.997607877361588e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.2250
+evaluating on full size validation set
+Full size Accuracy: 0.6000
+epoch 60, loss 8.098522084765136e-05
+epoch 70, loss 0.00010576536442385986
+epoch 80, loss 0.0001225368760060519
+epoch 90, loss 0.00013438716996461153
+epoch 100, loss 0.0001554724876768887
+evaluating on sampled validation set
+Sampled Accuracy: 0.2250
+evaluating on full size validation set
+Full size Accuracy: 0.6125
+epoch 110, loss 0.0001917422196129337
+epoch 120, loss 0.0002471872721798718
+epoch 130, loss 0.0003094490384683013
+epoch 140, loss 0.0003679780929815024
+epoch 150, loss 0.00042125783511437476
+evaluating on sampled validation set
+Sampled Accuracy: 0.2125
+evaluating on full size validation set
+Full size Accuracy: 0.5625
+epoch 160, loss 0.00046507478691637516
+epoch 170, loss 0.0004930740687996149
+epoch 180, loss 0.0005097771063446999
+epoch 190, loss 0.0005200454615987837
+evaluating on sampled test set
+Sampled Accuracy: 0.8000
+evaluating on full size test set
+Full size Accuracy: 0.4902
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 21, new test set size: 11, new val set size: 19
+original: training set size: 120, original test set size: 51, original val set size: 80
+percentage preserved: training set: 17.50%, test set: 21.57%, val set: 23.75%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 212.72it/s] 22%|██▏       | 44/200 [00:00<00:00, 214.67it/s] 33%|███▎      | 66/200 [00:00<00:00, 215.66it/s] 44%|████▍     | 88/200 [00:00<00:00, 216.12it/s] 55%|█████▌    | 110/200 [00:00<00:00, 216.32it/s] 66%|██████▌   | 132/200 [00:00<00:00, 216.48it/s] 77%|███████▋  | 154/200 [00:00<00:00, 216.53it/s] 88%|████████▊ | 176/200 [00:00<00:00, 216.54it/s] 99%|█████████▉| 198/200 [00:00<00:00, 216.55it/s]100%|██████████| 200/200 [00:00<00:00, 216.17it/s]
+epoch 0, loss 1.7242529392242432
+evaluating on sampled validation set
+Sampled Accuracy: 0.0500
+evaluating on full size validation set
+Full size Accuracy: 0.2250
+epoch 10, loss 0.18002812564373016
+epoch 20, loss 0.05859982967376709
+epoch 30, loss 0.002143408637493849
+epoch 40, loss 9.13529220269993e-05
+epoch 50, loss 5.614098336081952e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.1250
+evaluating on full size validation set
+Full size Accuracy: 0.5125
+epoch 60, loss 4.1651852370705456e-05
+epoch 70, loss 4.2299070628359914e-05
+epoch 80, loss 4.5676501031266525e-05
+epoch 90, loss 5.7964112784247845e-05
+epoch 100, loss 7.244120206451043e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.1500
+evaluating on full size validation set
+Full size Accuracy: 0.5375
+epoch 110, loss 8.744515071157366e-05
+epoch 120, loss 9.274112380808219e-05
+epoch 130, loss 9.584159852238372e-05
+epoch 140, loss 0.00010590412421151996
+epoch 150, loss 0.00011868980072904378
+evaluating on sampled validation set
+Sampled Accuracy: 0.1250
+evaluating on full size validation set
+Full size Accuracy: 0.5250
+epoch 160, loss 0.0001344649790553376
+epoch 170, loss 0.00015367761079687625
+epoch 180, loss 0.00017646324704401195
+epoch 190, loss 0.0002008987357839942
+evaluating on sampled test set
+Sampled Accuracy: 0.9091
+evaluating on full size test set
+Full size Accuracy: 0.5686
+torch.Size([5]) 5
+torch.Size([5]) 5
+Done loading data from cached files.
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 63, new test set size: 26, new val set size: 40
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 72.41%, test set: 70.27%, val set: 67.80%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 216.75it/s] 22%|██▏       | 44/200 [00:00<00:00, 217.65it/s] 33%|███▎      | 66/200 [00:00<00:00, 217.72it/s] 44%|████▍     | 88/200 [00:00<00:00, 217.77it/s] 55%|█████▌    | 110/200 [00:00<00:00, 217.74it/s] 66%|██████▌   | 132/200 [00:00<00:00, 217.76it/s] 77%|███████▋  | 154/200 [00:00<00:00, 217.51it/s] 88%|████████▊ | 176/200 [00:00<00:00, 216.98it/s] 99%|█████████▉| 198/200 [00:00<00:00, 216.77it/s]100%|██████████| 200/200 [00:00<00:00, 217.22it/s]
+epoch 0, loss 1.7039669752120972
+evaluating on sampled validation set
+Sampled Accuracy: 0.1017
+evaluating on full size validation set
+Full size Accuracy: 0.1356
+epoch 10, loss 0.12972129881381989
+epoch 20, loss 0.00412910059094429
+epoch 30, loss 0.00039561180165037513
+epoch 40, loss 0.0001304151810472831
+epoch 50, loss 9.604590013623238e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.5085
+evaluating on full size validation set
+Full size Accuracy: 0.5085
+epoch 60, loss 0.00010782061872305349
+epoch 70, loss 0.0001563330297358334
+epoch 80, loss 0.0002360031649004668
+epoch 90, loss 0.00032636435935273767
+epoch 100, loss 0.0004327505885157734
+evaluating on sampled validation set
+Sampled Accuracy: 0.5424
+evaluating on full size validation set
+Full size Accuracy: 0.5424
+epoch 110, loss 0.000528165081050247
+epoch 120, loss 0.000619043072219938
+epoch 130, loss 0.0007000652840360999
+epoch 140, loss 0.0007650849292986095
+epoch 150, loss 0.0008065522415563464
+evaluating on sampled validation set
+Sampled Accuracy: 0.5254
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 160, loss 0.0008304906077682972
+epoch 170, loss 0.0008413291652686894
+epoch 180, loss 0.0008430173038505018
+epoch 190, loss 0.0008365914691239595
+evaluating on sampled test set
+Sampled Accuracy: 0.6538
+evaluating on full size test set
+Full size Accuracy: 0.5676
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 49, new test set size: 23, new val set size: 34
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 56.32%, test set: 62.16%, val set: 57.63%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 214.16it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.60it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.64it/s] 44%|████▍     | 88/200 [00:00<00:00, 217.12it/s] 55%|█████▌    | 110/200 [00:00<00:00, 217.46it/s] 66%|██████▌   | 132/200 [00:00<00:00, 217.58it/s] 77%|███████▋  | 154/200 [00:00<00:00, 217.77it/s] 88%|████████▊ | 176/200 [00:00<00:00, 217.81it/s] 99%|█████████▉| 198/200 [00:00<00:00, 217.77it/s]100%|██████████| 200/200 [00:00<00:00, 217.32it/s]
+epoch 0, loss 1.563942790031433
+evaluating on sampled validation set
+Sampled Accuracy: 0.3390
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 10, loss 0.3288731873035431
+epoch 20, loss 0.018906408920884132
+epoch 30, loss 0.0008821212686598301
+epoch 40, loss 0.00017978287360165268
+epoch 50, loss 0.00010856712469831109
+evaluating on sampled validation set
+Sampled Accuracy: 0.4576
+evaluating on full size validation set
+Full size Accuracy: 0.5424
+epoch 60, loss 0.000107868792838417
+epoch 70, loss 0.00013329462672118098
+epoch 80, loss 0.00017948969616554677
+epoch 90, loss 0.00024411763297393918
+epoch 100, loss 0.00031958703766576946
+evaluating on sampled validation set
+Sampled Accuracy: 0.4915
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 110, loss 0.00039795579505153
+epoch 120, loss 0.0004891280550509691
+epoch 130, loss 0.0005918793031014502
+epoch 140, loss 0.0006945120985619724
+epoch 150, loss 0.0007793930126354098
+evaluating on sampled validation set
+Sampled Accuracy: 0.5254
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 160, loss 0.0008382359519600868
+epoch 170, loss 0.0008761337958276272
+epoch 180, loss 0.0008972627692855895
+epoch 190, loss 0.0009100907482206821
+evaluating on sampled test set
+Sampled Accuracy: 0.5217
+evaluating on full size test set
+Full size Accuracy: 0.4595
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 41, new test set size: 17, new val set size: 25
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 47.13%, test set: 45.95%, val set: 42.37%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.93it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.76it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.64it/s] 44%|████▍     | 88/200 [00:00<00:00, 217.22it/s] 55%|█████▌    | 110/200 [00:00<00:00, 217.46it/s] 66%|██████▌   | 132/200 [00:00<00:00, 217.68it/s] 77%|███████▋  | 154/200 [00:00<00:00, 217.86it/s] 88%|████████▊ | 176/200 [00:00<00:00, 217.91it/s] 99%|█████████▉| 198/200 [00:00<00:00, 217.95it/s]100%|██████████| 200/200 [00:00<00:00, 217.43it/s]
+epoch 0, loss 1.578909158706665
+evaluating on sampled validation set
+Sampled Accuracy: 0.2712
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 10, loss 0.25565916299819946
+epoch 20, loss 0.025584019720554352
+epoch 30, loss 0.002197248162701726
+epoch 40, loss 0.00013677033712156117
+epoch 50, loss 6.380743434419855e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.3559
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 60, loss 6.929713708814234e-05
+epoch 70, loss 8.995084499474615e-05
+epoch 80, loss 0.00013096562179271132
+epoch 90, loss 0.00020185898756608367
+epoch 100, loss 0.00026213983073830605
+evaluating on sampled validation set
+Sampled Accuracy: 0.3559
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 110, loss 0.00033230765257030725
+epoch 120, loss 0.00042755037429742515
+epoch 130, loss 0.0005318319890648127
+epoch 140, loss 0.0006116201402619481
+epoch 150, loss 0.0006621710490435362
+evaluating on sampled validation set
+Sampled Accuracy: 0.3559
+evaluating on full size validation set
+Full size Accuracy: 0.5763
+epoch 160, loss 0.0006968139205127954
+epoch 170, loss 0.0007196932565420866
+epoch 180, loss 0.0007329031359404325
+epoch 190, loss 0.0007406501099467278
+evaluating on sampled test set
+Sampled Accuracy: 0.7059
+evaluating on full size test set
+Full size Accuracy: 0.4595
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 26, new test set size: 14, new val set size: 20
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 29.89%, test set: 37.84%, val set: 33.90%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 214.04it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.60it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.69it/s] 44%|████▍     | 88/200 [00:00<00:00, 217.18it/s] 55%|█████▌    | 110/200 [00:00<00:00, 217.36it/s] 66%|██████▌   | 132/200 [00:00<00:00, 217.53it/s] 77%|███████▋  | 154/200 [00:00<00:00, 217.56it/s] 88%|████████▊ | 176/200 [00:00<00:00, 217.70it/s] 99%|█████████▉| 198/200 [00:00<00:00, 217.75it/s]100%|██████████| 200/200 [00:00<00:00, 217.27it/s]
+epoch 0, loss 1.576953649520874
+evaluating on sampled validation set
+Sampled Accuracy: 0.2203
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 10, loss 0.3495803475379944
+epoch 20, loss 0.10935879498720169
+epoch 30, loss 0.02257433906197548
+epoch 40, loss 0.0014163688756525517
+epoch 50, loss 0.00038316173595376313
+evaluating on sampled validation set
+Sampled Accuracy: 0.2373
+evaluating on full size validation set
+Full size Accuracy: 0.5424
+epoch 60, loss 0.00023029747535474598
+epoch 70, loss 0.00021255806495901197
+epoch 80, loss 0.000174289831193164
+epoch 90, loss 0.00016104358655866235
+epoch 100, loss 0.0002019094245042652
+evaluating on sampled validation set
+Sampled Accuracy: 0.2373
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 110, loss 0.00023278385924641043
+epoch 120, loss 0.00026340424665249884
+epoch 130, loss 0.00029301215545274317
+epoch 140, loss 0.000319248647429049
+epoch 150, loss 0.00033841095864772797
+evaluating on sampled validation set
+Sampled Accuracy: 0.2373
+evaluating on full size validation set
+Full size Accuracy: 0.5254
+epoch 160, loss 0.0003587336395867169
+epoch 170, loss 0.0003746760485228151
+epoch 180, loss 0.0003896768030244857
+epoch 190, loss 0.00041007038089446723
+evaluating on sampled test set
+Sampled Accuracy: 0.5714
+evaluating on full size test set
+Full size Accuracy: 0.4324
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 15, new test set size: 8, new val set size: 14
+original: training set size: 87, original test set size: 37, original val set size: 59
+percentage preserved: training set: 17.24%, test set: 21.62%, val set: 23.73%
+  0%|          | 0/200 [00:00<?, ?it/s] 11%|█         | 22/200 [00:00<00:00, 213.55it/s] 22%|██▏       | 44/200 [00:00<00:00, 215.19it/s] 33%|███▎      | 66/200 [00:00<00:00, 216.24it/s] 44%|████▍     | 88/200 [00:00<00:00, 216.74it/s] 55%|█████▌    | 110/200 [00:00<00:00, 216.94it/s] 66%|██████▌   | 132/200 [00:00<00:00, 217.10it/s] 77%|███████▋  | 154/200 [00:00<00:00, 217.22it/s] 88%|████████▊ | 176/200 [00:00<00:00, 217.36it/s] 99%|█████████▉| 198/200 [00:00<00:00, 217.38it/s]100%|██████████| 200/200 [00:00<00:00, 216.88it/s]
+epoch 0, loss 1.6326121091842651
+evaluating on sampled validation set
+Sampled Accuracy: 0.0000
+evaluating on full size validation set
+Full size Accuracy: 0.0508
+epoch 10, loss 0.41472989320755005
+epoch 20, loss 0.01586962677538395
+epoch 30, loss 0.0004995798808522522
+epoch 40, loss 0.00011138675472466275
+epoch 50, loss 6.833476072642952e-05
+evaluating on sampled validation set
+Sampled Accuracy: 0.1864
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 60, loss 6.411791400751099e-05
+epoch 70, loss 7.010937406448647e-05
+epoch 80, loss 8.067658927757293e-05
+epoch 90, loss 9.417501860298216e-05
+epoch 100, loss 0.00010725152242230251
+evaluating on sampled validation set
+Sampled Accuracy: 0.1864
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 110, loss 0.00012019194400636479
+epoch 120, loss 0.0001304156321566552
+epoch 130, loss 0.00014136149547994137
+epoch 140, loss 0.0001551220047986135
+epoch 150, loss 0.00017085953732021153
+evaluating on sampled validation set
+Sampled Accuracy: 0.1864
+evaluating on full size validation set
+Full size Accuracy: 0.5593
+epoch 160, loss 0.00018776729120872915
+epoch 170, loss 0.00020947071607224643
+epoch 180, loss 0.00023264397168532014
+epoch 190, loss 0.0002570567012298852
+evaluating on sampled test set
+Sampled Accuracy: 0.5000
+evaluating on full size test set
+Full size Accuracy: 0.4595
+torch.Size([5]) 5
+torch.Size([5]) 5
+Done loading data from cached files.
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 1786, new test set size: 698, new val set size: 1157
+original: training set size: 2496, original test set size: 1041, original val set size: 1664
+percentage preserved: training set: 71.55%, test set: 67.05%, val set: 69.53%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 191.12it/s] 20%|██        | 40/200 [00:00<00:00, 192.17it/s] 30%|███       | 60/200 [00:00<00:00, 192.42it/s] 40%|████      | 80/200 [00:00<00:00, 192.57it/s] 50%|█████     | 100/200 [00:00<00:00, 192.61it/s] 60%|██████    | 120/200 [00:00<00:00, 192.58it/s] 70%|███████   | 140/200 [00:00<00:00, 192.61it/s] 80%|████████  | 160/200 [00:00<00:00, 192.66it/s] 90%|█████████ | 180/200 [00:00<00:00, 192.68it/s]100%|██████████| 200/200 [00:01<00:00, 192.65it/s]100%|██████████| 200/200 [00:01<00:00, 192.53it/s]
+epoch 0, loss 1.6163448095321655
+evaluating on sampled validation set
+Sampled Accuracy: 0.1917
+evaluating on full size validation set
+Full size Accuracy: 0.2181
+epoch 10, loss 1.111544132232666
+epoch 20, loss 0.5287805795669556
+epoch 30, loss 0.1702784150838852
+epoch 40, loss 0.04141722619533539
+epoch 50, loss 0.015800056979060173
+evaluating on sampled validation set
+Sampled Accuracy: 0.1833
+evaluating on full size validation set
+Full size Accuracy: 0.2776
+epoch 60, loss 0.013387925922870636
+epoch 70, loss 0.015062129124999046
+epoch 80, loss 0.015146603807806969
+epoch 90, loss 0.0128972502425313
+epoch 100, loss 0.010582037270069122
+evaluating on sampled validation set
+Sampled Accuracy: 0.1917
+evaluating on full size validation set
+Full size Accuracy: 0.3143
+epoch 110, loss 0.009179050102829933
+epoch 120, loss 0.008398722857236862
+epoch 130, loss 0.007856357842683792
+epoch 140, loss 0.007421523332595825
+epoch 150, loss 0.007070745341479778
+evaluating on sampled validation set
+Sampled Accuracy: 0.1941
+evaluating on full size validation set
+Full size Accuracy: 0.3269
+epoch 160, loss 0.0068647125735878944
+epoch 170, loss 0.006636612582951784
+epoch 180, loss 0.0064826239831745625
+epoch 190, loss 0.5263187289237976
+evaluating on sampled test set
+Sampled Accuracy: 0.2880
+evaluating on full size test set
+Full size Accuracy: 0.3016
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 1455, new test set size: 569, new val set size: 967
+original: training set size: 2496, original test set size: 1041, original val set size: 1664
+percentage preserved: training set: 58.29%, test set: 54.66%, val set: 58.11%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 20/200 [00:00<00:00, 191.00it/s] 20%|██        | 40/200 [00:00<00:00, 192.40it/s] 30%|███       | 60/200 [00:00<00:00, 193.22it/s] 40%|████      | 80/200 [00:00<00:00, 193.65it/s] 50%|█████     | 100/200 [00:00<00:00, 193.94it/s] 60%|██████    | 120/200 [00:00<00:00, 194.06it/s] 70%|███████   | 140/200 [00:00<00:00, 194.14it/s] 80%|████████  | 160/200 [00:00<00:00, 194.15it/s] 90%|█████████ | 180/200 [00:00<00:00, 194.14it/s]100%|██████████| 200/200 [00:01<00:00, 194.20it/s]100%|██████████| 200/200 [00:01<00:00, 193.84it/s]
+epoch 0, loss 1.6058393716812134
+evaluating on sampled validation set
+Sampled Accuracy: 0.1593
+evaluating on full size validation set
+Full size Accuracy: 0.2175
+epoch 10, loss 1.2956820726394653
+epoch 20, loss 0.7513856291770935
+epoch 30, loss 0.22952918708324432
+epoch 40, loss 0.04353834688663483
+epoch 50, loss 0.012203161604702473
+evaluating on sampled validation set
+Sampled Accuracy: 0.1647
+evaluating on full size validation set
+Full size Accuracy: 0.2668
+epoch 60, loss 0.008867156691849232
+epoch 70, loss 0.0108497841283679
+epoch 80, loss 0.012160943821072578
+epoch 90, loss 0.010719360783696175
+epoch 100, loss 0.008848029188811779
+evaluating on sampled validation set
+Sampled Accuracy: 0.1707
+evaluating on full size validation set
+Full size Accuracy: 0.2632
+epoch 110, loss 0.00788644514977932
+epoch 120, loss 0.007411834318190813
+epoch 130, loss 0.006914121098816395
+epoch 140, loss 0.006489032879471779
+epoch 150, loss 0.006184489466249943
+evaluating on sampled validation set
+Sampled Accuracy: 0.1737
+evaluating on full size validation set
+Full size Accuracy: 0.2596
+epoch 160, loss 0.005929780192673206
+epoch 170, loss 0.005719984415918589
+epoch 180, loss 0.005511165130883455
+epoch 190, loss 0.0053675672970712185
+evaluating on sampled test set
+Sampled Accuracy: 0.3058
+evaluating on full size test set
+Full size Accuracy: 0.2671
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 1160, new test set size: 426, new val set size: 755
+original: training set size: 2496, original test set size: 1041, original val set size: 1664
+percentage preserved: training set: 46.47%, test set: 40.92%, val set: 45.37%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|▉         | 19/200 [00:00<00:00, 188.42it/s] 20%|█▉        | 39/200 [00:00<00:00, 189.73it/s] 30%|██▉       | 59/200 [00:00<00:00, 190.66it/s] 40%|███▉      | 79/200 [00:00<00:00, 191.02it/s] 50%|████▉     | 99/200 [00:00<00:00, 191.30it/s] 60%|█████▉    | 119/200 [00:00<00:00, 191.35it/s] 70%|██████▉   | 139/200 [00:00<00:00, 191.45it/s] 80%|███████▉  | 159/200 [00:00<00:00, 191.50it/s] 90%|████████▉ | 179/200 [00:00<00:00, 191.51it/s]100%|█████████▉| 199/200 [00:01<00:00, 191.60it/s]100%|██████████| 200/200 [00:01<00:00, 191.22it/s]
+epoch 0, loss 1.639825701713562
+evaluating on sampled validation set
+Sampled Accuracy: 0.1400
+evaluating on full size validation set
+Full size Accuracy: 0.2007
+epoch 10, loss 1.025648593902588
+epoch 20, loss 0.4690694808959961
+epoch 30, loss 0.16562728583812714
+epoch 40, loss 0.050524838268756866
+epoch 50, loss 0.011517596431076527
+evaluating on sampled validation set
+Sampled Accuracy: 0.1430
+evaluating on full size validation set
+Full size Accuracy: 0.2314
+epoch 60, loss 0.006669189315289259
+epoch 70, loss 0.007559771183878183
+epoch 80, loss 0.009282974526286125
+epoch 90, loss 0.009848115034401417
+epoch 100, loss 0.008947312831878662
+evaluating on sampled validation set
+Sampled Accuracy: 0.1388
+evaluating on full size validation set
+Full size Accuracy: 0.2488
+epoch 110, loss 0.007855420000851154
+epoch 120, loss 0.007130587473511696
+epoch 130, loss 0.006601780652999878
+epoch 140, loss 0.00609607296064496
+epoch 150, loss 0.00564208859577775
+evaluating on sampled validation set
+Sampled Accuracy: 0.1388
+evaluating on full size validation set
+Full size Accuracy: 0.2512
+epoch 160, loss 0.005254583433270454
+epoch 170, loss 0.004915884230285883
+epoch 180, loss 0.004648562520742416
+epoch 190, loss 0.0044368114322423935
+evaluating on sampled test set
+Sampled Accuracy: 0.3451
+evaluating on full size test set
+Full size Accuracy: 0.2805
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 838, new test set size: 310, new val set size: 543
+original: training set size: 2496, original test set size: 1041, original val set size: 1664
+percentage preserved: training set: 33.57%, test set: 29.78%, val set: 32.63%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|▉         | 19/200 [00:00<00:00, 186.17it/s] 19%|█▉        | 38/200 [00:00<00:00, 186.69it/s] 28%|██▊       | 57/200 [00:00<00:00, 187.89it/s] 38%|███▊      | 76/200 [00:00<00:00, 188.30it/s] 48%|████▊     | 95/200 [00:00<00:00, 188.62it/s] 57%|█████▋    | 114/200 [00:00<00:00, 188.83it/s] 66%|██████▋   | 133/200 [00:00<00:00, 188.93it/s] 76%|███████▌  | 152/200 [00:00<00:00, 189.01it/s] 86%|████████▌ | 171/200 [00:00<00:00, 189.09it/s] 95%|█████████▌| 190/200 [00:01<00:00, 189.14it/s]100%|██████████| 200/200 [00:01<00:00, 188.70it/s]
+epoch 0, loss 1.6199228763580322
+evaluating on sampled validation set
+Sampled Accuracy: 0.0841
+evaluating on full size validation set
+Full size Accuracy: 0.1953
+epoch 10, loss 0.8511831760406494
+epoch 20, loss 0.19119614362716675
+epoch 30, loss 0.017278265208005905
+epoch 40, loss 0.0031057940796017647
+epoch 50, loss 0.002373310038819909
+evaluating on sampled validation set
+Sampled Accuracy: 0.1196
+evaluating on full size validation set
+Full size Accuracy: 0.2151
+epoch 60, loss 0.0035434048622846603
+epoch 70, loss 0.00540586095303297
+epoch 80, loss 0.00624843081459403
+epoch 90, loss 0.0057372357696294785
+epoch 100, loss 0.0049578663893043995
+evaluating on sampled validation set
+Sampled Accuracy: 0.1118
+evaluating on full size validation set
+Full size Accuracy: 0.2175
+epoch 110, loss 0.004465536680072546
+epoch 120, loss 0.004231418948620558
+epoch 130, loss 0.004097358789294958
+epoch 140, loss 0.00394634623080492
+epoch 150, loss 0.003785776672884822
+evaluating on sampled validation set
+Sampled Accuracy: 0.1148
+evaluating on full size validation set
+Full size Accuracy: 0.2212
+epoch 160, loss 0.0036527826450765133
+epoch 170, loss 0.003539593191817403
+epoch 180, loss 0.00343723245896399
+epoch 190, loss 0.003348267637193203
+evaluating on sampled test set
+Sampled Accuracy: 0.3548
+evaluating on full size test set
+Full size Accuracy: 0.2469
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 515, new test set size: 203, new val set size: 323
+original: training set size: 2496, original test set size: 1041, original val set size: 1664
+percentage preserved: training set: 20.63%, test set: 19.50%, val set: 19.41%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|▉         | 19/200 [00:00<00:00, 184.40it/s] 19%|█▉        | 38/200 [00:00<00:00, 185.95it/s] 28%|██▊       | 57/200 [00:00<00:00, 186.60it/s] 38%|███▊      | 76/200 [00:00<00:00, 186.80it/s] 48%|████▊     | 95/200 [00:00<00:00, 187.04it/s] 57%|█████▋    | 114/200 [00:00<00:00, 187.16it/s] 66%|██████▋   | 133/200 [00:00<00:00, 187.17it/s] 76%|███████▌  | 152/200 [00:00<00:00, 187.20it/s] 86%|████████▌ | 171/200 [00:00<00:00, 187.31it/s] 95%|█████████▌| 190/200 [00:01<00:00, 187.39it/s]100%|██████████| 200/200 [00:01<00:00, 187.05it/s]
+epoch 0, loss 1.6591222286224365
+evaluating on sampled validation set
+Sampled Accuracy: 0.0445
+evaluating on full size validation set
+Full size Accuracy: 0.2007
+epoch 10, loss 0.659953773021698
+epoch 20, loss 0.15308380126953125
+epoch 30, loss 0.01950388215482235
+epoch 40, loss 0.002472247462719679
+epoch 50, loss 0.001351232291199267
+evaluating on sampled validation set
+Sampled Accuracy: 0.0847
+evaluating on full size validation set
+Full size Accuracy: 0.2151
+epoch 60, loss 0.001587377511896193
+epoch 70, loss 0.0024647193495184183
+epoch 80, loss 0.0033866227604448795
+epoch 90, loss 0.00385661399923265
+epoch 100, loss 0.003685689764097333
+evaluating on sampled validation set
+Sampled Accuracy: 0.0787
+evaluating on full size validation set
+Full size Accuracy: 0.2218
+epoch 110, loss 0.003224155632779002
+epoch 120, loss 0.0028896897565573454
+epoch 130, loss 0.002761594485491514
+epoch 140, loss 0.002665393752977252
+epoch 150, loss 0.002576601691544056
+evaluating on sampled validation set
+Sampled Accuracy: 0.0769
+evaluating on full size validation set
+Full size Accuracy: 0.2181
+epoch 160, loss 0.0024860152043402195
+epoch 170, loss 0.0024164810311049223
+epoch 180, loss 0.002351499395444989
+epoch 190, loss 0.0022892842534929514
+evaluating on sampled test set
+Sampled Accuracy: 0.3990
+evaluating on full size test set
+Full size Accuracy: 0.2334
+torch.Size([5]) 5
+torch.Size([5]) 5
+Done loading data from cached files.
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 757, new test set size: 320, new val set size: 517
+original: training set size: 1092, original test set size: 456, original val set size: 729
+percentage preserved: training set: 69.32%, test set: 70.18%, val set: 70.92%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 206.51it/s] 21%|██        | 42/200 [00:00<00:00, 206.82it/s] 32%|███▏      | 63/200 [00:00<00:00, 206.86it/s] 42%|████▏     | 84/200 [00:00<00:00, 206.96it/s] 52%|█████▎    | 105/200 [00:00<00:00, 206.87it/s] 63%|██████▎   | 126/200 [00:00<00:00, 206.87it/s] 74%|███████▎  | 147/200 [00:00<00:00, 206.87it/s] 84%|████████▍ | 168/200 [00:00<00:00, 206.93it/s] 94%|█████████▍| 189/200 [00:00<00:00, 206.97it/s]100%|██████████| 200/200 [00:00<00:00, 206.91it/s]
+epoch 0, loss 1.631135106086731
+evaluating on sampled validation set
+Sampled Accuracy: 0.1687
+evaluating on full size validation set
+Full size Accuracy: 0.2250
+epoch 10, loss 0.8477230668067932
+epoch 20, loss 0.37287506461143494
+epoch 30, loss 0.1374560445547104
+epoch 40, loss 0.03431496396660805
+epoch 50, loss 0.010655642487108707
+evaluating on sampled validation set
+Sampled Accuracy: 0.2757
+evaluating on full size validation set
+Full size Accuracy: 0.3237
+epoch 60, loss 0.008713433519005775
+epoch 70, loss 0.010272189974784851
+epoch 80, loss 0.010613945312798023
+epoch 90, loss 0.009602303616702557
+epoch 100, loss 0.008564833551645279
+evaluating on sampled validation set
+Sampled Accuracy: 0.2867
+evaluating on full size validation set
+Full size Accuracy: 0.3018
+epoch 110, loss 0.007858348079025745
+epoch 120, loss 0.007343417499214411
+epoch 130, loss 0.0068883877247571945
+epoch 140, loss 0.006478267256170511
+epoch 150, loss 0.006146311294287443
+evaluating on sampled validation set
+Sampled Accuracy: 0.2894
+evaluating on full size validation set
+Full size Accuracy: 0.3224
+epoch 160, loss 0.0058477274142205715
+epoch 170, loss 0.005593924317508936
+epoch 180, loss 0.0053789797239005566
+epoch 190, loss 0.005199196748435497
+evaluating on sampled test set
+Sampled Accuracy: 0.3781
+evaluating on full size test set
+Full size Accuracy: 0.3465
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 620, new test set size: 269, new val set size: 421
+original: training set size: 1092, original test set size: 456, original val set size: 729
+percentage preserved: training set: 56.78%, test set: 58.99%, val set: 57.75%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 204.35it/s] 21%|██        | 42/200 [00:00<00:00, 206.08it/s] 32%|███▏      | 63/200 [00:00<00:00, 206.99it/s] 42%|████▏     | 84/200 [00:00<00:00, 207.44it/s] 52%|█████▎    | 105/200 [00:00<00:00, 202.66it/s] 63%|██████▎   | 126/200 [00:00<00:00, 204.43it/s] 74%|███████▎  | 147/200 [00:00<00:00, 205.58it/s] 84%|████████▍ | 168/200 [00:00<00:00, 206.34it/s] 94%|█████████▍| 189/200 [00:00<00:00, 206.79it/s]100%|██████████| 200/200 [00:00<00:00, 206.06it/s]
+epoch 0, loss 1.5951004028320312
+evaluating on sampled validation set
+Sampled Accuracy: 0.2195
+evaluating on full size validation set
+Full size Accuracy: 0.2442
+epoch 10, loss 0.8348367810249329
+epoch 20, loss 0.3077095150947571
+epoch 30, loss 0.059482142329216
+epoch 40, loss 0.010425731539726257
+epoch 50, loss 0.004300659988075495
+evaluating on sampled validation set
+Sampled Accuracy: 0.2647
+evaluating on full size validation set
+Full size Accuracy: 0.2332
+epoch 60, loss 0.005288290791213512
+epoch 70, loss 0.006873688194900751
+epoch 80, loss 0.0068414402194321156
+epoch 90, loss 0.00610781367868185
+epoch 100, loss 0.0056268516927957535
+evaluating on sampled validation set
+Sampled Accuracy: 0.2647
+evaluating on full size validation set
+Full size Accuracy: 0.2963
+epoch 110, loss 0.005316576454788446
+epoch 120, loss 0.00502815144136548
+epoch 130, loss 0.004784990567713976
+epoch 140, loss 0.004576716106384993
+epoch 150, loss 0.004399746656417847
+evaluating on sampled validation set
+Sampled Accuracy: 0.2785
+evaluating on full size validation set
+Full size Accuracy: 0.2908
+epoch 160, loss 0.004245876334607601
+epoch 170, loss 0.00411468418315053
+epoch 180, loss 0.00399381248280406
+epoch 190, loss 0.0038908228743821383
+evaluating on sampled test set
+Sampled Accuracy: 0.4498
+evaluating on full size test set
+Full size Accuracy: 0.3136
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 490, new test set size: 216, new val set size: 319
+original: training set size: 1092, original test set size: 456, original val set size: 729
+percentage preserved: training set: 44.87%, test set: 47.37%, val set: 43.76%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 204.08it/s] 21%|██        | 42/200 [00:00<00:00, 206.02it/s] 32%|███▏      | 63/200 [00:00<00:00, 206.86it/s] 42%|████▏     | 84/200 [00:00<00:00, 207.38it/s] 52%|█████▎    | 105/200 [00:00<00:00, 207.65it/s] 63%|██████▎   | 126/200 [00:00<00:00, 207.72it/s] 74%|███████▎  | 147/200 [00:00<00:00, 207.77it/s] 84%|████████▍ | 168/200 [00:00<00:00, 207.76it/s] 94%|█████████▍| 189/200 [00:00<00:00, 207.81it/s]100%|██████████| 200/200 [00:00<00:00, 207.47it/s]
+epoch 0, loss 1.5634980201721191
+evaluating on sampled validation set
+Sampled Accuracy: 0.1481
+evaluating on full size validation set
+Full size Accuracy: 0.1536
+epoch 10, loss 0.6274121999740601
+epoch 20, loss 0.261197030544281
+epoch 30, loss 0.07598132640123367
+epoch 40, loss 0.014450752176344395
+epoch 50, loss 0.004694638308137655
+evaluating on sampled validation set
+Sampled Accuracy: 0.1893
+evaluating on full size validation set
+Full size Accuracy: 0.2305
+epoch 60, loss 0.003907641861587763
+epoch 70, loss 0.004794455599039793
+epoch 80, loss 0.005161115434020758
+epoch 90, loss 0.004788607358932495
+epoch 100, loss 0.004498340655118227
+evaluating on sampled validation set
+Sampled Accuracy: 0.1948
+evaluating on full size validation set
+Full size Accuracy: 0.2867
+epoch 110, loss 0.004292977973818779
+epoch 120, loss 0.004054162185639143
+epoch 130, loss 0.003853178583085537
+epoch 140, loss 0.0036839416716247797
+epoch 150, loss 0.0035336220171302557
+evaluating on sampled validation set
+Sampled Accuracy: 0.1989
+evaluating on full size validation set
+Full size Accuracy: 0.2538
+epoch 160, loss 0.0034086680971086025
+epoch 170, loss 0.0032960318494588137
+epoch 180, loss 0.0031989295966923237
+epoch 190, loss 0.003113418584689498
+evaluating on sampled test set
+Sampled Accuracy: 0.5417
+evaluating on full size test set
+Full size Accuracy: 0.2390
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 359, new test set size: 153, new val set size: 229
+original: training set size: 1092, original test set size: 456, original val set size: 729
+percentage preserved: training set: 32.88%, test set: 33.55%, val set: 31.41%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 203.91it/s] 21%|██        | 42/200 [00:00<00:00, 206.03it/s] 32%|███▏      | 63/200 [00:00<00:00, 207.00it/s] 42%|████▏     | 84/200 [00:00<00:00, 207.50it/s] 52%|█████▎    | 105/200 [00:00<00:00, 207.76it/s] 63%|██████▎   | 126/200 [00:00<00:00, 207.81it/s] 74%|███████▎  | 147/200 [00:00<00:00, 207.86it/s] 84%|████████▍ | 168/200 [00:00<00:00, 207.91it/s] 94%|█████████▍| 189/200 [00:00<00:00, 207.93it/s]100%|██████████| 200/200 [00:00<00:00, 207.56it/s]
+epoch 0, loss 1.6246747970581055
+evaluating on sampled validation set
+Sampled Accuracy: 0.1111
+evaluating on full size validation set
+Full size Accuracy: 0.1536
+epoch 10, loss 0.509125292301178
+epoch 20, loss 0.16439679265022278
+epoch 30, loss 0.03629634529352188
+epoch 40, loss 0.011865191161632538
+epoch 50, loss 0.005819534417241812
+evaluating on sampled validation set
+Sampled Accuracy: 0.1852
+evaluating on full size validation set
+Full size Accuracy: 0.1715
+epoch 60, loss 0.003762092674151063
+epoch 70, loss 0.003963256720453501
+epoch 80, loss 0.004342069383710623
+epoch 90, loss 0.004279941786080599
+epoch 100, loss 0.003983716014772654
+evaluating on sampled validation set
+Sampled Accuracy: 0.1852
+evaluating on full size validation set
+Full size Accuracy: 0.1852
+epoch 110, loss 0.0037776611279696226
+epoch 120, loss 0.0035715315025299788
+epoch 130, loss 0.003387067001312971
+epoch 140, loss 0.0032046588603407145
+epoch 150, loss 0.0030529096256941557
+evaluating on sampled validation set
+Sampled Accuracy: 0.1893
+evaluating on full size validation set
+Full size Accuracy: 0.1811
+epoch 160, loss 0.0029218806885182858
+epoch 170, loss 0.0027996457647532225
+epoch 180, loss 0.0026949772145599127
+epoch 190, loss 0.0026022770907729864
+evaluating on sampled test set
+Sampled Accuracy: 0.5948
+evaluating on full size test set
+Full size Accuracy: 0.2325
+calculating hat matrix
+
+...
+
+leverage_score computed
+sampled training set size: 218, new test set size: 93, new val set size: 145
+original: training set size: 1092, original test set size: 456, original val set size: 729
+percentage preserved: training set: 19.96%, test set: 20.39%, val set: 19.89%
+  0%|          | 0/200 [00:00<?, ?it/s] 10%|█         | 21/200 [00:00<00:00, 203.83it/s] 21%|██        | 42/200 [00:00<00:00, 206.03it/s] 32%|███▏      | 63/200 [00:00<00:00, 206.89it/s] 42%|████▏     | 84/200 [00:00<00:00, 207.41it/s] 52%|█████▎    | 105/200 [00:00<00:00, 207.65it/s] 63%|██████▎   | 126/200 [00:00<00:00, 207.64it/s] 74%|███████▎  | 147/200 [00:00<00:00, 207.68it/s] 84%|████████▍ | 168/200 [00:00<00:00, 207.72it/s] 94%|█████████▍| 189/200 [00:00<00:00, 207.74it/s]100%|██████████| 200/200 [00:00<00:00, 207.43it/s]
+epoch 0, loss 1.5505074262619019
+evaluating on sampled validation set
+Sampled Accuracy: 0.0864
+evaluating on full size validation set
+Full size Accuracy: 0.2469
+epoch 10, loss 0.34567466378211975
+epoch 20, loss 0.0827789232134819
+epoch 30, loss 0.03450440987944603
+epoch 40, loss 0.015867292881011963
+epoch 50, loss 0.008440260775387287
+evaluating on sampled validation set
+Sampled Accuracy: 0.1427
+evaluating on full size validation set
+Full size Accuracy: 0.1783
+epoch 60, loss 0.0038058864884078503
+epoch 70, loss 0.002295367419719696
+epoch 80, loss 0.0021458780393004417
+epoch 90, loss 0.002277747029438615
+epoch 100, loss 0.0024378185626119375
+evaluating on sampled validation set
+Sampled Accuracy: 0.1344
+evaluating on full size validation set
+Full size Accuracy: 0.1660
+epoch 110, loss 0.002517684828490019
+epoch 120, loss 0.0024856473319232464
+epoch 130, loss 0.002403354039415717
+epoch 140, loss 0.0023141209967434406
+epoch 150, loss 0.0022317792754620314
+evaluating on sampled validation set
+Sampled Accuracy: 0.1317
+evaluating on full size validation set
+Full size Accuracy: 0.1687
+epoch 160, loss 0.0021567174699157476
+epoch 170, loss 0.002091109985485673
+epoch 180, loss 0.002035262295976281
+epoch 190, loss 0.0019793156534433365
+evaluating on sampled test set
+Sampled Accuracy: 0.6774
+evaluating on full size test set
+Full size Accuracy: 0.1974
+torch.Size([5]) 5
+torch.Size([5]) 5

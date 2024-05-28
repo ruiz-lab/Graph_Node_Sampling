@@ -45,7 +45,9 @@ class GraphNodeSampler: # down sample graph according to leverage score, both th
         return torch.topk(self.leverage_score, num_excluded, largest=False)[1]
     
     def exclude_sample(self, idx, relabel=False):
-        full_size_idx = torch.ones(self.n, dtype=torch.bool)
+        device = self.data.x.device
+        idx = idx.to(device)
+        full_size_idx = torch.ones(self.n, dtype=torch.bool, device=device)
         full_size_idx[idx] = False
         train_mask = self.data.train_mask & full_size_idx
         test_mask = self.data.test_mask & full_size_idx
@@ -65,6 +67,43 @@ class GraphNodeSampler: # down sample graph according to leverage score, both th
         if relabel:
             return pyg.data.Data(x=new_x, edge_index=edge_index, y=new_y)
         return pyg.data.Data(x=new_x, edge_index=edge_index, y=new_y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
+    
+class A_Opt_Sampler:
+    def __init__(self, data:torch_geometric.data.data.Data, num_excluded=100):
+        A = pyg.utils.to_dense_adj(data.edge_index).squeeze()
+        D = torch.diag(A.sum(dim=1))
+        self.L = D - A
+        self.L_squared_diag = torch.diag(self.L @ self.L)
+        X = data.x
+        self.XXT = X @ X.T
+        self.XXT_squared_diag = torch.diag(self.XXT @ self.XXT)
+        self.num_excluded = num_excluded
+    
+    def Laplacian_Trace_Opt_Index(self, num_excluded=None):
+        if num_excluded is None:
+            num_excluded = self.num_excluded
+        idx = torch.topk(self.L_squared_diag, num_excluded, largest=True)[1]
+        return idx, torch.sum(self.L_squared_diag[idx])
+    
+    def Feature_Trace_Opt_Index(self, num_excluded=None):
+        if num_excluded is None:
+            num_excluded = self.num_excluded
+        idx = torch.topk(self.XXT_squared_diag, num_excluded, largest=True)[1]
+        return idx, torch.sum(self.XXT_squared_diag[idx])
+    
+    def sample_from_idx(self, idx, data:torch_geometric.data.data.Data):
+        device = data.x.device
+        idx = idx.to(device)
+        full_size_idx = torch.ones(data.num_nodes, dtype=torch.bool, device=device)
+        full_size_idx[idx] = False
+        train_mask = data.train_mask & full_size_idx
+        test_mask = data.test_mask & full_size_idx
+        val_mask = data.val_mask & full_size_idx
+        edge_index = pyg.utils.subgraph(idx, data.edge_index, relabel_nodes=False)[0]
+        new_x = data.x
+        new_y = data.y
+        return pyg.data.Data(x=new_x, edge_index=edge_index, y=new_y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
+
 
 def leverage_score(data:Data):
     X = data.x
@@ -116,6 +155,15 @@ def feature_homophily_score(data):
     A = pyg.utils.to_dense_adj(data.edge_index).squeeze()
     H_score = torch.trace(A @ normed_X @ normed_X.T) / data.num_edges
     return H_score.item()
+
+def Laplacian_feature_homophily_score(data):
+    X = data.x
+    norm = torch.linalg.vector_norm(X, ord=2, dim=1)
+    normed_X = X / torch.maximum(norm, torch.full_like(norm, 1e-6)).unsqueeze(1)
+    A = pyg.utils.to_dense_adj(data.edge_index).squeeze()
+    D = torch.diag(A.sum(dim=1))
+    L = D - A
+    H_score = torch.trace( -L @ normed_X @ normed_X.T) / data.num_edges
 
 def edge_homophily_score(data:Data):
     edge_index = data.edge_index
