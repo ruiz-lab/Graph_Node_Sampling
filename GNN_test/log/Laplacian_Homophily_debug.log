@@ -1,0 +1,16 @@
+nohup: ignoring input
+dataset_name:  SquirrelDataset
+Done loading data from cached files.
+sample_rate 0.10000000149011612, numerator: 0.0, denominator: 0, Laplacian_Homophily: nan
+sample_rate 0.19999998807907104, numerator: 0.0, denominator: 0, Laplacian_Homophily: nan
+sample_rate 0.29999998211860657, numerator: 0.0, denominator: 0, Laplacian_Homophily: nan
+sample_rate 0.3999999761581421, numerator: 0.0, denominator: 0, Laplacian_Homophily: nan
+sample_rate 0.4999999701976776, numerator: 0.0, denominator: 0, Laplacian_Homophily: nan
+sample_rate 0.6000000238418579, numerator: -4.780669212341309, denominator: 11, Laplacian_Homophily: -0.43460628390312195
+sample_rate 0.7000000476837158, numerator: -1372.25537109375, denominator: 1485, Laplacian_Homophily: -0.9240776896476746
+sample_rate 0.800000011920929, numerator: -5702.55322265625, denominator: 6150, Laplacian_Homophily: -0.9272444248199463
+sample_rate 0.8999999761581421, numerator: -18616.8671875, denominator: 20140, Laplacian_Homophily: -0.9243727326393127
+sample_rate 1.0, numerator: -199507.296875, denominator: 217073, Laplacian_Homophily: -0.9190793037414551
+tensor([0.1000, 0.2000, 0.3000, 0.4000, 0.5000, 0.6000, 0.7000, 0.8000, 0.9000,
+        1.0000])
+[tensor(nan), tensor(nan), tensor(nan), tensor(nan), tensor(nan), tensor(-0.4346), tensor(-0.9241), tensor(-0.9272), tensor(-0.9244), tensor(-0.9191)]

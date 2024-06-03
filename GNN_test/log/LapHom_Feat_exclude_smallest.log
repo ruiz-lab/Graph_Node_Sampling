@@ -1,0 +1,128 @@
+nohup: ignoring input
+dataset_name:  CoraGraphDataset
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+sample_rate 0.10000000149011612, numerator: -117.44654083251953, denominator: 140, Laplacian_Homophily: -0.8389038443565369
+sample_rate 0.19999998807907104, numerator: -461.771484375, denominator: 532, Laplacian_Homophily: -0.8679915070533752
+sample_rate 0.29999998211860657, numerator: -916.0740966796875, denominator: 1050, Laplacian_Homophily: -0.8724515438079834
+sample_rate 0.3999999761581421, numerator: -1476.8419189453125, denominator: 1694, Laplacian_Homophily: -0.8718075156211853
+sample_rate 0.4999999701976776, numerator: -2270.849365234375, denominator: 2574, Laplacian_Homophily: -0.8822258710861206
+sample_rate 0.6000000238418579, numerator: -3255.812744140625, denominator: 3656, Laplacian_Homophily: -0.8905395865440369
+sample_rate 0.7000000476837158, numerator: -4383.05615234375, denominator: 4884, Laplacian_Homophily: -0.8974316716194153
+sample_rate 0.800000011920929, numerator: -6174.22265625, denominator: 6798, Laplacian_Homophily: -0.9082410335540771
+sample_rate 0.8999999761581421, numerator: -7792.2841796875, denominator: 8560, Laplacian_Homophily: -0.9103135466575623
+sample_rate 1.0, numerator: -9652.6044921875, denominator: 10556, Laplacian_Homophily: -0.9144187569618225
+dataset_name:  CiteseerGraphDataset
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+sample_rate 0.10000000149011612, numerator: -115.32798767089844, denominator: 239, Laplacian_Homophily: -0.4825438857078552
+sample_rate 0.19999998807907104, numerator: -457.8750915527344, denominator: 745, Laplacian_Homophily: -0.6145974397659302
+sample_rate 0.29999998211860657, numerator: -948.0531005859375, denominator: 1397, Laplacian_Homophily: -0.6786350011825562
+sample_rate 0.3999999761581421, numerator: -1532.6827392578125, denominator: 2169, Laplacian_Homophily: -0.706631064414978
+sample_rate 0.4999999701976776, numerator: -2204.842529296875, denominator: 2987, Laplacian_Homophily: -0.7381461262702942
+sample_rate 0.6000000238418579, numerator: -3017.990478515625, denominator: 3981, Laplacian_Homophily: -0.7580986022949219
+sample_rate 0.7000000476837158, numerator: -3976.550537109375, denominator: 5112, Laplacian_Homophily: -0.7778854966163635
+sample_rate 0.800000011920929, numerator: -5019.16943359375, denominator: 6312, Laplacian_Homophily: -0.7951789498329163
+sample_rate 0.8999999761581421, numerator: -6308.0283203125, denominator: 7765, Laplacian_Homophily: -0.8123668432235718
+sample_rate 1.0, numerator: -7612.57568359375, denominator: 9228, Laplacian_Homophily: -0.8249431848526001
+dataset_name:  PubmedGraphDataset
+  NumNodes: 19717
+  NumEdges: 88651
+  NumFeats: 500
+  NumClasses: 3
+  NumTrainingSamples: 60
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+sample_rate 0.10000000149011612, numerator: -1314.839111328125, denominator: 1871, Laplacian_Homophily: -0.7027466893196106
+sample_rate 0.19999998807907104, numerator: -4300.95361328125, denominator: 6017, Laplacian_Homophily: -0.7148003578186035
+sample_rate 0.29999998211860657, numerator: -8211.6767578125, denominator: 11403, Laplacian_Homophily: -0.7201330065727234
+sample_rate 0.3999999761581421, numerator: -13422.6259765625, denominator: 18407, Laplacian_Homophily: -0.7292131185531616
+sample_rate 0.4999999701976776, numerator: -19370.44921875, denominator: 26363, Laplacian_Homophily: -0.7347589135169983
+sample_rate 0.6000000238418579, numerator: -26805.716796875, denominator: 36294, Laplacian_Homophily: -0.7385715842247009
+sample_rate 0.7000000476837158, numerator: -35479.5234375, denominator: 47679, Laplacian_Homophily: -0.7441331148147583
+sample_rate 0.800000011920929, numerator: -44929.87890625, denominator: 60035, Laplacian_Homophily: -0.7483947277069092
+sample_rate 0.8999999761581421, numerator: -56261.5703125, denominator: 74643, Laplacian_Homophily: -0.7537420988082886
+sample_rate 1.0, numerator: -67533.3046875, denominator: 88651, Laplacian_Homophily: -0.7617884278297424
+dataset_name:  TexasDataset
+Done loading data from cached files.
+sample_rate 0.10000000149011612, numerator: -3.2692363262176514, denominator: 6, Laplacian_Homophily: -0.5448727011680603
+sample_rate 0.19999998807907104, numerator: -13.070807456970215, denominator: 17, Laplacian_Homophily: -0.768871009349823
+sample_rate 0.29999998211860657, numerator: -21.36669921875, denominator: 26, Laplacian_Homophily: -0.8217961192131042
+sample_rate 0.3999999761581421, numerator: -47.766136169433594, denominator: 60, Laplacian_Homophily: -0.7961022853851318
+sample_rate 0.4999999701976776, numerator: -65.52278900146484, denominator: 83, Laplacian_Homophily: -0.7894312143325806
+sample_rate 0.6000000238418579, numerator: -88.3536605834961, denominator: 110, Laplacian_Homophily: -0.8032150864601135
+sample_rate 0.7000000476837158, numerator: -124.31741333007812, denominator: 154, Laplacian_Homophily: -0.8072559237480164
+sample_rate 0.800000011920929, numerator: -146.1031951904297, denominator: 180, Laplacian_Homophily: -0.8116844296455383
+sample_rate 0.8999999761581421, numerator: -251.25787353515625, denominator: 295, Laplacian_Homophily: -0.8517215847969055
+sample_rate 1.0, numerator: -277.64337158203125, denominator: 325, Laplacian_Homophily: -0.854287326335907
+dataset_name:  WisconsinDataset
+Done loading data from cached files.
+sample_rate 0.10000000149011612, numerator: -3.9502153396606445, denominator: 7, Laplacian_Homophily: -0.56431645154953
+sample_rate 0.19999998807907104, numerator: -26.986785888671875, denominator: 36, Laplacian_Homophily: -0.7496329545974731
+sample_rate 0.29999998211860657, numerator: -43.92341995239258, denominator: 59, Laplacian_Homophily: -0.7444647550582886
+sample_rate 0.3999999761581421, numerator: -72.21153259277344, denominator: 93, Laplacian_Homophily: -0.7764680981636047
+sample_rate 0.4999999701976776, numerator: -152.23318481445312, denominator: 183, Laplacian_Homophily: -0.8318753242492676
+sample_rate 0.6000000238418579, numerator: -218.7487030029297, denominator: 261, Laplacian_Homophily: -0.8381176590919495
+sample_rate 0.7000000476837158, numerator: -273.2189636230469, denominator: 323, Laplacian_Homophily: -0.8458791375160217
+sample_rate 0.800000011920929, numerator: -333.24066162109375, denominator: 391, Laplacian_Homophily: -0.852277934551239
+sample_rate 0.8999999761581421, numerator: -388.5029602050781, denominator: 457, Laplacian_Homophily: -0.8501158952713013
+sample_rate 1.0, numerator: -440.8757019042969, denominator: 515, Laplacian_Homophily: -0.8560693264007568
+dataset_name:  CornellDataset
+Done loading data from cached files.
+sample_rate 0.10000000149011612, numerator: 0.0, denominator: 0, Laplacian_Homophily: nan
+sample_rate 0.19999998807907104, numerator: -8.215875625610352, denominator: 10, Laplacian_Homophily: -0.8215875625610352
+sample_rate 0.29999998211860657, numerator: -14.901494026184082, denominator: 18, Laplacian_Homophily: -0.8278607726097107
+sample_rate 0.3999999761581421, numerator: -29.38858413696289, denominator: 35, Laplacian_Homophily: -0.8396738171577454
+sample_rate 0.4999999701976776, numerator: -102.02496337890625, denominator: 115, Laplacian_Homophily: -0.887173593044281
+sample_rate 0.6000000238418579, numerator: -131.3089599609375, denominator: 149, Laplacian_Homophily: -0.8812682032585144
+sample_rate 0.7000000476837158, numerator: -171.198486328125, denominator: 194, Laplacian_Homophily: -0.8824664354324341
+sample_rate 0.800000011920929, numerator: -196.49501037597656, denominator: 222, Laplacian_Homophily: -0.8851126432418823
+sample_rate 0.8999999761581421, numerator: -228.59268188476562, denominator: 260, Laplacian_Homophily: -0.8792026042938232
+sample_rate 1.0, numerator: -262.6994323730469, denominator: 298, Laplacian_Homophily: -0.8815417289733887
+dataset_name:  SquirrelDataset
+Done loading data from cached files.
+sample_rate 0.10000000149011612, numerator: -1491.037841796875, denominator: 1580, Laplacian_Homophily: -0.9436948299407959
+sample_rate 0.19999998807907104, numerator: -4454.1962890625, denominator: 4673, Laplacian_Homophily: -0.9531770348548889
+sample_rate 0.29999998211860657, numerator: -9522.7216796875, denominator: 9905, Laplacian_Homophily: -0.9614055156707764
+sample_rate 0.3999999761581421, numerator: -17207.763671875, denominator: 17789, Laplacian_Homophily: -0.9673261046409607
+sample_rate 0.4999999701976776, numerator: -27202.822265625, denominator: 27981, Laplacian_Homophily: -0.9721890687942505
+sample_rate 0.6000000238418579, numerator: -48937.23046875, denominator: 50028, Laplacian_Homophily: -0.9781967997550964
+sample_rate 0.7000000476837158, numerator: -79036.703125, denominator: 80494, Laplacian_Homophily: -0.9818955659866333
+sample_rate 0.800000011920929, numerator: -118969.1796875, denominator: 120807, Laplacian_Homophily: -0.9847871661186218
+sample_rate 0.8999999761581421, numerator: -163013.59375, denominator: 165212, Laplacian_Homophily: -0.9866934418678284
+sample_rate 1.0, numerator: -199507.296875, denominator: 217073, Laplacian_Homophily: -0.9190793037414551
+dataset_name:  ChameleonDataset
+Done loading data from cached files.
+sample_rate 0.10000000149011612, numerator: -1211.6307373046875, denominator: 1255, Laplacian_Homophily: -0.9654428362846375
+sample_rate 0.19999998807907104, numerator: -3485.10546875, denominator: 3580, Laplacian_Homophily: -0.9734931588172913
+sample_rate 0.29999998211860657, numerator: -7322.5419921875, denominator: 7484, Laplacian_Homophily: -0.9784262180328369
+sample_rate 0.3999999761581421, numerator: -11060.4189453125, denominator: 11279, Laplacian_Homophily: -0.9806205034255981
+sample_rate 0.4999999701976776, numerator: -15562.212890625, denominator: 15834, Laplacian_Homophily: -0.9828352332115173
+sample_rate 0.6000000238418579, numerator: -19756.05078125, denominator: 20071, Laplacian_Homophily: -0.9843082427978516
+sample_rate 0.7000000476837158, numerator: -24146.14453125, denominator: 24505, Laplacian_Homophily: -0.9853558540344238
+sample_rate 0.800000011920929, numerator: -27200.5859375, denominator: 27588, Laplacian_Homophily: -0.985957145690918
+sample_rate 0.8999999761581421, numerator: -30924.095703125, denominator: 31389, Laplacian_Homophily: -0.9851889610290527
+sample_rate 1.0, numerator: -32912.09765625, denominator: 36101, Laplacian_Homophily: -0.9116672277450562
+tensor([0.1000, 0.2000, 0.3000, 0.4000, 0.5000, 0.6000, 0.7000, 0.8000, 0.9000,
+        1.0000])
+[tensor(-0.8389), tensor(-0.8680), tensor(-0.8725), tensor(-0.8718), tensor(-0.8822), tensor(-0.8905), tensor(-0.8974), tensor(-0.9082), tensor(-0.9103), tensor(-0.9144)]
+[tensor(-0.4825), tensor(-0.6146), tensor(-0.6786), tensor(-0.7066), tensor(-0.7381), tensor(-0.7581), tensor(-0.7779), tensor(-0.7952), tensor(-0.8124), tensor(-0.8249)]
+[tensor(-0.7027), tensor(-0.7148), tensor(-0.7201), tensor(-0.7292), tensor(-0.7348), tensor(-0.7386), tensor(-0.7441), tensor(-0.7484), tensor(-0.7537), tensor(-0.7618)]
+[tensor(-0.5449), tensor(-0.7689), tensor(-0.8218), tensor(-0.7961), tensor(-0.7894), tensor(-0.8032), tensor(-0.8073), tensor(-0.8117), tensor(-0.8517), tensor(-0.8543)]
+[tensor(-0.5643), tensor(-0.7496), tensor(-0.7445), tensor(-0.7765), tensor(-0.8319), tensor(-0.8381), tensor(-0.8459), tensor(-0.8523), tensor(-0.8501), tensor(-0.8561)]
+[tensor(nan), tensor(-0.8216), tensor(-0.8279), tensor(-0.8397), tensor(-0.8872), tensor(-0.8813), tensor(-0.8825), tensor(-0.8851), tensor(-0.8792), tensor(-0.8815)]
+[tensor(-0.9437), tensor(-0.9532), tensor(-0.9614), tensor(-0.9673), tensor(-0.9722), tensor(-0.9782), tensor(-0.9819), tensor(-0.9848), tensor(-0.9867), tensor(-0.9191)]
+[tensor(-0.9654), tensor(-0.9735), tensor(-0.9784), tensor(-0.9806), tensor(-0.9828), tensor(-0.9843), tensor(-0.9854), tensor(-0.9860), tensor(-0.9852), tensor(-0.9117)]

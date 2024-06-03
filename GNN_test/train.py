@@ -14,7 +14,14 @@ import seaborn as sns
 from tqdm import tqdm
 from utils import *
 from model import *
+import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--train_type", type=str, default="A_opt", help="train type")
+parser.add_argument("--trace_type", type=str, default="Laplacian", help="trace type")
+parser.add_argument("--n_epochs", type=int, default=200, help="number of epochs")
+parser.add_argument("--device", type=str, default="cuda:0", help="device")
+args = parser.parse_args()
 
 
 
@@ -101,6 +108,8 @@ def A_opt_train(dataset_name_ls, n_epochs, device, trace_type="Laplacian", num_e
         print(f"\nTraining on {dataset_name}\n")
         dataset = dgl.data.__getattribute__(dataset_name)()
         data = convert_dgl_to_pyg(dataset)
+        if dataset_name == "PubMedGraphDataset":
+            data = TFIDF2BOW_Feature(data)
         print(f"\nnum_nodes: {data.num_nodes}, num_edges: {data.num_edges}\n")
         sampler = A_Opt_Sampler(data)
         sample_val_acc_ls = []
@@ -149,7 +158,10 @@ def A_opt_train(dataset_name_ls, n_epochs, device, trace_type="Laplacian", num_e
         plt.plot(sample_rate_ls, full_size_test_acc_ls, 'o-', label=dataset_name)
     plt.xlabel("Sample Rate")
     plt.ylabel("Accuracy")
+    y_ticks = np.linspace(0, 1, 11)
+    plt.yticks(y_ticks)
     plt.title("Test Accuracy")
+    plt.grid()
     plt.legend()
     plt.ylim(0, 1)
     plt.savefig(f"img/A_opt_{trace_type}/test_acc.png")
@@ -160,6 +172,8 @@ def leverage_train(dataset_name_ls, n_epochs, device):
     for dataset_name in dataset_name_ls:
         dataset = dgl.data.__getattribute__(dataset_name)()
         data = convert_dgl_to_pyg(dataset)
+        if dataset_name == "PubMedGraphDataset":
+            data = TFIDF2BOW_Feature(data)
         best_sample_val_acc = []
         best_full_size_val_acc = []
         best_sample_test_acc = []
@@ -185,7 +199,10 @@ def leverage_train(dataset_name_ls, n_epochs, device):
         plt.plot(sample_rate_ls, best_full_size_test_acc, 'o-', label=dataset_name)
     plt.xlabel("Sample Rate")
     plt.ylabel("Accuracy")
+    y_ticks = np.linspace(0, 1, 11)
+    plt.yticks(y_ticks)
     plt.title("Test Accuracy")
+    plt.grid()
     plt.legend()
     plt.ylim(0, 1)
     plt.savefig(f"img/leverage/test_acc.png")
@@ -194,11 +211,51 @@ def leverage_train(dataset_name_ls, n_epochs, device):
         # # plot test acc
         # plot_rst(sample_rate_ls, best_sample_test_acc, best_full_size_test_acc, title=f"{dataset_name} Test Accuracy", xlabel="Sample Rate", ylabel="Accuracy", save_path=f"img/leverage/{dataset_name}_test_acc.png")
 
+def random_sample_train(dataset_name_ls, n_epochs, device):
+    sample_rate_ls = torch.linspace(0.1, 0.9, 9)
+    plt.figure(figsize=(10, 5))
+    for dataset_name in dataset_name_ls:
+        dataset = dgl.data.__getattribute__(dataset_name)()
+        data = convert_dgl_to_pyg(dataset)
+        if dataset_name == "PubMedGraphDataset":
+            data = TFIDF2BOW_Feature(data)
+        best_sample_val_acc = []
+        best_full_size_val_acc = []
+        best_sample_test_acc = []
+        best_full_size_test_acc = []
+        for sample_rate in sample_rate_ls:
+            num_excluded = int((1 - sample_rate) * data.num_nodes)
+            sampler = RandomSampler(num_excluded=num_excluded)
+            exclude_idx = sampler.Exclusion_Index(data, num_excluded)
+            sub_data = sampler.sample_from_idx(data, exclude_idx)
+            sub_data = sub_data.to(device)
+            data = data.to(device)
+            # train model
+            model = GConvModel(data.num_features, 16, dataset.num_classes).to(device)
+            optimizer = optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4)
+            criterion = nn.NLLLoss()
+            model, train_loss, sampled_val_acc, full_size_val_acc = train(n_epochs, model, criterion, optimizer, sub_data, data)
+            best_sample_val_acc.append(max(sampled_val_acc))
+            best_full_size_val_acc.append(max(full_size_val_acc))
+            # evaluate model
+            sample_test_acc, full_size_acc = evaluate(model, sub_data, data)
+            best_sample_test_acc.append(sample_test_acc)
+            best_full_size_test_acc.append(full_size_acc)
+        plt.plot(sample_rate_ls, best_full_size_test_acc, 'o-', label=dataset_name)
+    plt.xlabel("Sample Rate")
+    plt.ylabel("Accuracy")
+    y_ticks = np.linspace(0, 1, 11)
+    plt.yticks(y_ticks)
+    plt.title("Test Accuracy")
+    plt.grid()
+    plt.legend()
+    plt.ylim(0, 1)
+    plt.savefig(f"img/random_sample/test_acc.png")
 
 dataset_name_ls = ['CoraGraphDataset', 'CiteseerGraphDataset', 'PubmedGraphDataset', 'TexasDataset', 'WisconsinDataset', 'CornellDataset', 'SquirrelDataset', 'ChameleonDataset']
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+device = torch.device(args.device)
 pattern = re.compile(r'(Graph)?Dataset')
-n_epochs = 200
+n_epochs = args.n_epochs
 
 '''
 synthetic dataset 
@@ -222,9 +279,14 @@ synthetic dataset
 #     plot_val_acc(sampled_val_acc, full_size_val_acc, title=f"{pattern.sub('', dataset_name)} test acc {full_size_acc}", save_path=f"{crnt_folder}/{pattern.sub('', dataset_name)}_val_acc.png")
     # plot_heatmap(generated_x, f"img/random_feature_heatmap/{pattern.sub('', dataset_name)}_cosine_similarity.png", metric="cos")
     # plot_heatmap(generated_x, f"img/random_feature_heatmap/{pattern.sub('', dataset_name)}_L2_Distance.png", metric="L2")
-
-# A_opt_train(dataset_name_ls, n_epochs, device, trace_type="Laplacian")
-leverage_train(dataset_name_ls, n_epochs, device)
+if args.train_type == "A_opt":
+    A_opt_train(dataset_name_ls, n_epochs, device, trace_type=args.trace_type)
+elif args.train_type == "leverage":
+    leverage_train(dataset_name_ls, n_epochs, device)
+elif args.train_type == "random":
+    random_sample_train(dataset_name_ls, n_epochs, device)
+# A_opt_train(dataset_name_ls, n_epochs, device, trace_type="Feature")
+# leverage_train(dataset_name_ls, n_epochs, device)
 # for dataset_name in dataset_name_ls:
 #     dataset = dgl.data.__getattribute__(dataset_name)()
 #     data = convert_dgl_to_pyg(dataset)

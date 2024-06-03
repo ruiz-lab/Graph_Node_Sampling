@@ -3,7 +3,7 @@ import torch_geometric
 import torch_geometric as pyg
 import numpy as np
 import networkx as nx
-from torch_geometric.data import Data
+from torch_geometric.data.data import Data
 from torch_geometric.datasets import Planetoid
 import re
 import matplotlib.pyplot as plt
@@ -79,16 +79,16 @@ class A_Opt_Sampler:
         self.XXT_squared_diag = torch.diag(self.XXT @ self.XXT)
         self.num_excluded = num_excluded
     
-    def Laplacian_Trace_Opt_Index(self, num_excluded=None):
+    def Laplacian_Trace_Opt_Index(self, num_excluded=None, exclude_largest=True):
         if num_excluded is None:
             num_excluded = self.num_excluded
-        idx = torch.topk(self.L_squared_diag, num_excluded, largest=True)[1]
+        idx = torch.topk(self.L_squared_diag, num_excluded, largest=exclude_largest)[1]
         return idx, torch.sum(self.L_squared_diag[idx])
     
-    def Feature_Trace_Opt_Index(self, num_excluded=None):
+    def Feature_Trace_Opt_Index(self, num_excluded=None, exclude_largest=True):
         if num_excluded is None:
             num_excluded = self.num_excluded
-        idx = torch.topk(self.XXT_squared_diag, num_excluded, largest=True)[1]
+        idx = torch.topk(self.XXT_squared_diag, num_excluded, largest=exclude_largest)[1]
         return idx, torch.sum(self.XXT_squared_diag[idx])
     
     def sample_from_idx(self, idx, data:torch_geometric.data.data.Data):
@@ -102,6 +102,26 @@ class A_Opt_Sampler:
         edge_index = pyg.utils.subgraph(idx, data.edge_index, relabel_nodes=False)[0]
         return pyg.data.Data(x=data.x, edge_index=edge_index, y=data.y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
 
+class RandomSampler:
+    def __init__(self, num_excluded=100):
+        self.num_excluded = num_excluded
+    
+    def Exclusion_Index(self, data:torch_geometric.data.data.Data, num_excluded=None):
+        if num_excluded is None:
+            num_excluded = self.num_excluded
+        idx = torch.randperm(data.num_nodes)[:num_excluded]
+        return idx
+
+    def sample_from_idx(self, data:torch_geometric.data.data.Data, idx):
+        device = data.x.device
+        idx = idx.to(device)
+        full_size_idx = torch.ones(data.num_nodes, dtype=torch.bool, device=device)
+        full_size_idx[idx] = False
+        train_mask = data.train_mask & full_size_idx
+        test_mask = data.test_mask & full_size_idx
+        val_mask = data.val_mask & full_size_idx
+        edge_index = pyg.utils.subgraph(idx, data.edge_index, relabel_nodes=False)[0]
+        return pyg.data.Data(x=data.x, edge_index=edge_index, y=data.y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
 
 def leverage_score(data:Data):
     X = data.x
@@ -447,3 +467,11 @@ def plot_val_acc(sampled_val_acc, full_size_val_acc, title, save_path):
     plt.legend()
     plt.savefig(save_path)
     plt.close()
+
+def TFIDF2BOW_Feature(data:Data):
+    x = data.x
+    mask = x != 0
+    new_x = torch.zeros_like(x)
+    new_x[mask] = 1
+    data.x = new_x
+    return data
