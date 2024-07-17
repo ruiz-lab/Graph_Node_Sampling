@@ -186,6 +186,8 @@ def Laplacian_feature_homophily_score(data):
 
 def edge_homophily_score(data:Data):
     edge_index = data.edge_index
+    if len(edge_index.shape) == 1 or edge_index.shape[1] == 0:
+        return 0
     y = data.y
     y_y = y.unsqueeze(0) == y.unsqueeze(1)
     edge_homophily = torch.sum(y_y[edge_index[0], edge_index[1]]).item()
@@ -475,3 +477,10 @@ def TFIDF2BOW_Feature(data:Data):
     new_x[mask] = 1
     data.x = new_x
     return data
+
+def subgraph_from_index(sample_idx, data):
+    X = data.x
+    new_x = X[sample_idx]
+    edge_idx = pyg.utils.subgraph(sample_idx, data.edge_index, relabel_nodes=True)[0]
+    sub_data = pyg.data.Data(x=new_x, y=data.y[sample_idx], edge_index=edge_idx)
+    return sub_data

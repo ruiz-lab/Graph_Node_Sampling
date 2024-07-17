@@ -1,0 +1,91 @@
+nohup: ignoring input
+dataset_name:  CoraGraphDataset
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([1433]) torch.Size([2708])
+dataset_name:  CiteseerGraphDataset
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([3703]) torch.Size([3327])
+dataset_name:  PubmedGraphDataset
+  NumNodes: 19717
+  NumEdges: 88651
+  NumFeats: 500
+  NumClasses: 3
+  NumTrainingSamples: 60
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([500]) torch.Size([19717])
+dataset_name:  TexasDataset
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([183])
+dataset_name:  WisconsinDataset
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([251])
+dataset_name:  CornellDataset
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([183])
+dataset_name:  SquirrelDataset
+Done loading data from cached files.
+torch.Size([2089]) torch.Size([5201])
+dataset_name:  ChameleonDataset
+Done loading data from cached files.
+torch.Size([2325]) torch.Size([2277])
+[tensor(-0.0010), tensor(-0.0030), tensor(-0.0060), tensor(-0.0096), tensor(-0.0138), tensor(-0.0183), tensor(-0.0237), tensor(-0.0302), tensor(-0.0357), tensor(-0.0410)]
+[tensor(-0.0008), tensor(-0.0020), tensor(-0.0036), tensor(-0.0054), tensor(-0.0076), tensor(-0.0097), tensor(-0.0119), tensor(-0.0141), tensor(-0.0170), tensor(-0.0194)]
+[tensor(-3.2329e-06), tensor(-9.9145e-06), tensor(-1.9668e-05), tensor(-3.2670e-05), tensor(-4.6801e-05), tensor(-6.3807e-05), tensor(-8.1750e-05), tensor(-0.0001), tensor(-0.0001), tensor(-0.0001)]
+[tensor(-4.4906e-08), tensor(-4.8182e-07), tensor(-9.2090e-07), tensor(-1.5856e-06), tensor(-2.3767e-06), tensor(-3.1476e-06), tensor(-4.3093e-06), tensor(-5.0329e-06), tensor(-8.2459e-06), tensor(-9.0087e-06)]
+[tensor(-1.6821e-07), tensor(-6.8918e-07), tensor(-1.2248e-06), tensor(-3.2314e-06), tensor(-3.9144e-06), tensor(-5.1782e-06), tensor(-6.4912e-06), tensor(-7.3162e-06), tensor(-8.1380e-06), tensor(-9.1203e-06)]
+[tensor(-1.1270e-07), tensor(-2.4351e-07), tensor(-6.5472e-07), tensor(-1.0406e-06), tensor(-1.6255e-06), tensor(-4.3459e-06), tensor(-5.1095e-06), tensor(-5.8774e-06), tensor(-6.4320e-06), tensor(-7.2370e-06)]
+[tensor(-1.2845e-05), tensor(-2.8944e-05), tensor(-5.6835e-05), tensor(-9.5476e-05), tensor(-0.0002), tensor(-0.0002), tensor(-0.0003), tensor(-0.0004), tensor(-0.0005), tensor(-0.0006)]
+[tensor(-2.7687e-05), tensor(-6.4510e-05), tensor(-0.0001), tensor(-0.0002), tensor(-0.0002), tensor(-0.0003), tensor(-0.0004), tensor(-0.0004), tensor(-0.0005), tensor(-0.0005)]
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([1433]) torch.Size([2708])
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([3703]) torch.Size([3327])
+  NumNodes: 19717
+  NumEdges: 88651
+  NumFeats: 500
+  NumClasses: 3
+  NumTrainingSamples: 60
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([500]) torch.Size([19717])
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([183])
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([251])
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([183])
+Done loading data from cached files.
+torch.Size([2089]) torch.Size([5201])
+Done loading data from cached files.
+torch.Size([2325]) torch.Size([2277])

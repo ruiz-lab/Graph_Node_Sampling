@@ -1,0 +1,46 @@
+nohup: ignoring input
+dataset_name:  CoraGraphDataset
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([1433]) torch.Size([2708])
+dataset_name:  CiteseerGraphDataset
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([3703]) torch.Size([3327])
+dataset_name:  PubmedGraphDataset
+  NumNodes: 19717
+  NumEdges: 88651
+  NumFeats: 500
+  NumClasses: 3
+  NumTrainingSamples: 60
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([500]) torch.Size([19717])
+dataset_name:  TexasDataset
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([183])
+dataset_name:  WisconsinDataset
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([251])
+dataset_name:  CornellDataset
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([183])
+dataset_name:  SquirrelDataset
+Done loading data from cached files.
+torch.Size([2089]) torch.Size([5201])
+dataset_name:  ChameleonDataset
+Done loading data from cached files.
+torch.Size([2325]) torch.Size([2277])

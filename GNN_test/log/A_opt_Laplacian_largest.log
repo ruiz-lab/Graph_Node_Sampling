@@ -1,0 +1,54 @@
+nohup: ignoring input
+dataset_name:  CoraGraphDataset
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([1433]) torch.Size([2708])
+dataset_name:  CiteseerGraphDataset
+  NumNodes: 3327
+  NumEdges: 9228
+  NumFeats: 3703
+  NumClasses: 6
+  NumTrainingSamples: 120
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([3703]) torch.Size([3327])
+dataset_name:  PubmedGraphDataset
+  NumNodes: 19717
+  NumEdges: 88651
+  NumFeats: 500
+  NumClasses: 3
+  NumTrainingSamples: 60
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done loading data from cached files.
+torch.Size([500]) torch.Size([19717])
+dataset_name:  TexasDataset
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([183])
+dataset_name:  WisconsinDataset
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([251])
+dataset_name:  CornellDataset
+Done loading data from cached files.
+torch.Size([1703]) torch.Size([183])
+dataset_name:  SquirrelDataset
+Done loading data from cached files.
+torch.Size([2089]) torch.Size([5201])
+dataset_name:  ChameleonDataset
+Done loading data from cached files.
+torch.Size([2325]) torch.Size([2277])
+[tensor(-0.0001), tensor(-0.0005), tensor(-0.0010), tensor(-0.0017), tensor(-0.0029), tensor(-0.0043), tensor(-0.0071), tensor(-0.0107), tensor(-0.0175), tensor(-0.0410)]
+[tensor(-3.3945e-05), tensor(-0.0002), tensor(-0.0005), tensor(-0.0008), tensor(-0.0014), tensor(-0.0022), tensor(-0.0034), tensor(-0.0052), tensor(-0.0086), tensor(-0.0194)]
+[tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(-8.1684e-08), tensor(-3.9366e-07), tensor(-1.2987e-06), tensor(-6.1464e-06), tensor(-3.1241e-05), tensor(-0.0001)]
+[tensor(0.), tensor(0.), tensor(-3.6394e-07), tensor(-9.2802e-07), tensor(-1.3567e-06), tensor(-1.5684e-06), tensor(-2.3067e-06), tensor(-3.0785e-06), tensor(-4.1732e-06), tensor(-9.0087e-06)]
+[tensor(0.), tensor(-6.5930e-08), tensor(-3.3714e-07), tensor(-7.6894e-07), tensor(-1.0428e-06), tensor(-1.7473e-06), tensor(-2.4844e-06), tensor(-3.2882e-06), tensor(-5.0819e-06), tensor(-9.1203e-06)]
+[tensor(0.), tensor(0.), tensor(-1.9939e-08), tensor(-9.0945e-07), tensor(-1.2885e-06), tensor(-1.6721e-06), tensor(-2.3391e-06), tensor(-3.3955e-06), tensor(-4.5747e-06), tensor(-7.2370e-06)]
+[tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(-1.5658e-08), tensor(-4.5440e-06), tensor(-1.8830e-05), tensor(-6.1978e-05), tensor(-0.0006)]
+[tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(0.), tensor(-2.3876e-06), tensor(-1.9863e-05), tensor(-8.3959e-05), tensor(-0.0005)]
