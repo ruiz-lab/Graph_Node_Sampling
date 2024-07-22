@@ -46,8 +46,9 @@ def homophily_vs_edge_homophily_barplot(dataset_name_ls, sample_rate_ls, trace_t
         original_X = data.x
         X_norm_feature_wise = torch.linalg.norm(original_X, ord=2, dim=0)
         vector_norm = torch.linalg.norm(original_X, ord=2, dim=1)
-        feature_normed_X = original_X / torch.maximum(X_norm_feature_wise, torch.full_like(X_norm_feature_wise, 1e-6))
-        processed_X = feature_normed_X / torch.maximum(vector_norm, torch.full_like(vector_norm, 1e-6)).unsqueeze(1)
+        # feature_normed_X = original_X / torch.maximum(X_norm_feature_wise, torch.full_like(X_norm_feature_wise, 1e-6))
+        processed_X = original_X / torch.maximum(vector_norm, torch.full_like(vector_norm, 1e-6)).unsqueeze(1)
+        # processed_X = feature_normed_X
         n, d = original_X.shape
         processed_X /= d
         data.x = processed_X
@@ -136,7 +137,7 @@ def homophily_vs_edge_homophily_barplot(dataset_name_ls, sample_rate_ls, trace_t
             axs[i].set_xticklabels([dataset_name.replace("Dataset", "").replace("Graph", "") for dataset_name in dataset_name_ls])
             axs[i].legend()
         fig.tight_layout()
-        path = f"img/A_opt_{trace_type}/{exclusion_type}_Exclusion_{trace_type}_Homophily_Edge_Homophily.png"
+        path = f"img/A_opt_{trace_type}/{exclusion_type}_Exclusion_{trace_type}_Homophily_Edge_Homophily_no_feat_norm.png"
         fig.savefig(path)
 
     return 

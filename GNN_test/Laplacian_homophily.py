@@ -23,16 +23,8 @@ def Laplacian_Homophily(data):
     L = D - A
     Homophily = -torch.trace( L @ x @ x.t() )
     return Homophily
-
-if __name__ == "__main__":
-
-    dataset_name_ls = ['CoraGraphDataset', 'CiteseerGraphDataset', 'PubmedGraphDataset', 'TexasDataset', 'WisconsinDataset', 'CornellDataset', 'SquirrelDataset', 'ChameleonDataset']
-
-    sample_rate_ls = torch.linspace(0.1, 1, 10)
-    trace_type = "Feature"
-    exclusion_type = "Smallest"
+def main(dataset_name_ls, sample_rate_ls, trace_type, exclusion_type):
     dataset2homophily = {}
-
 
     for dataset_name in dataset_name_ls:
         print("dataset_name: ", dataset_name)
@@ -44,8 +36,9 @@ if __name__ == "__main__":
         X_norm_feature_wise = torch.linalg.norm(original_X, ord=2, dim=0)
         vector_norm = torch.linalg.norm(original_X, ord=2, dim=1)
         print(X_norm_feature_wise.shape, vector_norm.shape)
-        feature_normed_X = original_X / torch.maximum(X_norm_feature_wise, torch.full_like(X_norm_feature_wise, 1e-6))
-        processed_X = feature_normed_X / torch.maximum(vector_norm, torch.full_like(vector_norm, 1e-6)).unsqueeze(1)
+        # feature_normed_X = original_X / torch.maximum(X_norm_feature_wise, torch.full_like(X_norm_feature_wise, 1e-6))
+        processed_X = original_X / torch.maximum(vector_norm, torch.full_like(vector_norm, 1e-6)).unsqueeze(1)
+        # processed_X = feature_normed_X
         n, d = original_X.shape
         processed_X /= d
         data.x = processed_X
@@ -96,7 +89,7 @@ if __name__ == "__main__":
             dataset2homophily[dataset_name]["Exclude_Largest"] = Homophily_Exclude_Largest_ls
             dataset2homophily[dataset_name]["Exclude_Smallest"] = Homophily_Exclude_Smallest_ls
     if exclusion_type != "Both":
-        save_path = f"img/A_opt_{trace_type}/Laplacian_Homophily_exclude_smallest.png" if exclusion_type == "Smallest" else f"img/A_opt_{trace_type}/Laplacian_Homophily_exclude_largest.png"
+        save_path = f"img/A_opt_{trace_type}/Laplacian_Homophily_exclude_smallest_no_feat_norm.png" if exclusion_type == "Smallest" else f"img/A_opt_{trace_type}/Laplacian_Homophily_exclude_largest_no_feat_norm.png"
         # save_path = f"img/leverage/Laplacian_Homophily.png"
         plt.figure(figsize=(10, 5))
         for dataset_name in dataset_name_ls:
@@ -110,9 +103,11 @@ if __name__ == "__main__":
         plt.legend()
         plt.title("Laplacian Homophily Score")
         plt.savefig(save_path, dpi=300)
+        plt.close()
     elif exclusion_type == "Both":
+        plt.close()
         for dataset_name in dataset_name_ls:
-            save_path = f"img/A_opt_{trace_type}/{dataset_name}_LapHom_Both.png"
+            save_path = f"img/A_opt_{trace_type}/{dataset_name}_LapHom_Both_no_feat_norm.png"
             plt.plot(sample_rate_ls, dataset2homophily[dataset_name]["Exclude_Largest"], 'o-', c='red', label = f"Exclude_Largest")
             plt.plot(sample_rate_ls, dataset2homophily[dataset_name]["Exclude_Smallest"], 'o-', c='green', label = f"Exclude_Smallest")
             plt.xlabel("Sample Rate")
@@ -123,3 +118,16 @@ if __name__ == "__main__":
             plt.title(f"{dataset_name} Laplacian Homophily")
             plt.savefig(save_path, dpi=300)
             plt.close()
+
+
+if __name__ == "__main__":
+
+    dataset_name_ls = ['CoraGraphDataset', 'CiteseerGraphDataset', 'PubmedGraphDataset', 'TexasDataset', 'WisconsinDataset', 'CornellDataset', 'SquirrelDataset', 'ChameleonDataset']
+
+    sample_rate_ls = torch.linspace(0.1, 1, 10)
+    trace_type_ls = ["Feature", "Laplacian"]
+    exclusion_type = ["Smallest", "Largest", "Both"]
+    
+    for trace_type in trace_type_ls:
+        for exclusion in exclusion_type:
+            main(dataset_name_ls, sample_rate_ls, trace_type, exclusion)
