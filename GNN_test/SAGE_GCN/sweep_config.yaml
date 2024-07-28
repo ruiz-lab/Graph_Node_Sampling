@@ -1,0 +1,30 @@
+project: SAGE_GCN_hyperparameter_tuning_JULY_24
+method: grid
+metric:
+  name: valid_acc
+  goal: maximize
+parameters:
+  optimizer_type:
+    values: ['Adam']
+  learning_rate:
+    values: [0.001, 0.0001]
+  weight_decay:
+    values: [0.001, 0.0001]
+  num_hidden_layers:
+    values: [1, 2, 3]
+  hidden_dim:
+    values: [16, 32, 64]
+  dataset_name:
+    values: ['CoraGraphDataset', 'CiteseerGraphDataset', 'PubmedGraphDataset']
+  sample_rate:
+    values: [0.5, 0.7, 0.9]
+  num_epochs:
+    values: [200, 300]
+  trace_type:
+    values: ['Feature', 'Laplacian']
+  exclusion_type:
+    values: ['Largest', 'Smallest']
+  model_type:
+    values: ['SAGE', 'GCN']
+  activation_type:
+    values: ['Relu', 'Sigmoid']

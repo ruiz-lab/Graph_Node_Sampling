@@ -1,3 +1,4 @@
+import dgl.data
 import torch
 import torch_geometric
 import torch_geometric as pyg
@@ -8,6 +9,8 @@ from torch_geometric.datasets import Planetoid
 import re
 import matplotlib.pyplot as plt
 import seaborn as sns
+import dgl
+from torch_geometric.datasets import OGB_MAG
 
 
 class GraphNodeSampler: # down sample graph according to leverage score, both threshold and number of excluded nodes are supported
@@ -69,14 +72,27 @@ class GraphNodeSampler: # down sample graph according to leverage score, both th
         return pyg.data.Data(x=new_x, edge_index=edge_index, y=new_y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
     
 class A_Opt_Sampler:
-    def __init__(self, data:torch_geometric.data.data.Data, num_excluded=100):
-        A = pyg.utils.to_dense_adj(data.edge_index).squeeze()
-        D = torch.diag(A.sum(dim=1))
-        self.L = D - A
-        self.L_squared_diag = torch.diag(self.L @ self.L)
-        X = data.x
-        self.XXT = X @ X.T
-        self.XXT_squared_diag = torch.diag(self.XXT @ self.XXT)
+    def __init__(self, data:torch_geometric.data.data.Data, num_excluded=100, trace_type=None):
+        
+        if trace_type == "Laplacian":
+            A = pyg.utils.to_dense_adj(data.edge_index).squeeze()
+            D = torch.diag(A.sum(dim=1))
+            self.L = D - A
+            self.L_squared_diag = torch.sum(self.L**2, dim=1)
+        elif trace_type == "Feature":
+            X = data.x
+            self.XXT = X @ X.T
+            self.XXT_squared_diag = torch.sum(self.XXT**2, dim=1)
+        elif trace_type is None:
+            A = pyg.utils.to_dense_adj(data.edge_index).squeeze()
+            D = torch.diag(A.sum(dim=1))
+            self.L = D - A
+            self.L_squared_diag = torch.sum(self.L**2, dim=1)
+            X = data.x
+            self.XXT = X @ X.T
+            self.XXT_squared_diag = torch.sum(self.XXT**2, dim=1)
+        elif trace_type == "heritage":
+            pass
         self.num_excluded = num_excluded
     
     def Laplacian_Trace_Opt_Index(self, num_excluded=None, exclude_largest=True):
@@ -484,3 +500,26 @@ def subgraph_from_index(sample_idx, data):
     edge_idx = pyg.utils.subgraph(sample_idx, data.edge_index, relabel_nodes=True)[0]
     sub_data = pyg.data.Data(x=new_x, y=data.y[sample_idx], edge_index=edge_idx)
     return sub_data
+
+def dataset_name2dataset(dataset_name):
+    dataset = dgl.data.__getattribute__(dataset_name)()
+    data = convert_dgl_to_pyg(dataset)
+    if dataset_name == "PubmedGraphDataset":
+        data = TFIDF2BOW_Feature(data)
+    return data
+
+def load_ogbn_mag():
+    dataset = OGB_MAG(root='../data/')
+    data = dataset[0]
+    
+    paper_edge_index = data['paper', 'cites', 'paper'].edge_index
+    
+    paper_data = data['paper']
+    x = paper_data.x
+    y = paper_data.y
+    train_mask = paper_data.train_mask
+    val_mask = paper_data.val_mask
+    test_mask = paper_data.test_mask
+
+    paper_data = Data(x=x, edge_index=paper_edge_index, y=y, train_mask=train_mask, val_mask=val_mask, test_mask=test_mask)
+    return paper_data

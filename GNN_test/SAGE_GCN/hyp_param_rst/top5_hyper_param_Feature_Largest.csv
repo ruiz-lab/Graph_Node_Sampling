@@ -1,0 +1,16 @@
+hidden_dim,model_type,num_epochs,trace_type,sample_rate,dataset_name,weight_decay,learning_rate,exclusion_type,activation_type,num_hidden_layers,test_acc
+64,GCN,300,Feature,0.7,CoraGraphDataset,0.0001,0.001,Largest,Relu,1,0.745
+64,GCN,300,Feature,0.7,CoraGraphDataset,0.001,0.001,Largest,Relu,1,0.733
+64,GCN,200,Feature,0.7,CoraGraphDataset,0.0001,0.001,Largest,Relu,1,0.73
+32,GCN,300,Feature,0.7,CoraGraphDataset,0.001,0.001,Largest,Relu,1,0.723
+32,GCN,200,Feature,0.7,CoraGraphDataset,0.001,0.001,Largest,Relu,1,0.722
+64,GCN,300,Feature,0.7,CiteseerGraphDataset,0.001,0.001,Largest,Relu,2,0.64
+32,GCN,300,Feature,0.7,CiteseerGraphDataset,0.001,0.001,Largest,Relu,2,0.632
+64,GCN,200,Feature,0.7,CiteseerGraphDataset,0.0001,0.001,Largest,Relu,1,0.622
+32,GCN,300,Feature,0.7,CiteseerGraphDataset,0.001,0.001,Largest,Relu,1,0.611
+64,GCN,200,Feature,0.7,CiteseerGraphDataset,0.001,0.001,Largest,Relu,1,0.607
+64,GCN,300,Feature,0.7,PubmedGraphDataset,0.001,0.001,Largest,Relu,1,0.782
+16,GCN,300,Feature,0.7,PubmedGraphDataset,0.0001,0.001,Largest,Relu,2,0.78
+64,GCN,200,Feature,0.7,PubmedGraphDataset,0.001,0.001,Largest,Sigmoid,2,0.777
+32,GCN,300,Feature,0.7,PubmedGraphDataset,0.001,0.001,Largest,Sigmoid,1,0.775
+32,GCN,300,Feature,0.7,PubmedGraphDataset,0.001,0.001,Largest,Sigmoid,2,0.771

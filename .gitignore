@@ -1,3 +1,4 @@
 data/
 GNN_test/data
 FC_test/data
+GNN_test/SAGE_GCN/wandb

@@ -1,0 +1,16 @@
+hidden_dim,model_type,num_epochs,trace_type,sample_rate,dataset_name,weight_decay,learning_rate,exclusion_type,activation_type,num_hidden_layers,test_acc
+32,GCN,300,Laplacian,0.7,CoraGraphDataset,0.0001,0.001,Largest,Relu,3,0.618
+64,GCN,300,Laplacian,0.7,CoraGraphDataset,0.001,0.001,Largest,Relu,2,0.601
+64,GCN,200,Laplacian,0.7,CoraGraphDataset,0.001,0.001,Largest,Relu,1,0.564
+64,GCN,300,Laplacian,0.7,CoraGraphDataset,0.001,0.001,Largest,Relu,1,0.56
+16,GCN,200,Laplacian,0.7,CoraGraphDataset,0.0001,0.001,Largest,Relu,3,0.541
+16,GCN,300,Laplacian,0.7,CiteseerGraphDataset,0.001,0.001,Largest,Relu,1,0.585
+64,GCN,200,Laplacian,0.7,CiteseerGraphDataset,0.001,0.001,Largest,Relu,1,0.548
+64,GCN,300,Laplacian,0.7,CiteseerGraphDataset,0.001,0.001,Largest,Relu,3,0.535
+32,GCN,200,Laplacian,0.7,CiteseerGraphDataset,0.001,0.001,Largest,Relu,1,0.528
+64,GCN,300,Laplacian,0.7,CiteseerGraphDataset,0.001,0.001,Largest,Relu,1,0.522
+16,GCN,300,Laplacian,0.7,PubmedGraphDataset,0.001,0.001,Largest,Sigmoid,3,0.796
+64,GCN,200,Laplacian,0.7,PubmedGraphDataset,0.001,0.001,Largest,Sigmoid,2,0.793
+64,GCN,200,Laplacian,0.7,PubmedGraphDataset,0.001,0.001,Largest,Sigmoid,3,0.792
+64,GCN,300,Laplacian,0.7,PubmedGraphDataset,0.0001,0.001,Largest,Relu,3,0.79
+64,GCN,200,Laplacian,0.7,PubmedGraphDataset,0.001,0.001,Largest,Relu,3,0.789
