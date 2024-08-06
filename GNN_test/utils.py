@@ -139,6 +139,33 @@ class RandomSampler:
         edge_index = pyg.utils.subgraph(idx, data.edge_index, relabel_nodes=False)[0]
         return pyg.data.Data(x=data.x, edge_index=edge_index, y=data.y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
 
+class Cached_Sampler:
+    def __init__(self, dataset_name, trace_type, exclusion_type):
+        self.dataset_name = dataset_name
+        self.trace_type = trace_type
+        self.exclusion_type = exclusion_type
+        self.cache_path = f"cache/{self.dataset_name}_{self.trace_type}_score_descending_indices.pt"
+        self.__load_cache(self.cache_path)
+
+    def __load_cache(self, path):
+        self.desending_indices = torch.load(path)
+
+    def sample(self, data:torch_geometric.data.data.Data, num_excluded=100):
+        if self.exclusion_type == "Largest":
+            exclusion_indices = self.desending_indices[:num_excluded]
+        elif self.exclusion_type == "Smallest":
+            exclusion_indices = self.desending_indices[-num_excluded:]
+        device = data.x.device
+        exclusion_indices = exclusion_indices.to(device)
+        full_size_idx = torch.ones(data.num_nodes, dtype=torch.bool, device=device)
+        full_size_idx[exclusion_indices] = False
+        train_mask = data.train_mask & full_size_idx
+        test_mask = data.test_mask & full_size_idx
+        val_mask = data.val_mask & full_size_idx
+        edge_index = pyg.utils.subgraph(exclusion_indices, data.edge_index, relabel_nodes=False)[0]
+        return pyg.data.Data(x=data.x, edge_index=edge_index, y=data.y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
+
+
 def leverage_score(data:Data):
     X = data.x
     # norm = torch.linalg.vector_norm(X, ord=2, dim=1)

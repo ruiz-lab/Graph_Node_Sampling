@@ -1,0 +1,32 @@
+project: SAGE_GCN_hyperparameter_tuning_Cached
+method: grid
+metric:
+  name: valid_acc
+  goal: maximize
+parameters:
+  batch_size:
+    values: [64, 128]
+  optimizer_type:
+    values: ['Adam']
+  learning_rate:
+    values: [0.001, 0.0001]
+  weight_decay:
+    values: [0.001, 0.0001]
+  num_hidden_layers:
+    values: [1, 2, 3]
+  hidden_dim:
+    values: [256, 384, 512]
+  dataset_name:
+    values: ['OGB_MAG']
+  sample_rate:
+    values: [0.5, 0.7, 0.9]
+  num_epochs:
+    values: [200, 300]
+  trace_type:
+    values: ['Feature', 'Laplacian']
+  exclusion_type:
+    values: ['Largest', 'Smallest']
+  model_type:
+    values: ['SAGE', 'GCN']
+  activation_type:
+    values: ['Relu']

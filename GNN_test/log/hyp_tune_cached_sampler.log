@@ -1,0 +1,178 @@
+nohup: ignoring input
+wandb: Agent Starting Run: 6ap38lue with config:
+wandb: 	activation_type: Relu
+wandb: 	batch_size: 64
+wandb: 	dataset_name: OGB_MAG
+wandb: 	exclusion_type: Largest
+wandb: 	hidden_dim: 256
+wandb: 	learning_rate: 0.001
+wandb: 	model_type: SAGE
+wandb: 	num_epochs: 200
+wandb: 	num_hidden_layers: 1
+wandb: 	optimizer_type: Adam
+wandb: 	sample_rate: 0.5
+wandb: 	trace_type: Feature
+wandb: 	weight_decay: 0.001
+wandb: Currently logged in as: jamesli-wks (jamesli-wks-johns-hopkins-university). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.17.5
+wandb: Run data is saved locally in /home/jamesl/stats_leverage/GNN_test/SAGE_GCN/wandb/run-20240803_175347-6ap38lue
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run peachy-sweep-1
+wandb: ⭐️ View project at https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached
+wandb: 🧹 View sweep at https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/sweeps/27kzqf1s
+wandb: 🚀 View run at https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/runs/6ap38lue
+wandb: - 0.015 MB of 0.015 MB uploadedwandb:                                                                                
+wandb: 🚀 View run peachy-sweep-1 at: https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/runs/6ap38lue
+wandb: ⭐️ View project at: https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240803_175347-6ap38lue/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.
+Run 6ap38lue errored:
+Traceback (most recent call last):
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/wandb/agents/pyagent.py", line 307, in _run_job
+    self._function()
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/hyp_tune_cached_sampler.py", line 90, in train
+    train_dataset = Graph_Dataset(sub_data, sub_data.train_mask)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 65, in __init__
+    self.out_edge_dict, self.in_edge_dict = self.graph2edge_dict(data, mask)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 78, in graph2edge_dict
+    out_edge_dict[out_node].append(in_node)
+    ~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: tensor(2, device='cuda:1')
+
+wandb: ERROR Run 6ap38lue errored:
+wandb: ERROR Traceback (most recent call last):
+wandb: ERROR   File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/wandb/agents/pyagent.py", line 307, in _run_job
+wandb: ERROR     self._function()
+wandb: ERROR   File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/hyp_tune_cached_sampler.py", line 90, in train
+wandb: ERROR     train_dataset = Graph_Dataset(sub_data, sub_data.train_mask)
+wandb: ERROR                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+wandb: ERROR   File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 65, in __init__
+wandb: ERROR     self.out_edge_dict, self.in_edge_dict = self.graph2edge_dict(data, mask)
+wandb: ERROR                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+wandb: ERROR   File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 78, in graph2edge_dict
+wandb: ERROR     out_edge_dict[out_node].append(in_node)
+wandb: ERROR     ~~~~~~~~~~~~~^^^^^^^^^^
+wandb: ERROR KeyError: tensor(2, device='cuda:1')
+wandb: ERROR 
+wandb: Agent Starting Run: 6p1yjk0n with config:
+wandb: 	activation_type: Relu
+wandb: 	batch_size: 64
+wandb: 	dataset_name: OGB_MAG
+wandb: 	exclusion_type: Largest
+wandb: 	hidden_dim: 256
+wandb: 	learning_rate: 0.001
+wandb: 	model_type: SAGE
+wandb: 	num_epochs: 200
+wandb: 	num_hidden_layers: 1
+wandb: 	optimizer_type: Adam
+wandb: 	sample_rate: 0.5
+wandb: 	trace_type: Feature
+wandb: 	weight_decay: 0.0001
+wandb: Tracking run with wandb version 0.17.5
+wandb: Run data is saved locally in /home/jamesl/stats_leverage/GNN_test/SAGE_GCN/wandb/run-20240803_175403-6p1yjk0n
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ancient-sweep-2
+wandb: ⭐️ View project at https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached
+wandb: 🧹 View sweep at https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/sweeps/27kzqf1s
+wandb: 🚀 View run at https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/runs/6p1yjk0n
+wandb: - 0.015 MB of 0.015 MB uploadedwandb:                                                                                
+wandb: 🚀 View run ancient-sweep-2 at: https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/runs/6p1yjk0n
+wandb: ⭐️ View project at: https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240803_175403-6p1yjk0n/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.
+Run 6p1yjk0n errored:
+Traceback (most recent call last):
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/wandb/agents/pyagent.py", line 307, in _run_job
+    self._function()
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/hyp_tune_cached_sampler.py", line 90, in train
+    train_dataset = Graph_Dataset(sub_data, sub_data.train_mask)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 65, in __init__
+    self.out_edge_dict, self.in_edge_dict = self.graph2edge_dict(data, mask)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 78, in graph2edge_dict
+    out_edge_dict[out_node].append(in_node)
+    ~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: tensor(2, device='cuda:1')
+
+wandb: ERROR Run 6p1yjk0n errored:
+wandb: ERROR Traceback (most recent call last):
+wandb: ERROR   File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/wandb/agents/pyagent.py", line 307, in _run_job
+wandb: ERROR     self._function()
+wandb: ERROR   File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/hyp_tune_cached_sampler.py", line 90, in train
+wandb: ERROR     train_dataset = Graph_Dataset(sub_data, sub_data.train_mask)
+wandb: ERROR                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+wandb: ERROR   File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 65, in __init__
+wandb: ERROR     self.out_edge_dict, self.in_edge_dict = self.graph2edge_dict(data, mask)
+wandb: ERROR                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+wandb: ERROR   File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 78, in graph2edge_dict
+wandb: ERROR     out_edge_dict[out_node].append(in_node)
+wandb: ERROR     ~~~~~~~~~~~~~^^^^^^^^^^
+wandb: ERROR KeyError: tensor(2, device='cuda:1')
+wandb: ERROR 
+wandb: Agent Starting Run: qcrhxse3 with config:
+wandb: 	activation_type: Relu
+wandb: 	batch_size: 64
+wandb: 	dataset_name: OGB_MAG
+wandb: 	exclusion_type: Largest
+wandb: 	hidden_dim: 256
+wandb: 	learning_rate: 0.001
+wandb: 	model_type: SAGE
+wandb: 	num_epochs: 200
+wandb: 	num_hidden_layers: 1
+wandb: 	optimizer_type: Adam
+wandb: 	sample_rate: 0.5
+wandb: 	trace_type: Laplacian
+wandb: 	weight_decay: 0.001
+wandb: Tracking run with wandb version 0.17.5
+wandb: Run data is saved locally in /home/jamesl/stats_leverage/GNN_test/SAGE_GCN/wandb/run-20240803_175419-qcrhxse3
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run balmy-sweep-3
+wandb: ⭐️ View project at https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached
+wandb: 🧹 View sweep at https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/sweeps/27kzqf1s
+wandb: 🚀 View run at https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/runs/qcrhxse3
+wandb: - 0.015 MB of 0.015 MB uploadedwandb:                                                                                
+wandb: 🚀 View run balmy-sweep-3 at: https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/runs/qcrhxse3
+wandb: ⭐️ View project at: https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240803_175419-qcrhxse3/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.
+Run qcrhxse3 errored:
+Traceback (most recent call last):
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/wandb/agents/pyagent.py", line 307, in _run_job
+    self._function()
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/hyp_tune_cached_sampler.py", line 90, in train
+    train_dataset = Graph_Dataset(sub_data, sub_data.train_mask)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 65, in __init__
+    self.out_edge_dict, self.in_edge_dict = self.graph2edge_dict(data, mask)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 78, in graph2edge_dict
+    out_edge_dict[out_node].append(in_node)
+    ~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: tensor(0, device='cuda:1')
+
+wandb: ERROR Run qcrhxse3 errored:
+wandb: ERROR Traceback (most recent call last):
+wandb: ERROR   File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/wandb/agents/pyagent.py", line 307, in _run_job
+wandb: ERROR     self._function()
+wandb: ERROR   File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/hyp_tune_cached_sampler.py", line 90, in train
+wandb: ERROR     train_dataset = Graph_Dataset(sub_data, sub_data.train_mask)
+wandb: ERROR                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+wandb: ERROR   File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 65, in __init__
+wandb: ERROR     self.out_edge_dict, self.in_edge_dict = self.graph2edge_dict(data, mask)
+wandb: ERROR                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+wandb: ERROR   File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/../model.py", line 78, in graph2edge_dict
+wandb: ERROR     out_edge_dict[out_node].append(in_node)
+wandb: ERROR     ~~~~~~~~~~~~~^^^^^^^^^^
+wandb: ERROR KeyError: tensor(0, device='cuda:1')
+wandb: ERROR 
+Detected 3 failed runs in the first 60 seconds, killing sweep.
+wandb: ERROR Detected 3 failed runs in the first 60 seconds, killing sweep.
+wandb: To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true
+Create sweep with ID: 27kzqf1s
+Sweep URL: https://wandb.ai/jamesli-wks-johns-hopkins-university/SAGE_GCN_hyperparameter_tuning_Cached/sweeps/27kzqf1s
