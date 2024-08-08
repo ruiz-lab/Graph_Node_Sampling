@@ -1,0 +1,16 @@
+hidden_dim,model_type,num_epochs,trace_type,sample_rate,dataset_name,weight_decay,learning_rate,exclusion_type,activation_type,num_hidden_layers,test_acc,mean,std
+64,GCN,200,Laplacian,0.7,CoraGraphDataset,0.001,0.001,Smallest,Relu,1,0.769,0.7811800000000002,0.00389712714701484
+32,GCN,200,Laplacian,0.7,CoraGraphDataset,0.0001,0.001,Smallest,Relu,1,0.758,0.7992899999999998,0.0018400815199332895
+64,GCN,300,Laplacian,0.7,CoraGraphDataset,0.001,0.001,Smallest,Relu,1,0.756,0.7808600000000001,0.003939593887699598
+64,GCN,200,Laplacian,0.7,CoraGraphDataset,0.0001,0.001,Smallest,Relu,1,0.755,0.7757199999999997,0.009644770603803917
+64,GCN,200,Laplacian,0.7,CoraGraphDataset,0.0001,0.001,Smallest,Relu,2,0.743,0.75509,0.004854060156199142
+64,GCN,300,Laplacian,0.7,CiteseerGraphDataset,0.0001,0.001,Smallest,Relu,2,0.649,0.6189300000000001,0.018169895431729945
+32,GCN,200,Laplacian,0.7,CiteseerGraphDataset,0.0001,0.001,Smallest,Relu,2,0.627,0.61149,0.01954865468516953
+64,GCN,300,Laplacian,0.7,CiteseerGraphDataset,0.001,0.001,Smallest,Relu,2,0.615,0.64228,0.0020153411621856993
+64,GCN,200,Laplacian,0.7,CiteseerGraphDataset,0.0001,0.001,Smallest,Relu,1,0.611,0.65933,0.0031370527569679185
+64,GCN,300,Laplacian,0.7,CiteseerGraphDataset,0.001,0.001,Smallest,Relu,1,0.566,0.66472,0.0015561490931141544
+64,GCN,200,Laplacian,0.7,PubmedGraphDataset,0.001,0.001,Smallest,Relu,2,0.716,0.7867099999999999,0.001282926342390709
+32,GCN,300,Laplacian,0.7,PubmedGraphDataset,0.001,0.001,Smallest,Relu,2,0.715,0.7861200000000003,0.0016265300489077981
+64,GCN,300,Laplacian,0.7,PubmedGraphDataset,0.0001,0.001,Smallest,Relu,2,0.714,0.7847,0.003047950130825637
+64,GCN,200,Laplacian,0.7,PubmedGraphDataset,0.0001,0.001,Smallest,Relu,2,0.71,0.7843400000000001,0.003296118929893159
+64,GCN,200,Laplacian,0.7,PubmedGraphDataset,0.001,0.001,Smallest,Relu,1,0.706,0.78696,0.00190745904281062

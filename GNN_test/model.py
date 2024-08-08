@@ -36,8 +36,8 @@ class Modified_GCN(nn.Module):
         self.output_conv = pyg.nn.GCNConv(hidden_dim, output_dim)
     def forward(self, data):
         x, edge_index = data.x, data.edge_index
-        print("x.shape", x.shape)
-        print("edge_index.shape", edge_index.shape)
+        # print("x.shape", x.shape)
+        # print("edge_index.shape", edge_index.shape)
         x = self.activation(self.input_conv(x, edge_index))
         for layer in self.hidden_layers:
             x = self.activation(layer(x, edge_index))
@@ -56,8 +56,8 @@ class Modified_SAGE(nn.Module):
 
     def forward(self, data):
         x, edge_index = data.x, data.edge_index
-        print("x.shape", x.shape)
-        print("edge_index.shape", edge_index.shape)
+        # print("x.shape", x.shape)
+        # print("edge_index.shape", edge_index.shape)
         x = self.activation(self.input_conv(x, edge_index))
         for layer in self.hidden_layers:
             x = self.activation(layer(x, edge_index))

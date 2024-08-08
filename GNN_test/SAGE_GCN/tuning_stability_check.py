@@ -75,7 +75,7 @@ def train(config_dict, run_times=100):
 
 if __name__ == "__main__":
     trace_type_ls = ['Laplacian', 'Feature']
-    exclusion_type_ls = ['Largest', 'Random']
+    exclusion_type_ls = ['Largest', 'Smallest']
     for trace_type in trace_type_ls:
         for exclusion_type in exclusion_type_ls:
             hyp_config_path = f"hyp_param_rst/top5_hyper_param_{trace_type}_{exclusion_type}.csv"
@@ -119,7 +119,7 @@ if __name__ == "__main__":
                 plt.title(f"{dataset_name}_{trace_type}_{exclusion_type}.png")
                 values = list(config_dict.values())
                 values = [str(v) for v in values]
-                name = "_".join(values)
+                name = "_".join(values) + f"_{trace_type}_{exclusion_type}"
                 plot_save_path = f"../img/stability_check/{name}.png"
                 plt.savefig(plot_save_path)
                 plt.close()
