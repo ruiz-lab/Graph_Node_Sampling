@@ -9,6 +9,7 @@ from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
 import torch_geometric as pyg
 from torch_geometric.data import Data
+from torch_geometric.loader import NeighborLoader
 import networkx as nx
 import dgl
 from tqdm import tqdm
@@ -85,24 +86,25 @@ def train():
     sampler = cached_sampler_dict[key]
     num_excluded = int(data.num_nodes * (1 - sample_rate))
     sub_data = sampler.sample(data, num_excluded)
+    print("num_nodes", data.num_nodes, "num_edges", data.num_edges)
 
     # make dataset and dataloader
-    train_dataloader = Graph_Loader(sub_data, batch_size, shuffle=True, mode='train')
+    train_dataloader = NeighborLoader(sub_data, num_neighbors=[-1], batch_size=batch_size, shuffle=True)
+
 
     # train model
-    for epoch in tqdm(range(num_epochs)):
-        for crnt_data, index in train_dataloader:
+    for epoch in range(num_epochs):
+        for batch_data in tqdm(train_dataloader, desc=f"epoch {epoch+1}/{num_epochs}"):
             model.train()
             optimizer.zero_grad()
-            out = model(crnt_data)
-            train_loss = criterion(out[index], sub_data.y[index])
+            out = model(x=batch_data.x, edge_index=batch_data.edge_index)
+            train_loss = criterion(out, batch_data.y)
             train_loss.backward()
             optimizer.step()
             pred = out.argmax(dim=1)
-            correct = pred.eq(sub_data.y)
-            sub_train_acc = correct[index].sum().item() / len(index)
-            train_acc = correct[data.train_mask].sum().item() / data.train_mask.sum().item()
-            wandb.log({'sub_train_loss': train_loss.item(), 'sub_train_acc': sub_train_acc, 'train_acc': train_acc})
+            correct = pred.eq(batch_data.y)
+            sub_train_acc = correct.sum().item() / batch_data.y.size(0)
+            wandb.log({'sub_train_loss': train_loss.item(), 'sub_train_acc': sub_train_acc})
 
         if (epoch+1) % 5 == 0:
             valid_acc = validation(model, data)

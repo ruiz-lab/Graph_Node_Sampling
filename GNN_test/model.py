@@ -18,8 +18,9 @@ class GConvModel(nn.Module):
         self.conv2 = pyg.nn.GCNConv(hidden_dim, hidden_dim)
         self.fc = nn.Linear(hidden_dim, output_dim)
     
-    def forward(self, data):
-        x, edge_index = data.x, data.edge_index
+    def forward(self, data=None, x=None, edge_index=None):
+        if data is not None:
+            x, edge_index = data.x, data.edge_index
         x = F.relu(self.conv1(x, edge_index))
         x = F.relu(self.conv2(x, edge_index))
         x = self.fc(x)
@@ -34,8 +35,9 @@ class Modified_GCN(nn.Module):
         for _ in range(num_hidden_layers):
             self.hidden_layers.append(pyg.nn.GCNConv(hidden_dim, hidden_dim))
         self.output_conv = pyg.nn.GCNConv(hidden_dim, output_dim)
-    def forward(self, data):
-        x, edge_index = data.x, data.edge_index
+    def forward(self, data=None, x=None, edge_index=None):
+        if data is not None:
+            x, edge_index = data.x, data.edge_index
         # print("x.shape", x.shape)
         # print("edge_index.shape", edge_index.shape)
         x = self.activation(self.input_conv(x, edge_index))
@@ -54,8 +56,9 @@ class Modified_SAGE(nn.Module):
             self.hidden_layers.append(pyg.nn.SAGEConv(hidden_dim, hidden_dim))
         self.output_conv = pyg.nn.SAGEConv(hidden_dim, output_dim)
 
-    def forward(self, data):
-        x, edge_index = data.x, data.edge_index
+    def forward(self, data=None, x=None, edge_index=None):
+        if data is not None:
+            x, edge_index = data.x, data.edge_index
         # print("x.shape", x.shape)
         # print("edge_index.shape", edge_index.shape)
         x = self.activation(self.input_conv(x, edge_index))
