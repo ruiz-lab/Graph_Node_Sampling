@@ -1,11 +1,11 @@
-project: SAGE_GCN_hyperparameter_tuning_Cached
+project: SAGE_GCN_hyperparameter_tuning_OGB_MAG
 method: grid
 metric:
   name: valid_acc
   goal: maximize
 parameters:
   batch_size:
-    values: [64, 128]
+    values: [1024]
   optimizer_type:
     values: ['Adam']
   learning_rate:
@@ -15,11 +15,11 @@ parameters:
   num_hidden_layers:
     values: [1, 2, 3]
   hidden_dim:
-    values: [256, 384, 512]
+    values: [32, 64, 128]
   dataset_name:
-    values: ['OGB_MAG']
+    values: ['CoraGraphDataset']
   sample_rate:
-    values: [0.5, 0.7, 0.9]
+    values: [0.5, 0.625, 0.75, 0.875, 1]
   num_epochs:
     values: [200, 300]
   trace_type:

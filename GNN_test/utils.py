@@ -122,9 +122,11 @@ class RandomSampler:
     def __init__(self, num_excluded=100):
         self.num_excluded = num_excluded
     
-    def Exclusion_Index(self, data:torch_geometric.data.data.Data, num_excluded=None):
+    def Exclusion_Index(self, data:torch_geometric.data.data.Data, num_excluded=None, sample_rate=None):
         if num_excluded is None:
             num_excluded = self.num_excluded
+        if sample_rate is not None:
+            num_excluded = int(data.num_nodes * (1 - sample_rate))
         idx = torch.randperm(data.num_nodes)[:num_excluded]
         return idx
 
@@ -138,19 +140,28 @@ class RandomSampler:
         val_mask = data.val_mask & full_size_idx
         edge_index = pyg.utils.subgraph(idx, data.edge_index, relabel_nodes=False)[0]
         return pyg.data.Data(x=data.x, edge_index=edge_index, y=data.y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
+    
+    def sample(self, data:torch_geometric.data.data.Data, num_excluded=None, sample_rate=None):
+        idx = self.Exclusion_Index(data, num_excluded, sample_rate)
+        return self.sample_from_idx(data, idx)
 
 class Cached_Sampler:
-    def __init__(self, dataset_name, trace_type, exclusion_type):
+    def __init__(self, dataset_name, trace_type, exclusion_type, cache_path=None):
         self.dataset_name = dataset_name
         self.trace_type = trace_type
         self.exclusion_type = exclusion_type
-        self.cache_path = f"cache/{self.dataset_name}_{self.trace_type}_score_descending_indices.pt"
+        if cache_path is None:
+            self.cache_path = f"cache/{self.dataset_name}_{self.trace_type}_score_descending_indices.pt"
+        else:
+            self.cache_path = cache_path    
         self.__load_cache(self.cache_path)
 
     def __load_cache(self, path):
         self.desending_indices = torch.load(path)
 
-    def sample(self, data:torch_geometric.data.data.Data, num_excluded=100):
+    def sample(self, data:torch_geometric.data.data.Data, num_excluded=None, sample_rate=None):
+        if num_excluded is None:
+            num_excluded = int(data.num_nodes * (1 - sample_rate))
         if self.exclusion_type == "Largest":
             exclusion_indices = self.desending_indices[:num_excluded]
         elif self.exclusion_type == "Smallest":
@@ -528,15 +539,8 @@ def subgraph_from_index(sample_idx, data):
     sub_data = pyg.data.Data(x=new_x, y=data.y[sample_idx], edge_index=edge_idx)
     return sub_data
 
-def dataset_name2dataset(dataset_name):
-    dataset = dgl.data.__getattribute__(dataset_name)()
-    data = convert_dgl_to_pyg(dataset)
-    if dataset_name == "PubmedGraphDataset":
-        data = TFIDF2BOW_Feature(data)
-    return data
-
-def load_ogbn_mag():
-    dataset = OGB_MAG(root='../data/')
+def load_ogbn_mag(path='../data/'):
+    dataset = OGB_MAG(root=path)
     data = dataset[0]
     
     paper_edge_index = data['paper', 'cites', 'paper'].edge_index
@@ -550,3 +554,12 @@ def load_ogbn_mag():
 
     paper_data = Data(x=x, edge_index=paper_edge_index, y=y, train_mask=train_mask, val_mask=val_mask, test_mask=test_mask)
     return paper_data
+
+def dataset_name2dataset(dataset_name, path='../data/'):
+    if dataset_name == "OGB_MAG":
+        return load_ogbn_mag(path=path)
+    dataset = dgl.data.__getattribute__(dataset_name)()
+    data = convert_dgl_to_pyg(dataset)
+    if dataset_name == "PubmedGraphDataset":
+        data = TFIDF2BOW_Feature(data)
+    return data
