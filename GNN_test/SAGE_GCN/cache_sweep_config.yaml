@@ -1,4 +1,4 @@
-project: SAGE_GCN_hyperparameter_tuning_OGB_MAG
+project: SAGE_GCN_hyperparameter_tuning_obgn_correct_sampler
 method: grid
 metric:
   name: valid_acc
@@ -15,9 +15,9 @@ parameters:
   num_hidden_layers:
     values: [1, 2, 3]
   hidden_dim:
-    values: [32, 64, 128]
+    values: [64, 128, 256]
   dataset_name:
-    values: ['CoraGraphDataset']
+    values: ['OGB_MAG']
   sample_rate:
     values: [0.5, 0.625, 0.75, 0.875, 1]
   num_epochs:

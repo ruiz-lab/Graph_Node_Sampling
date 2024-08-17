@@ -18,7 +18,7 @@ from utils import *
 from model import Modified_GCN, Modified_SAGE, Graph_Loader 
 from train import validation, test
 
-dataset_name_ls = ['CoraGraphDataset']
+dataset_name_ls = ['OGB_MAG']
 trace_type_ls = ['Laplacian', 'Feature']
 exclusion_type_ls = ['Largest', 'Smallest']
 cached_sampler_dict = {}
@@ -31,7 +31,7 @@ for dataset_name in dataset_name_ls:
 def train():
     wandb.init()
 
-    device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
     config = wandb.config
     dataset_name = config.dataset_name

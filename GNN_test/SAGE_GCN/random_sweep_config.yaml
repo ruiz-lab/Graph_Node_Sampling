@@ -1,0 +1,28 @@
+project: SAGE_GCN_hyperparameter_tuning_Random_OGB_MAG
+method: grid
+metric:
+  name: valid_acc
+  goal: maximize
+parameters:
+  batch_size:
+    values: [1024]
+  optimizer_type:
+    values: ['Adam']
+  learning_rate:
+    values: [0.001, 0.0001]
+  weight_decay:
+    values: [0.001, 0.0001]
+  num_hidden_layers:
+    values: [1, 2, 3]
+  hidden_dim:
+    values: [128, 256, 512]
+  dataset_name:
+    values: ['OGB_MAG']
+  sample_rate:
+    values: [0.5, 0.625, 0.75, 0.875, 1]
+  num_epochs:
+    values: [200, 300]
+  model_type:
+    values: ['SAGE', 'GCN']
+  activation_type:
+    values: ['Relu']

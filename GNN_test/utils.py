@@ -10,6 +10,9 @@ import re
 import matplotlib.pyplot as plt
 import seaborn as sns
 import dgl
+import wandb
+import pandas as pd
+from tqdm import tqdm
 from torch_geometric.datasets import OGB_MAG
 
 
@@ -133,12 +136,14 @@ class RandomSampler:
     def sample_from_idx(self, data:torch_geometric.data.data.Data, idx):
         device = data.x.device
         idx = idx.to(device)
+        remained_mask = torch.ones(data.num_nodes, dtype=torch.bool, device=device)
+        remained_mask[idx] = False
         full_size_idx = torch.ones(data.num_nodes, dtype=torch.bool, device=device)
         full_size_idx[idx] = False
         train_mask = data.train_mask & full_size_idx
         test_mask = data.test_mask & full_size_idx
         val_mask = data.val_mask & full_size_idx
-        edge_index = pyg.utils.subgraph(idx, data.edge_index, relabel_nodes=False)[0]
+        edge_index = pyg.utils.subgraph(remained_mask, data.edge_index, relabel_nodes=False)[0]
         return pyg.data.Data(x=data.x, edge_index=edge_index, y=data.y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
     
     def sample(self, data:torch_geometric.data.data.Data, num_excluded=None, sample_rate=None):
@@ -164,16 +169,19 @@ class Cached_Sampler:
             num_excluded = int(data.num_nodes * (1 - sample_rate))
         if self.exclusion_type == "Largest":
             exclusion_indices = self.desending_indices[:num_excluded]
+            remained_indices = self.desending_indices[num_excluded:]
         elif self.exclusion_type == "Smallest":
             exclusion_indices = self.desending_indices[-num_excluded:]
+            remained_indices = self.desending_indices[:-num_excluded]
         device = data.x.device
         exclusion_indices = exclusion_indices.to(device)
+        remained_indices = remained_indices.to(device)
         full_size_idx = torch.ones(data.num_nodes, dtype=torch.bool, device=device)
         full_size_idx[exclusion_indices] = False
         train_mask = data.train_mask & full_size_idx
         test_mask = data.test_mask & full_size_idx
         val_mask = data.val_mask & full_size_idx
-        edge_index = pyg.utils.subgraph(exclusion_indices, data.edge_index, relabel_nodes=False)[0]
+        edge_index = pyg.utils.subgraph(remained_indices, data.edge_index, relabel_nodes=False)[0]
         return pyg.data.Data(x=data.x, edge_index=edge_index, y=data.y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
 
 
@@ -563,3 +571,16 @@ def dataset_name2dataset(dataset_name, path='../data/'):
     if dataset_name == "PubmedGraphDataset":
         data = TFIDF2BOW_Feature(data)
     return data
+
+def project_name2rst_df(project_name):
+    api = wandb.Api()
+    runs = api.runs(project_name)
+    data = []
+    for run in tqdm(runs, desc="loading runs", total=len(runs)):
+        summary = run.summary._json_dict
+        config = {k: v for k, v in run.config.items() if not k[0] == "_"}
+        config.update(summary)
+        data.append(config)
+    df = pd.DataFrame(data)
+    df = df[['hidden_dim', 'model_type', 'num_epochs', 'trace_type', 'sample_rate', 'dataset_name', 'weight_decay', 'learning_rate', 'exclusion_type','activation_type', 'num_hidden_layers','test_acc']]
+    return df
