@@ -58,7 +58,7 @@ class GraphNodeSampler: # down sample graph according to leverage score, both th
         train_mask = self.data.train_mask & full_size_idx
         test_mask = self.data.test_mask & full_size_idx
         val_mask = self.data.val_mask & full_size_idx
-        edge_index = pyg.utils.subgraph(idx, self.data.edge_index, relabel_nodes=relabel)[0]
+        edge_index = pyg.utils.subgraph(full_size_idx, self.data.edge_index, relabel_nodes=relabel)[0]
         print(f"sampled training set size: {train_mask.sum()}, new test set size: {test_mask.sum()}, new val set size: {val_mask.sum()}")
         print(f"original: training set size: {self.data.train_mask.sum()}, original test set size: {self.data.test_mask.sum()}, original val set size: {self.data.val_mask.sum()}")
         print(f"percentage preserved: training set: {train_mask.sum() / self.data.train_mask.sum() * 100:.2f}%, test set: {test_mask.sum() / self.data.test_mask.sum() * 100:.2f}%, val set: {val_mask.sum() / self.data.val_mask.sum() * 100:.2f}%")
@@ -118,7 +118,7 @@ class A_Opt_Sampler:
         train_mask = data.train_mask & full_size_idx
         test_mask = data.test_mask & full_size_idx
         val_mask = data.val_mask & full_size_idx
-        edge_index = pyg.utils.subgraph(idx, data.edge_index, relabel_nodes=False)[0]
+        edge_index = pyg.utils.subgraph(full_size_idx, data.edge_index, relabel_nodes=False)[0]
         return pyg.data.Data(x=data.x, edge_index=edge_index, y=data.y, train_mask=train_mask, test_mask=test_mask, val_mask=val_mask)
 
 class RandomSampler:

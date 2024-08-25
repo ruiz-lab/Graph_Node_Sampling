@@ -18,7 +18,7 @@ from utils import *
 from model import Modified_GCN, Modified_SAGE, Graph_Loader 
 from train import validation, test
 
-dataset_name_ls = ['OGB_MAG']
+dataset_name_ls = ['PubmedGraphDataset']
 trace_type_ls = ['Laplacian', 'Feature']
 exclusion_type_ls = ['Largest', 'Smallest']
 cached_sampler_dict = {}
@@ -115,7 +115,7 @@ def train():
         #     sub_train_acc = correct.sum().item() / batch_data.y.size(0)
 
         out = model(sub_data)
-        train_loss = criterion(out, sub_data.y)
+        train_loss = criterion(out[sub_data.train_mask], sub_data.y[sub_data.train_mask])
 
         # Backward pass and optimization
         train_loss.backward()

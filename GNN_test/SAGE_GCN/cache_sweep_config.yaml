@@ -1,4 +1,4 @@
-project: SAGE_GCN_hyperparameter_tuning_obgn_correct_sampler
+project: SAGE_GCN_hyperparameter_tuning_pubmed_correct_sampler
 method: grid
 metric:
   name: valid_acc
@@ -15,17 +15,17 @@ parameters:
   num_hidden_layers:
     values: [1, 2, 3]
   hidden_dim:
-    values: [64, 128, 256]
+    values: [32, 64, 128]
   dataset_name:
-    values: ['OGB_MAG']
+    values: ['PubmedGraphDataset']
   sample_rate:
-    values: [0.5, 0.625, 0.75, 0.875, 1]
+    values: [0.125, 0.25, 0.375]
   num_epochs:
     values: [200, 300]
   trace_type:
-    values: ['Feature', 'Laplacian']
+    values: ['Feature']
   exclusion_type:
-    values: ['Largest', 'Smallest']
+    values: ['Largest']
   model_type:
     values: ['SAGE', 'GCN']
   activation_type:
