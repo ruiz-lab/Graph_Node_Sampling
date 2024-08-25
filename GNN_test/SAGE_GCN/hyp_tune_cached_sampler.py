@@ -18,7 +18,7 @@ from utils import *
 from model import Modified_GCN, Modified_SAGE, Graph_Loader 
 from train import validation, test
 
-dataset_name_ls = ['PubmedGraphDataset']
+dataset_name_ls = ['CoraGraphDataset']
 trace_type_ls = ['Laplacian', 'Feature']
 exclusion_type_ls = ['Largest', 'Smallest']
 cached_sampler_dict = {}
@@ -31,7 +31,7 @@ for dataset_name in dataset_name_ls:
 def train():
     wandb.init()
 
-    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
 
     config = wandb.config
     dataset_name = config.dataset_name
@@ -93,6 +93,7 @@ def train():
     # train_dataloader = NeighborLoader(sub_data, num_neighbors=[-1], batch_size=batch_size, shuffle=True)
 
     # Train model
+    best_valid_acc = 0
     for epoch in tqdm(range(num_epochs), total=num_epochs):
         # for batch_data in train_dataloader:
         #     model.train()
@@ -132,6 +133,11 @@ def train():
         valid_acc = validation(model, data)
         test_acc = test(model, data)    
         wandb.log({'valid_acc': valid_acc, 'test_acc': test_acc})
+
+        if valid_acc > best_valid_acc:
+            best_valid_acc = valid_acc
+            wandb.run.summary['best_valid_acc'] = best_valid_acc
+            wandb.run.summary['best_test_acc'] = test_acc
         
     return 
 

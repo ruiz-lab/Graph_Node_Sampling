@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/jamesl/stats_leverage/GNN_test/SAGE_GCN/hyp_tune_cached_sampler.py", line 5, in <module>
+    import torch
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/torch/__init__.py", line 1439, in <module>
+    from torch import distributions as distributions
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/torch/distributions/__init__.py", line 98, in <module>
+    from .logistic_normal import LogisticNormal
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/torch/distributions/logistic_normal.py", line 9, in <module>
+    class LogisticNormal(TransformedDistribution):
+  File "/home/jamesl/anaconda3/envs/pytorch/lib/python3.11/site-packages/torch/distributions/logistic_normal.py", line 9, in LogisticNormal
+    class LogisticNormal(TransformedDistribution):
+    
+KeyboardInterrupt
