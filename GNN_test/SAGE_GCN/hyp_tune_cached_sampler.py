@@ -111,6 +111,7 @@ def train():
         #     optimizer.step()
 
         #     # Calculate accuracy
+        
         #     pred = out.argmax(dim=1)
         #     correct = pred.eq(batch_data.y)
         #     sub_train_acc = correct.sum().item() / batch_data.y.size(0)
