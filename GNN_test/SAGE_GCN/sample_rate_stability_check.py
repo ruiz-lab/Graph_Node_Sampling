@@ -26,7 +26,7 @@ from tuning_stability_check import train
 def train(config_dict, run_times=100):
 
     if torch.cuda.is_available():
-        device = torch.device('cuda:1')
+        device = torch.device('cuda:2')
 
     if config_dict["dataset_name"] != 'OGB_MAG':
         data = dataset_name2dataset(config_dict["dataset_name"]).to(device)
@@ -45,6 +45,8 @@ def train(config_dict, run_times=100):
     sample_rate = config_dict["sample_rate"]
     sampled_data = sampler.sample(data=data, sample_rate=sample_rate)
 
+    print(hidden_dim)
+
     if model_type == 'GCN':
         model = Modified_GCN(input_dim, hidden_dim, output_dim, num_hidden_layers, activation_type)
     elif model_type == 'SAGE':
@@ -60,8 +62,9 @@ def train(config_dict, run_times=100):
     num_epochs = config_dict["num_epochs"]
 
     test_acc_ls = []
-    for run in tqdm(range(run_times), desc=""):
-        best_epoch_test_acc = 0
+    for run in tqdm(range(run_times), desc=f"{dataset_name}_{sample_rate:.3f}"):
+        best_valid_acc = 0
+        test_acc = 0
         for epoch in range(num_epochs):
             model.train()
             optimizer.zero_grad()
@@ -70,21 +73,26 @@ def train(config_dict, run_times=100):
             loss.backward()
             optimizer.step()
             if epoch % 10 == 0:
-                test_acc = test(model, sampled_data, device)
-                if test_acc > best_epoch_test_acc:
-                    best_epoch_test_acc = test_acc
+                valid_acc = validation(model, data)
+                if valid_acc > best_valid_acc:
+                    test_acc = test(model, data)
+        test_acc_ls.append(test_acc)
+    
+    return test_acc_ls
 if __name__ == "__main__":
-    dataset_name_ls = ["CoraGraphDataset", "CiteSeerGraphDataset", "PubMedGraphDataset"]
-    sample_rate_ls = [0.125, 0.25, 0.375]
+    dataset_name_ls = ["CoraGraphDataset", "CiteseerGraphDataset", "PubmedGraphDataset"]
+    sample_rate_ls = np.linspace(0.125, 1, 8)
+    num_configs = 5
+    run_times = 100
     for dataset_name in dataset_name_ls:
         for sample_rate in sample_rate_ls:
-            config_path = f"hyp_param_rst/top5_{dataset_name}_{sample_rate}_config.csv"
-            config_df = pd.read_csv(config_path)
-            mean_array = np.zeros(len(config_df))
-            std_array = np.zeros(len(config_df))
-            for config_idx in range(len(config_df)):
+            config_path = f"hyp_param_rst/top5_{dataset_name}_{sample_rate:.3f}_undirected_config.csv"
+            config_df = pd.read_csv(config_path).iloc[:num_configs]
+            mean_array = np.zeros(num_configs)
+            std_array = np.zeros(num_configs)
+            for config_idx in range(num_configs):
                 crnt_config = config_df.iloc[config_idx]
-                hidden_dim = config_df.iloc[config_idx]["hidden_dim"]
+                hidden_dim = int(config_df.iloc[config_idx]["hidden_dim"])
                 model_type = config_df.iloc[config_idx]["model_type"]
                 num_epochs = config_df.iloc[config_idx]["num_epochs"]
                 sample_rate = config_df.iloc[config_idx]["sample_rate"]
@@ -105,3 +113,14 @@ if __name__ == "__main__":
                     "activation_type": activation_type,
                     "num_hidden_layers": num_hidden_layers
                 }
+
+                print("crnt_config: ")
+                print(config_df.iloc[config_idx])
+                test_acc_ls = train(config_dict)
+                mean_array[config_idx] = np.mean(test_acc_ls)
+                std_array[config_idx] = np.std(test_acc_ls)
+
+            config_df["mean"] = mean_array
+            config_df["std"] = std_array
+            config_df.to_csv(f"stability_check/{dataset_name}_{sample_rate}_undirected.csv", index=False)
+

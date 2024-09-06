@@ -83,14 +83,14 @@ def random_baseline(run_config, runtimes=100, k=None):
 
 
 dataset_name_ls = ['cora', 'citeseer', 'pubmed']
-project_name_format = 'SAGE_GCN_hyperparameter_tuning_{}_correct_sampler'
+project_name_format = 'SAGE_GCN_hyperparameter_tuning_{}_icassp_undirected'
 # the number of best runs to be baselined
-top_k = 10
+top_k = 5
 
 for dataset_name in dataset_name_ls:
     crnt_project_name = project_name_format.format(dataset_name)
     rst_df = project_name2rst_df(crnt_project_name)
-    test_acc_sorted_rst_df = rst_df.sort_values(by='test_acc', ascending=False)[:top_k]
+    test_acc_sorted_rst_df = rst_df.sort_values(by='best_test_acc', ascending=False)[:top_k]
     max_test_acc_ls = []
     min_test_acc_ls = []
     mean_test_acc_ls = []
@@ -114,24 +114,24 @@ for dataset_name in dataset_name_ls:
         plt.title(title)
         plt.xlabel('test accuracy')
         plt.ylabel('count')
-        plot_path = f"../img/random_baseline/{dataset_name}_random_baseline_{_+1}.png"
+        plot_path = f"../img/random_baseline/{dataset_name}_undirected_random_baseline_{_+1}.png"
         plt.savefig(plot_path)
         plt.close()
     sns.boxplot(data=[box_plot_test_acc_dict[_] for _ in range(top_k)], width=0.5, showmeans=True)
     for _ in range(top_k):
-        plt.scatter(_, test_acc_sorted_rst_df.iloc[_]['test_acc'], color='red', s=100, label='Sampling Acc')
+        plt.scatter(_, test_acc_sorted_rst_df.iloc[_]['best_test_acc'], color='red', s=100, label='Sampling Acc')
     plt.title(f"{dataset_name} random baseline")
     plt.xlabel('Different Configurations')
     plt.ylabel('Test Accuracy')
     plt.legend()
-    plot_path = f"../img/random_baseline/{dataset_name}_random_baseline_boxplot.png"
+    plot_path = f"../img/random_baseline/{dataset_name}_undirected_random_baseline_boxplot.png"
     plt.savefig(plot_path)
     plt.close()
     test_acc_sorted_rst_df['max_test_acc'] = max_test_acc_ls
     test_acc_sorted_rst_df['min_test_acc'] = min_test_acc_ls
     test_acc_sorted_rst_df['mean_test_acc'] = mean_test_acc_ls
     test_acc_sorted_rst_df['std_test_acc'] = std_test_acc_ls
-    csv_path = f"random_baseline/{dataset_name}_random_baseline.csv"
+    csv_path = f"random_baseline/{dataset_name}_undirected_random_baseline.csv"
     test_acc_sorted_rst_df.to_csv(csv_path, index=False)
     
         

@@ -31,7 +31,7 @@ for dataset_name in dataset_name_ls:
 def train():
     wandb.init()
 
-    device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:4' if torch.cuda.is_available() else 'cpu')
 
     config = wandb.config
     dataset_name = config.dataset_name

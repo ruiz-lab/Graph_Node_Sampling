@@ -1,0 +1,6 @@
+hidden_dim,model_type,num_epochs,trace_type,sample_rate,dataset_name,weight_decay,learning_rate,exclusion_type,activation_type,num_hidden_layers,best_test_acc,mean,std
+128,GCN,200,Feature,1.0,PubmedGraphDataset,0.001,0.001,Largest,Relu,2,0.778,0.7981600000000002,0.0033428131865241915
+128,GCN,200,Feature,1.0,PubmedGraphDataset,0.0001,0.001,Largest,Relu,2,0.775,0.7925900000000001,0.0049580137151887796
+64,GCN,300,Feature,1.0,PubmedGraphDataset,0.001,0.001,Largest,Relu,2,0.773,0.7982500000000001,0.0029945784344378125
+64,GCN,300,Feature,1.0,PubmedGraphDataset,0.001,0.001,Largest,Relu,3,0.769,0.78278,0.0008553361912137246
+64,GCN,300,Feature,1.0,PubmedGraphDataset,0.0001,0.001,Largest,Relu,2,0.769,0.7926300000000001,0.004640377139845428

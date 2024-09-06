@@ -31,13 +31,13 @@ def sparse_trace_rank_estimation(data, rank_threshold=1e-10):
     # rank_end = time.time()
     # print(f"Rank calculation takes {rank_end - rank_start} seconds")
     rank = None
-    return trace, rank
+    return trace/num_nodes, rank
 
 
 dataset_name_ls = ['CoraGraphDataset', 'CiteseerGraphDataset', 'PubmedGraphDataset']
 trace_type = 'Feature'
 exclusion_type = 'Largest'
-sample_rate_ls = np.linspace(0.5, 1, 5)
+sample_rate_ls = np.linspace(0.125, 1, 8)
 trace_rst = {}
 rank_rst = {}
 num_random_trails = 100
@@ -79,8 +79,13 @@ for dataset_name in dataset_name_ls:
     sns.boxplot(data=[trace_rst[dataset_name]["random"][sample_rate] for sample_rate in sample_rate_ls], color='skyblue', width=0.5)
     # scatter heuristic results
     for _ in range(len(sample_rate_ls)):
-        plt.scatter(_, trace_rst[dataset_name]["heuristic"][sample_rate_ls[_]], color='red', s=50, label='Feature Largest', zorder=10)
+        if _ == 0:
+            label = 'Exclude Feature Largest'
+        else:
+            label = None
+        plt.scatter(_, trace_rst[dataset_name]["heuristic"][sample_rate_ls[_]], color='red', s=10, label=label, zorder=10)
     plt.title(f"{dataset_name} trace estimation")
+    plt.legend()
     plt.xlabel('Sample Rate')
     plt.xticks(range(len(sample_rate_ls)), [f"{sample_rate * 100:.1f}%" for sample_rate in sample_rate_ls])
     plt.ylabel('Trace')

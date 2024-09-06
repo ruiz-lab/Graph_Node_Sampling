@@ -1,4 +1,4 @@
-project: SAGE_GCN_hyperparameter_tuning_cora_icassp
+project: SAGE_GCN_hyperparameter_tuning_cora_icassp_undirected
 method: grid
 metric:
   name: valid_acc

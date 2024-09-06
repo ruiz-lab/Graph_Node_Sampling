@@ -1,0 +1,6 @@
+hidden_dim,model_type,num_epochs,trace_type,sample_rate,dataset_name,weight_decay,learning_rate,exclusion_type,activation_type,num_hidden_layers,best_test_acc,mean,std
+128,GCN,200,Feature,1.0,CiteseerGraphDataset,0.001,0.001,Largest,Relu,2,0.7,0.7123900000000001,0.001475770984943126
+128,GCN,300,Feature,1.0,CiteseerGraphDataset,0.001,0.001,Largest,Relu,2,0.698,0.7121799999999999,0.000698283610003844
+64,GCN,300,Feature,1.0,CiteseerGraphDataset,0.001,0.001,Largest,Relu,3,0.697,0.6369,0.005795688052336845
+64,GCN,300,Feature,1.0,CiteseerGraphDataset,0.001,0.001,Largest,Relu,2,0.694,0.71209,0.0014148851543499927
+64,GCN,200,Feature,1.0,CiteseerGraphDataset,0.0001,0.001,Largest,Relu,2,0.691,0.6865200000000001,0.004616232229860155

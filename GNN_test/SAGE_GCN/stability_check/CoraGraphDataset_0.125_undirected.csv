@@ -1,0 +1,6 @@
+hidden_dim,model_type,num_epochs,trace_type,sample_rate,dataset_name,weight_decay,learning_rate,exclusion_type,activation_type,num_hidden_layers,best_test_acc,mean,std
+128,GCN,200,Feature,0.125,CoraGraphDataset,0.0001,0.001,Largest,Relu,3,0.555,0.22210999999999997,0.007390392411773547
+64,GCN,300,Feature,0.125,CoraGraphDataset,0.001,0.001,Largest,Relu,3,0.529,0.21880000000000002,0.0012649110640673533
+128,GCN,300,Feature,0.125,CoraGraphDataset,0.0001,0.001,Largest,Relu,3,0.485,0.22105999999999998,0.007737984233636047
+64,GCN,200,Feature,0.125,CoraGraphDataset,0.001,0.001,Largest,Relu,3,0.432,0.21949000000000002,0.0028477886157508257
+128,GCN,300,Feature,0.125,CoraGraphDataset,0.001,0.001,Largest,Relu,3,0.428,0.21882000000000001,0.0012520383380711642

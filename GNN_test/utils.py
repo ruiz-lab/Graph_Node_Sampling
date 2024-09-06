@@ -582,5 +582,5 @@ def project_name2rst_df(project_name):
         config.update(summary)
         data.append(config)
     df = pd.DataFrame(data)
-    df = df[['hidden_dim', 'model_type', 'num_epochs', 'trace_type', 'sample_rate', 'dataset_name', 'weight_decay', 'learning_rate', 'exclusion_type','activation_type', 'num_hidden_layers','test_acc']]
+    df = df[['hidden_dim', 'model_type', 'num_epochs', 'trace_type', 'sample_rate', 'dataset_name', 'weight_decay', 'learning_rate', 'exclusion_type','activation_type', 'num_hidden_layers','best_test_acc']]
     return df
