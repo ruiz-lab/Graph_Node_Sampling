@@ -51,12 +51,13 @@ def random_baseline(run_config, runtimes=100, k=None):
     criterion = nn.NLLLoss()
 
     # load device
-    device = torch.device('cuda:7' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:4' if torch.cuda.is_available() else 'cpu')
     model = model.to(device)
 
     # load sampler
     sampler = RandomSampler()
     sampled_data = sampler.sample(data, sample_rate=sample_rate).to(device)
+    data = data.to(device)
 
     # training
     test_acc_rst_ls = []
@@ -71,8 +72,8 @@ def random_baseline(run_config, runtimes=100, k=None):
             loss.backward()
             optimizer.step()
             with torch.no_grad():
-                test_acc = test(model, sampled_data)
-                valid_acc = validation(model, sampled_data)
+                test_acc = test(model, data)
+                valid_acc = validation(model, data)
                 crnt_test_acc_ls.append(test_acc)
                 crnt_valid_acc_ls.append(valid_acc)
         best_valid_acc_idx = np.argmax(crnt_valid_acc_ls)
@@ -81,12 +82,64 @@ def random_baseline(run_config, runtimes=100, k=None):
 
     return test_acc_rst_ls
 
+def degree_sampler_baseline(run_config):
+    model_type = run_config['model_type']
+    hidden_dim = int(run_config['hidden_dim'])
+    dataset_name = run_config['dataset_name']
+    num_epochs = int(run_config['num_epochs'])
+    sample_rate = run_config['sample_rate']
+    weight_decay = run_config['weight_decay']
+    learning_rate = run_config['learning_rate']
+    activation_type = run_config['activation_type']
+    num_hidden_layers = int(run_config['num_hidden_layers'])
+
+    # load dataset
+    data = dataset_name2dataset(dataset_name)
+    
+    # load model
+    input_dim = data.num_features
+    output_dim = data.num_classes
+    if model_type == 'GCN':
+        model = Modified_GCN(input_dim, hidden_dim, output_dim, num_hidden_layers, activation_type)
+    elif model_type == 'SAGE':
+        model = Modified_SAGE(input_dim, hidden_dim, output_dim, num_hidden_layers, activation_type)
+
+    # load optimizer
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
+
+    # load loss function
+    criterion = nn.NLLLoss()
+
+    # load device
+    device = torch.device('cuda:4' if torch.cuda.is_available() else 'cpu')
+    model = model.to(device)
+
+    # load sampler
+    sampler = Cached_Degree_Sampler(dataset_name=dataset_name)
+    sampled_data = sampler.sample(data, sample_rate=sample_rate).to(device)
+    data = data.to(device)
+
+    # training
+    best_test_acc = 0
+    best_valid_acc = 0
+    for epoch in tqdm(range(num_epochs), desc=f'{dataset_name} Degree Sampler', total=num_epochs):
+        model.train()
+        optimizer.zero_grad()
+        out = model(sampled_data)
+        loss = criterion(out[sampled_data.train_mask], sampled_data.y[sampled_data.train_mask])
+        loss.backward()
+        optimizer.step()
+        with torch.no_grad():
+            valid_acc = validation(model, data)
+            if valid_acc > best_valid_acc:
+                best_valid_acc = valid_acc
+                best_test_acc = test(model, data)
+    return best_test_acc
 
 dataset_name_ls = ["CoraGraphDataset", "CiteseerGraphDataset", "PubmedGraphDataset"]
 stability_check_config_path = 'stability_check/{}_{}_undirected.csv'
 sample_rate_ls = np.linspace(0.125, 1, 8)
 # sample_rate_ls = [0.125]
-
 
 for dataset_name in dataset_name_ls:
     boxplot_random_test_acc_ls = []
@@ -96,10 +149,12 @@ for dataset_name in dataset_name_ls:
         num_configs = config_df.shape[0]
         acc_diff = []
         random_test_acc_rst = []
+        degree_idx_test_acc_ls = []
         for i in range(num_configs):
             run_config = config_df.iloc[i]
             crnt_best_acc = run_config['mean']
-            test_acc_rst_ls = random_baseline(run_config, runtimes=100, k=i)
+            degree_idx_test_acc_ls.append(degree_sampler_baseline(run_config))
+            test_acc_rst_ls = random_baseline(run_config, runtimes=50, k=i)
             test_acc_rst_df = pd.DataFrame({'test_acc': test_acc_rst_ls})
             random_mean = test_acc_rst_df['test_acc'].mean()
             acc_diff.append(crnt_best_acc - random_mean)
@@ -113,16 +168,18 @@ for dataset_name in dataset_name_ls:
     for _, sample_rate in enumerate(sample_rate_ls):
         if _ == 0:
             label = 'Sampling Acc'
+            degree_label = 'Degree Sampler Acc'
         else:
             label = None
         crnt_df = pd.read_csv(stability_check_config_path.format(dataset_name, sample_rate))
         plt.scatter(_, crnt_df.iloc[biggest_diff_idx[_]]['mean'], color='red', s=30, label=label, zorder=10)
+        plt.scatter(_, degree_idx_test_acc_ls[_], color='blue', s=30, label=degree_label, zorder=10)
     plt.title(title)
     plt.xticks(range(len(sample_rate_ls)), sample_rate_ls)
     plt.xlabel('Sample Rate')
     plt.ylabel('Test Accuracy')
     plt.legend()
-    plot_path = f"../img/random_baseline/{dataset_name}_undirected_random_baseline_boxplot.png"
+    plot_path = f"../img/random_baseline/{dataset_name}_undirected+degree_random_baseline_boxplot.png"
     plt.savefig(plot_path)
     plt.close()
 

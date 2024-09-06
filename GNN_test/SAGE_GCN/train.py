@@ -19,6 +19,8 @@ from utils import *
 from model import Modified_GCN, Modified_SAGE
 
 def validation(model, data):
+    if data.val_mask.sum().item() == 0:
+        return -1
     model.eval()
     out = model(data)
     pred = out.argmax(dim=1)
