@@ -199,6 +199,8 @@ class Cached_Degree_Sampler:
     def sample(self, data:torch_geometric.data.data.Data, num_excluded=None, sample_rate=None):
         if num_excluded is None:
             num_excluded = int(data.num_nodes * (1 - sample_rate))
+        if num_excluded == 0:
+            return data
         device = data.x.device
         exclusion_indices = self.desending_indices[-num_excluded:]
         remained_indices = self.desending_indices[:-num_excluded]

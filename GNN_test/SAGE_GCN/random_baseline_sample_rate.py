@@ -82,7 +82,7 @@ def random_baseline(run_config, runtimes=100, k=None):
 
     return test_acc_rst_ls
 
-def degree_sampler_baseline(run_config):
+def degree_sampler_baseline(run_config, runtimes=100, k=None):
     model_type = run_config['model_type']
     hidden_dim = int(run_config['hidden_dim'])
     dataset_name = run_config['dataset_name']
@@ -120,21 +120,26 @@ def degree_sampler_baseline(run_config):
     data = data.to(device)
 
     # training
-    best_test_acc = 0
-    best_valid_acc = 0
-    for epoch in tqdm(range(num_epochs), desc=f'{dataset_name} Degree Sampler', total=num_epochs):
-        model.train()
-        optimizer.zero_grad()
-        out = model(sampled_data)
-        loss = criterion(out[sampled_data.train_mask], sampled_data.y[sampled_data.train_mask])
-        loss.backward()
-        optimizer.step()
-        with torch.no_grad():
-            valid_acc = validation(model, data)
-            if valid_acc > best_valid_acc:
-                best_valid_acc = valid_acc
-                best_test_acc = test(model, data)
-    return best_test_acc
+    valid_acc_ls = []
+    test_acc_ls = []
+    for _ in tqdm(range(runtimes), desc=f'{dataset_name} Degree Sampler Baseline at {k}', total=runtimes):
+        best_valid_acc = 0
+        best_test_acc = 0
+        for epoch in range(num_epochs):
+            model.train()
+            optimizer.zero_grad()
+            out = model(sampled_data)
+            loss = criterion(out[sampled_data.train_mask], sampled_data.y[sampled_data.train_mask])
+            loss.backward()
+            optimizer.step()
+            with torch.no_grad():
+                valid_acc = validation(model, data)
+                if valid_acc > best_valid_acc:
+                    best_valid_acc = valid_acc
+                    best_test_acc = test(model, data)
+        valid_acc_ls.append(best_valid_acc)
+        test_acc_ls.append(best_test_acc)
+    return test_acc_ls
 
 dataset_name_ls = ["CoraGraphDataset", "CiteseerGraphDataset", "PubmedGraphDataset"]
 stability_check_config_path = 'stability_check/{}_{}_undirected.csv'
@@ -143,39 +148,46 @@ sample_rate_ls = np.linspace(0.125, 1, 8)
 
 for dataset_name in dataset_name_ls:
     boxplot_random_test_acc_ls = []
+    degree_test_acc_ls = []
     biggest_diff_idx = []
     for sample_rate in sample_rate_ls:
         config_df = pd.read_csv(stability_check_config_path.format(dataset_name, sample_rate))
         num_configs = config_df.shape[0]
         acc_diff = []
         random_test_acc_rst = []
-        degree_idx_test_acc_ls = []
+        degree_test_acc_rst = []
         for i in range(num_configs):
             run_config = config_df.iloc[i]
             crnt_best_acc = run_config['mean']
-            degree_idx_test_acc_ls.append(degree_sampler_baseline(run_config))
+            degree_test_acc_rst.append(degree_sampler_baseline(run_config, runtimes=1, k=i)[0])
             test_acc_rst_ls = random_baseline(run_config, runtimes=50, k=i)
             test_acc_rst_df = pd.DataFrame({'test_acc': test_acc_rst_ls})
             random_mean = test_acc_rst_df['test_acc'].mean()
             acc_diff.append(crnt_best_acc - random_mean)
             random_test_acc_rst.append(test_acc_rst_ls)
+            degree_test_acc_rst.append(degree_test_acc_ls)
         idx = np.argmax(acc_diff)
         biggest_diff_idx.append(idx)
         boxplot_random_test_acc_ls.append(random_test_acc_rst[idx])
+        degree_test_acc_ls.append(degree_test_acc_rst[idx])
     title = f"{dataset_name}"
     plt.figure()
-    sns.boxplot(data=boxplot_random_test_acc_ls, width=0.5, showmeans=True)
+    sns.boxplot(data=boxplot_random_test_acc_ls, width=0.5, color='grey', label='Random Baseline')
+    # sns.boxplot(data=degree_test_acc_ls, width=0.5, color='blue', label='Degree Baseline')
+    sns.despine()
     for _, sample_rate in enumerate(sample_rate_ls):
         if _ == 0:
-            label = 'Sampling Acc'
-            degree_label = 'Degree Sampler Acc'
+            label = 'Feature Heuristic'
+            degree_label = 'Degree Heuristic'
         else:
             label = None
+            degree_label = None
         crnt_df = pd.read_csv(stability_check_config_path.format(dataset_name, sample_rate))
         plt.scatter(_, crnt_df.iloc[biggest_diff_idx[_]]['mean'], color='red', s=30, label=label, zorder=10)
-        plt.scatter(_, degree_idx_test_acc_ls[_], color='blue', s=30, label=degree_label, zorder=10)
+        plt.scatter(_, degree_test_acc_ls[_], color='blue', s=30, label=degree_label, zorder=10)
     plt.title(title)
     plt.xticks(range(len(sample_rate_ls)), sample_rate_ls)
+    plt.ylim(0, 1)
     plt.xlabel('Sample Rate')
     plt.ylabel('Test Accuracy')
     plt.legend()
