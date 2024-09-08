@@ -47,21 +47,29 @@ for dataset_name in dataset_name_ls:
     trace_rst[dataset_name] = {}
     trace_rst[dataset_name]["heuristic"] = {}
     trace_rst[dataset_name]["random"] = {}
+    trace_rst[dataset_name]["degree"] = {}
     rank_rst[dataset_name] = {}
     rank_rst[dataset_name]["heuristic"] = {}
     rank_rst[dataset_name]["random"] = {}
+    rank_rst[dataset_name]["degree"] = {}
     cached_indices_path = f"SAGE_GCN/cache/{dataset_name}_{trace_type}_score_descending_indices.pt"
     heuristic_sampler = Cached_Sampler(dataset_name, trace_type, exclusion_type, cached_indices_path)
     random_sampler = RandomSampler()
+    degree_sampler = Cached_Degree_Sampler(dataset_name, "SAGE_GCN/degree_idx_cache/")
     for sample_rate in sample_rate_ls:
         trace_rst[dataset_name]["heuristic"][sample_rate] = []
         trace_rst[dataset_name]["random"][sample_rate] = []
+        trace_rst[dataset_name]["degree"][sample_rate] = []
         rank_rst[dataset_name]["heuristic"][sample_rate] = []
         rank_rst[dataset_name]["random"][sample_rate] = []
+        rank_rst[dataset_name]["degree"][sample_rate] = []
         heuristic_sampled_data = heuristic_sampler.sample(data, sample_rate=sample_rate)
         heuristic_trace, heuristic_rank = sparse_trace_rank_estimation(heuristic_sampled_data)
         trace_rst[dataset_name]["heuristic"][sample_rate].append(heuristic_trace)
         rank_rst[dataset_name]["heuristic"][sample_rate].append(heuristic_rank)
+        degree_sampled_data = degree_sampler.sample(data, sample_rate=sample_rate)
+        degree_trace, degree_rank = sparse_trace_rank_estimation(degree_sampled_data)
+        trace_rst[dataset_name]["degree"][sample_rate].append(degree_trace)
         for i in tqdm(range(num_random_trails), desc=f'{dataset_name} Random Baseline at {sample_rate}', total=num_random_trails):
             random_sampled_data = random_sampler.sample(data, sample_rate=sample_rate)
             random_trace, random_rank = sparse_trace_rank_estimation(random_sampled_data)
@@ -80,10 +88,13 @@ for dataset_name in dataset_name_ls:
     # scatter heuristic results
     for _ in range(len(sample_rate_ls)):
         if _ == 0:
-            label = 'Exclude Feature Largest'
+            label = 'Feature Heuristic'
+            degree_label = 'Degree Heuristic'
         else:
             label = None
+            degree_label = None
         plt.scatter(_, trace_rst[dataset_name]["heuristic"][sample_rate_ls[_]], color='red', s=10, label=label, zorder=10)
+        plt.scatter(_, trace_rst[dataset_name]["degree"][sample_rate_ls[_]], color='blue', s=50, label=degree_label, zorder=9)
     plt.title(f"{dataset_name} trace estimation")
     plt.legend()
     plt.xlabel('Sample Rate')
