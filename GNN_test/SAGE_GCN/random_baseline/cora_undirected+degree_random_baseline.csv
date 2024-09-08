@@ -1,0 +1,2 @@
+hidden_dim,model_type,num_epochs,trace_type,sample_rate,dataset_name,weight_decay,learning_rate,exclusion_type,activation_type,num_hidden_layers,best_test_acc,max_test_acc,min_test_acc,mean_test_acc,std_test_acc
+128,GCN,200,Feature,1.0,CoraGraphDataset,0.0001,0.001,Largest,Relu,2,0.821,0.811,0.798,0.8025,0.00398120584747888

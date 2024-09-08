@@ -51,7 +51,7 @@ def random_baseline(run_config, runtimes=100, k=None):
     criterion = nn.NLLLoss()
 
     # load device
-    device = torch.device('cuda:4' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:5' if torch.cuda.is_available() else 'cpu')
     model = model.to(device)
 
     # load sampler
@@ -111,7 +111,7 @@ def degree_sampler_baseline(run_config, runtimes=100, k=None):
     criterion = nn.NLLLoss()
 
     # load device
-    device = torch.device('cuda:4' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:5' if torch.cuda.is_available() else 'cpu')
     model = model.to(device)
 
     # load sampler
@@ -165,7 +165,6 @@ for dataset_name in dataset_name_ls:
             random_mean = test_acc_rst_df['test_acc'].mean()
             acc_diff.append(crnt_best_acc - random_mean)
             random_test_acc_rst.append(test_acc_rst_ls)
-            degree_test_acc_rst.append(degree_test_acc_ls)
         idx = np.argmax(acc_diff)
         biggest_diff_idx.append(idx)
         boxplot_random_test_acc_ls.append(random_test_acc_rst[idx])

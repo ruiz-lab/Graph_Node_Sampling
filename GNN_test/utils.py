@@ -7,6 +7,7 @@ import networkx as nx
 from torch_geometric.data.data import Data
 from torch_geometric.datasets import Planetoid
 import re
+import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 import dgl
@@ -190,7 +191,7 @@ class Cached_Degree_Sampler:
         if cache_path is None:
             self.cache_path = f"degree_idx_cache/{self.dataset_name}_degree_idx.pt"
         else:
-            self.cache_path = cache_path
+            self.cache_path = os.path.join(cache_path, f"{self.dataset_name}_degree_idx.pt")
         self.__load_cache(self.cache_path)
 
     def __load_cache(self, path):
